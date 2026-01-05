@@ -39,12 +39,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Suspense fallback={<Loading />}>
-            <AdHeader
+            {/* <AdHeader
               title={"recent project title"}
               description={""}
               buttonText={"Visit Now"}
               href={"https://github.com/habiburRhaman05"}
-            />
+            /> */}
 
             <Header />
             <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
