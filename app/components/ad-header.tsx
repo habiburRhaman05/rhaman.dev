@@ -46,7 +46,7 @@ export default function AdHeader({
             <div className="flex items-center justify-between py-3">
               <div className="flex items-center space-x-4 flex-1 min-w-0">
                 <div className="flex-1 min-w-0">
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                  <div className="flex flex-col gap-1">
                     <h3 className="font-semibold text-sm sm:text-base truncate">
                       {title}
                     </h3>

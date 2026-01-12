@@ -13,7 +13,7 @@ const projects = [
 
   {
     logo: "/humanitycarefoundationLogo.svg",
-    title: "Opportune Hub , A Full stack Job Portal App",
+    title: "Opportune Hub. Full stack Job Portal App",
     description:
       "A modern website for a charitable organization, highlighting their mission, donation options, and community impact with a smooth UI/UX experience.",
     image: "/opportune-hub.png",
@@ -96,7 +96,7 @@ export default function Projects() {
           </Select>
         </div>
 
-        <div className="grid grid-cols-12 gap-6">
+        <div className="grid md:grid-cols-12 grid-cols-6 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}

@@ -40,10 +40,11 @@ export default function RootLayout({
         >
           <Suspense fallback={<Loading />}>
             <AdHeader
-              title={"recent project title"}
-              description={""}
+            isExternal={true}
+              title={"Opportune Hub"}
+              description={"A modern website for a charitable organization, highlighting their mission, donation options, and community impact with a smooth UI/UX experience."}
               buttonText={"Visit Now"}
-              href={"https://github.com/habiburRhaman05"}
+              href={"https://opportune-hub.vercel.app"}
             />
 
             <Header />

@@ -43,7 +43,7 @@ export default function Header() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-lg font-bold">
+            <Link href="/" className="text-xl font-bold">
               Habib.
             </Link>
           </div>

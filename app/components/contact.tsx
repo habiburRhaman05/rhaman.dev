@@ -7,7 +7,7 @@ import { Textarea } from "../components/ui/textarea";
 import { Mail, Phone, MapPin, Linkedin, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { useToast } from "../components/ui/use-toast";
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -17,7 +17,8 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const { toast } = useToast();
+  const [error, setError] = useState(false);
+
 
   const handleChange = (e: { target: { id: any; value: any } }) => {
     const { id, value } = e.target;
@@ -45,17 +46,8 @@ export default function Contact() {
 
       if (response.ok) {
         setIsSuccess(true);
-        toast({
-          title: "Success!",
-          description: (
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              {
-                "Your message has been sent successfully. I'll get back to you soon!"
-              }
-            </div>
-          ),
-        });
+        setError(false)
+      
         setFormData({
           name: "",
           email: "",
@@ -65,12 +57,10 @@ export default function Contact() {
         throw new Error(data.message || "Failed to send message");
       }
     } catch (error) {
-      toast({
-        title: "Error",
-        description:
-          error instanceof Error ? error.message : "Failed to send message",
-        variant: "destructive",
-      });
+   
+setError(true)
+
+     
     } finally {
       setIsSubmitting(false);
     }
@@ -253,6 +243,7 @@ export default function Contact() {
                       "Submit Message"
                     )}
                   </Button>
+                  {error && !isSuccess && <p className=" text-center text-red-800 font-bold text-xl">Somethink was wrong! plz try again</p>}
                 </form>
               </>
             )}
