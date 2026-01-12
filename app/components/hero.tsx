@@ -49,15 +49,10 @@ export default function Hero() {
   }, [x, y]);
 
   return (
-<<<<<<< HEAD
     <section className="relative pb-16 md:pb-24 overflow-hidden ">
       {/* soft glowing background */}
     
 
-=======
-    <section className="relative py-16 md:py-24 overflow-hidden ">
- 
->>>>>>> 9f5373d6440313b01a95f5e192e82fdd985d095e
       <div className="relative z-10 grid md:grid-cols-3 gap-14 items-center max-w-6xl mx-auto px-6 md:px-8">
         {/* Left Content */}
         <motion.div
@@ -104,11 +99,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-3 pt-4">
-<<<<<<< HEAD
             <Link href="https://github.com/habiburRhaman05" target="_blank" download>
-=======
-            <Link href="" target="_blank" download>
->>>>>>> 9f5373d6440313b01a95f5e192e82fdd985d095e
               <Button
                 size="sm"
                 className="bg-gradient-to-r from-sky-500 to-purple-500 hover:from-purple-600 hover:to-sky-500 text-white font-semibold shadow-lg shadow-sky-400/30 transition-transform hover:scale-105"
