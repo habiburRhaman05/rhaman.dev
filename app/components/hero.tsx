@@ -99,7 +99,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-3 pt-4">
-            <Link href="https://github.com/habiburRhaman05" target="_blank" download>
+            <Link href="./habib-resume.pdf" target="_blank" download>
               <Button
                 size="sm"
                 className="bg-gradient-to-r from-sky-500 to-purple-500 hover:from-purple-600 hover:to-sky-500 text-white font-semibold shadow-lg shadow-sky-400/30 transition-transform hover:scale-105"
