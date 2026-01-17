@@ -19,7 +19,7 @@ const projects = [
     image: "/opportune-hub.png",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Figma", "Nodemailer"],
     demoUrl: "https://opportune-hub.vercel.app/",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/habiburRhaman05/OpportuneX",
 
     features: [
       "Animated homepage using Framer Motion for engaging transitions",
