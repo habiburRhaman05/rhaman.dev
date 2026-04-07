@@ -208,14 +208,14 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="lg:col-span-2 relative hidden lg:flex items-center justify-center"
+            className="lg:col-span-2 relative  lg:flex items-center justify-center"
           >
             <div className="relative ">
               {/* <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-purple-500/20 to-pink-500/30 blur-2xl animate-pulse-glow" /> */}
 
-              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-primary via-purple-500 to-pink-500 opacity-20 animate-accordion-up" style={{ animationDuration: '8s' }} />
+              <div className="absolute hidden sm:flex -inset-1 rounded-3xl bg-gradient-to-br from-primary via-purple-500 to-pink-500 opacity-20 animate-accordion-up" style={{ animationDuration: '8s' }} />
 
-              <div className="relative w-[400px] h-[500px] rounded-3xl overflow-hidden border-2 border-border/30 shadow-2xl shadow-primary/10">
+              <div className="relative mx-auto sm:w-[400px] w-[70%] sm:h-[500px] h-[300px] rounded-3xl overflow-hidden border-2 border-border/30 shadow-2xl shadow-primary/10">
                 {/* <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-purple-500/10 z-10 pointer-events-none" /> */}
                 <Image
                   src="https://res.cloudinary.com/drngnsgwy/image/upload/v1775490683/Gemini_Generated_Image__jzxcpb.png"
