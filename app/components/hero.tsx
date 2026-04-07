@@ -1,701 +1,263 @@
-// "use client";
-
-// import { motion } from "framer-motion";
-// import { Button } from "../components/ui/button";
-// import { Github, Linkedin, Download, Mail, MapPin } from "lucide-react";
-// import { FaAws, FaNode, FaNodeJs } from "react-icons/fa";
-// import {
-//   RiNextjsFill,
-//   RiReactjsFill,
-//   RiTailwindCssFill,
-//   RiTwitterXLine,
-// } from "react-icons/ri";
-// import { SiMongodb } from "react-icons/si";
-// import Link from "next/link";
-
-// export default function Hero() {
-//   return (
-//     <section className="py-6 md:py-10">
-//       <div className="grid md:grid-cols-3 gap-10 items-center max-w-6xl mx-auto">
-//         <motion.div
-//           initial={{ opacity: 0, y: 20 }}
-//           animate={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.5 }}
-//           className="space-y-6 md:col-span-2"
-//         >
-//           <div className="space-y-2">
-//             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-//               Habibur Rhaman
-//             </h1>
-//             <p className="text-lg sm:text-xl text-muted-foreground">
-//               Full Stack Software Engineer | FrontEnd Specialist
-//             </p>
-//           </div>
-
-//           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm text-muted-foreground">
-//             <div className="flex items-center gap-1">
-//               <Mail className="h-4 w-4" />
-//               <a href="mailto:haquedot@gmail.com">devhabib2005@gmail.com</a>
-//             </div>
-//             <div className="flex items-center gap-1">
-//               <MapPin className="h-4 w-4" />
-//               <span>Dhaka, BanglaDesh</span>
-//             </div>
-//           </div>
-
-//           <p className="text-muted-foreground text-sm sm:text-base capitalize">
-//             I’m <b>Habibur Rahman</b>, a <b>Full Stack Software Developer</b>{" "}
-//             <br /> Who builds scalable, high-performance, and visually stunning
-//             applications. With expertise in frontend, backend, cloud, and
-//             DevOps, I deliver end-to-end solutions that are fast, secure, and
-//             future-ready. I work with Next.js, React, TypeScript, and
-//             TailwindCSS on the front, and Node.js, Go, and PostgreSQL
-//           </p>
-
-//           <div className="flex flex-wrap gap-2 sm:gap-3">
-//             <Link href="/MerajResumeFR.pdf" target="_blank" download>
-//               <Button size="sm" className="text-xs sm:text-sm">
-//                 <Download className="mr-2 h-3 w-3 sm:h-4 sm:w-4" /> Resume
-//               </Button>
-//             </Link>
-//             <Link href="https://github.com/haquedot" target="_blank">
-//               <Button
-//                 variant="outline"
-//                 size="sm"
-//                 className="text-xs sm:text-sm"
-//               >
-//                 <Github className="h-3 w-3 sm:h-4 sm:w-4" />
-//               </Button>
-//             </Link>
-
-//             <Link href="https://www.linkedin.com/in/haquedot/" target="_blank">
-//               <Button
-//                 variant="outline"
-//                 size="sm"
-//                 className="text-xs sm:text-sm"
-//               >
-//                 <Linkedin className="h-3 w-3 sm:h-4 sm:w-4" />
-//               </Button>
-//             </Link>
-//           </div>
-//         </motion.div>
-
-//         <motion.div
-//           initial={{ opacity: 0, scale: 0.9 }}
-//           animate={{ opacity: 1, scale: 1 }}
-//           transition={{ duration: 0.5, delay: 0.2 }}
-//           className="flex justify-center h-48 md:h-auto"
-//         >
-//           <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square">
-//             {/* Animated border */}
-//             <motion.div
-//               className="absolute inset-0 rounded-lg"
-//               animate={{
-//                 rotate: [0, 5, -5, 0],
-//                 scale: [1, 1.02, 1.02, 1],
-//               }}
-//               transition={{
-//                 duration: 8,
-//                 repeat: Infinity,
-//                 ease: "easeInOut",
-//               }}
-//             />
-
-//             {/* Grid with floating tech stacks */}
-//             <div className="absolute inset-0 grid grid-cols-2 gap-2 sm:gap-4 p-2 sm:p-4">
-//               {/* Top Left - React Logo */}
-//               <motion.div
-//                 className="bg-muted rounded-lg p-2 sm:p-4 flex items-center justify-center"
-//                 whileHover={{ scale: 1.05 }}
-//                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-//               >
-//                 <motion.div
-//                   transition={{
-//                     duration: 10,
-//                     repeat: Infinity,
-//                     ease: "linear",
-//                   }}
-//                   className="text-4xl text-[#087ea4]"
-//                 >
-//                   <RiNextjsFill />
-//                 </motion.div>
-//               </motion.div>
-
-//               {/* Top Right - Node.js */}
-//               <motion.div
-//                 className="bg-muted rounded-lg p-2 sm:p-4 flex items-center justify-center"
-//                 initial={{ y: -20 }}
-//                 animate={{ y: 0 }}
-//                 transition={{
-//                   duration: 2,
-//                   repeat: Infinity,
-//                   repeatType: "reverse",
-//                   ease: "easeInOut",
-//                 }}
-//               >
-//                 <div className="text-4xl">
-//                   {" "}
-//                   <FaNodeJs />
-//                 </div>
-//               </motion.div>
-
-//               {/* Bottom Left - Database */}
-//               <motion.div
-//                 className="bg-muted rounded-lg p-2 sm:p-4 flex items-center justify-center"
-//                 whileHover={{ scale: 1.05 }}
-//               >
-//                 <motion.div
-//                   animate={{ y: [0, -5, 0] }}
-//                   transition={{
-//                     duration: 3,
-//                     repeat: Infinity,
-//                     ease: "easeInOut",
-//                   }}
-//                   className="text-4xl text-green-600"
-//                 >
-//                   <SiMongodb />
-//                 </motion.div>
-//               </motion.div>
-
-//               {/* Bottom Right - TypeScript */}
-//               <motion.div
-//                 className="bg-muted rounded-lg p-2 sm:p-4 flex items-center justify-center"
-//                 animate={{
-//                   boxShadow: [
-//                     "0 0 0 0px rgba(49, 130, 206, 0.1)",
-//                     "0 0 0 10px rgba(49, 130, 206, 0.1)",
-//                     "0 0 0 0px rgba(49, 130, 206, 0.1)",
-//                   ],
-//                 }}
-//                 transition={{
-//                   duration: 4,
-//                   repeat: Infinity,
-//                 }}
-//               >
-//                 <div className="text-4xl text-sky-500">
-//                   <FaAws />
-//                 </div>
-//               </motion.div>
-//             </div>
-
-//             {/* Floating tech badges around the grid */}
-//             <motion.div
-//               className="absolute -top-3 sm:-top-5 -left-3 sm:-left-5 bg-background px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm shadow-md border"
-//               animate={{
-//                 y: [0, -5, 0],
-//                 rotate: [0, 5, -5, 0],
-//               }}
-//               transition={{
-//                 duration: 6,
-//                 repeat: Infinity,
-//                 ease: "easeInOut",
-//               }}
-//             >
-//               ReactJs
-//             </motion.div>
-
-//             <motion.div
-//               className="absolute -bottom-3 sm:-bottom-5 -right-3 sm:-right-5 bg-background px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm shadow-md border"
-//               animate={{
-//                 y: [0, 5, 0],
-//                 rotate: [0, -5, 5, 0],
-//               }}
-//               transition={{
-//                 duration: 6,
-//                 repeat: Infinity,
-//                 ease: "easeInOut",
-//                 delay: 1,
-//               }}
-//             >
-//               Tailwind CSS
-//             </motion.div>
-
-//             <motion.div
-//               className="absolute -top-3 sm:-top-5 -right-3 sm:-right-5 bg-background px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm shadow-md border"
-//               animate={{
-//                 x: [0, 5, 0],
-//                 rotate: [0, 5, -5, 0],
-//               }}
-//               transition={{
-//                 duration: 5,
-//                 repeat: Infinity,
-//                 ease: "easeInOut",
-//                 delay: 0.5,
-//               }}
-//             >
-//               Next.js
-//             </motion.div>
-
-//             <motion.div
-//               className="absolute -bottom-3 sm:-bottom-5 -left-3 sm:-left-5 bg-background px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm shadow-md border"
-//               animate={{
-//                 x: [0, -5, 0],
-//                 rotate: [0, -5, 5, 0],
-//               }}
-//               transition={{
-//                 duration: 5,
-//                 repeat: Infinity,
-//                 ease: "easeInOut",
-//                 delay: 1.5,
-//               }}
-//             >
-//               MongoDB
-//             </motion.div>
-//           </div>
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// 2nd version
-// "use client";
-
-// import { motion } from "framer-motion";
-// import { Button } from "../components/ui/button";
-// import { Github, Linkedin, Download, Mail, MapPin } from "lucide-react";
-// import { FaAws, FaNodeJs } from "react-icons/fa";
-// import { RiNextjsFill, RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
-// import { SiMongodb } from "react-icons/si";
-// import Link from "next/link";
-
-// export default function Hero() {
-//   return (
-//     <section className="relative py-10 md:py-20 overflow-hidden">
-//       {/* Soft gradient background */}
-//       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background pointer-events-none" />
-//       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-r from-sky-400/20 via-purple-400/10 to-transparent rounded-full blur-3xl opacity-40 animate-pulse" />
-
-//       <div className="relative z-10 grid md:grid-cols-3 gap-10 items-center max-w-6xl mx-auto px-4 sm:px-6">
-//         {/* ===== Left Content ===== */}
-//         <motion.div
-//           initial={{ opacity: 0, y: 20 }}
-//           animate={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6 }}
-//           className="space-y-6 md:col-span-2"
-//         >
-//           <div className="space-y-3">
-//             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-sky-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-//               Habibur Rahman
-//             </h1>
-//             <p className="text-lg sm:text-xl text-muted-foreground font-medium">
-//               Full Stack Software Engineer • Frontend Specialist
-//             </p>
-//           </div>
-
-//           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm text-muted-foreground">
-//             <div className="flex items-center gap-1">
-//               <Mail className="h-4 w-4 text-sky-500" />
-//               <a
-//                 href="mailto:devhabib2005@gmail.com"
-//                 className="hover:text-foreground transition-colors"
-//               >
-//                 devhabib2005@gmail.com
-//               </a>
-//             </div>
-//             <div className="flex items-center gap-1">
-//               <MapPin className="h-4 w-4 text-sky-500" />
-//               <span>Dhaka, Bangladesh</span>
-//             </div>
-//           </div>
-
-//           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-//             I’m <b>Habibur Rahman</b>, a passionate{" "}
-//             <b>Full Stack Software Developer</b> crafting fast, secure, and
-//             scalable web applications. With expertise in{" "}
-//             <b>Next.js, React, TypeScript, Node.js</b>, and modern cloud
-//             platforms like <b>AWS</b>, I build products that are
-//             <span className="text-sky-500 font-medium">
-//               {" "}
-//               performant, reliable, and delightful
-//             </span>{" "}
-//             to use.
-//           </p>
-
-//           <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
-//             <Link href="/MerajResumeFR.pdf" target="_blank" download>
-//               <Button
-//                 size="sm"
-//                 className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-blue-600 hover:to-sky-500 text-white shadow-md"
-//               >
-//                 <Download className="mr-2 h-4 w-4" /> Download Resume
-//               </Button>
-//             </Link>
-
-//             <Link href="https://github.com/haquedot" target="_blank">
-//               <Button variant="outline" size="sm" className="hover:bg-sky-50">
-//                 <Github className="h-4 w-4 text-sky-600" />
-//               </Button>
-//             </Link>
-
-//             <Link href="https://www.linkedin.com/in/haquedot/" target="_blank">
-//               <Button variant="outline" size="sm" className="hover:bg-sky-50">
-//                 <Linkedin className="h-4 w-4 text-sky-600" />
-//               </Button>
-//             </Link>
-//           </div>
-//         </motion.div>
-
-//         {/* ===== Right Side Animation / Tech Grid ===== */}
-//         <motion.div
-//           initial={{ opacity: 0, scale: 0.9 }}
-//           animate={{ opacity: 1, scale: 1 }}
-//           transition={{ duration: 0.7, delay: 0.3 }}
-//           className="flex justify-center h-64 md:h-auto"
-//         >
-//           <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square">
-//             {/* Animated Glow Border */}
-//             <motion.div
-//               className="absolute inset-0 rounded-3xl border border-sky-200 shadow-xl shadow-sky-200/30"
-//               animate={{
-//                 scale: [1, 1.03, 1],
-//                 rotate: [0, 4, -4, 0],
-//               }}
-//               transition={{
-//                 duration: 6,
-//                 repeat: Infinity,
-//                 ease: "easeInOut",
-//               }}
-//             />
-
-//             {/* Grid with Tech Icons */}
-//             <div className="absolute inset-0 grid grid-cols-2 gap-3 sm:gap-5 p-4">
-//               <TechCard
-//                 icon={<RiNextjsFill />}
-//                 color="text-black dark:text-white"
-//               />
-//               <TechCard icon={<FaNodeJs />} color="text-green-600" />
-//               <TechCard icon={<SiMongodb />} color="text-emerald-600" />
-//               <TechCard icon={<FaAws />} color="text-yellow-500" />
-//             </div>
-
-//             {/* Floating Labels */}
-//             <FloatingBadge label="React.js" position="top-left" delay={0} />
-//             <FloatingBadge
-//               label="TailwindCSS"
-//               position="bottom-right"
-//               delay={1}
-//             />
-//             <FloatingBadge label="Next.js" position="top-right" delay={0.5} />
-//             <FloatingBadge label="MongoDB" position="bottom-left" delay={1.2} />
-//           </div>
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// /* ===== Sub Components ===== */
-
-// function TechCard({ icon, color }: { icon: React.ReactNode; color?: string }) {
-//   return (
-//     <motion.div
-//       whileHover={{ scale: 1.07 }}
-//       transition={{ type: "spring", stiffness: 300, damping: 12 }}
-//       className={`bg-muted/60 backdrop-blur-sm border border-border rounded-2xl flex items-center justify-center text-5xl shadow-inner hover:shadow-lg transition-all ${color}`}
-//     >
-//       {icon}
-//     </motion.div>
-//   );
-// }
-
-// function FloatingBadge({
-//   label,
-//   position,
-//   delay,
-// }: {
-//   label: string;
-//   position: "top-left" | "top-right" | "bottom-left" | "bottom-right";
-//   delay: number;
-// }) {
-//   const pos = {
-//     "top-left": "absolute -top-4 -left-4",
-//     "top-right": "absolute -top-4 -right-4",
-//     "bottom-left": "absolute -bottom-4 -left-4",
-//     "bottom-right": "absolute -bottom-4 -right-4",
-//   }[position];
-
-//   return (
-//     <motion.div
-//       className={`${pos} bg-background/80 backdrop-blur-md px-3 py-1 rounded-full text-xs sm:text-sm shadow-md border border-border font-medium`}
-//       animate={{
-//         y: [0, -5, 0],
-//         rotate: [0, 5, -5, 0],
-//       }}
-//       transition={{
-//         duration: 5,
-//         repeat: Infinity,
-//         ease: "easeInOut",
-//         delay,
-//       }}
-//     >
-//       {label}
-//     </motion.div>
-//   );
-// }
-
-// 3rd version
 "use client";
 
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { Button } from "../components/ui/button";
-import { Github, Linkedin, Download, Mail, MapPin } from "lucide-react";
-import { FaAws, FaNodeJs } from "react-icons/fa";
-import { RiNextjsFill, RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiDocker, SiExpress, SiMongodb, SiPostgresql } from "react-icons/si";
+import { Github, Linkedin, Download, Mail, ArrowDown, Sparkles, Contact2 } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
+
+const ROLES = [
+  "Full-Stack Developer",
+  "MERN Stack Developer",
+  "Frontend Developer",
+  "SaaS Builder",
+];
+
+function TypingText({ words }: { words: string[] }) {
+  const [currentWord, setCurrentWord] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const word = words[currentWord];
+    let pauseTimer: ReturnType<typeof setTimeout> | null = null;
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          setCurrentText(word.substring(0, currentText.length + 1));
+          if (currentText.length === word.length) {
+            pauseTimer = setTimeout(() => setIsDeleting(true), 2000);
+          }
+        } else {
+          setCurrentText(word.substring(0, currentText.length - 1));
+          if (currentText.length === 0) {
+            setIsDeleting(false);
+            setCurrentWord((prev) => (prev + 1) % words.length);
+          }
+        }
+      },
+      isDeleting ? 50 : 100
+    );
+    return () => {
+      clearTimeout(timeout);
+      if (pauseTimer) clearTimeout(pauseTimer);
+    };
+  }, [currentText, isDeleting, currentWord, words]);
+
+  return (
+    <span className="gradient-text">
+      {currentText}
+      <span className="border-r-2 border-primary animate-typing-cursor ml-0.5">
+        &nbsp;
+      </span>
+    </span>
+  );
+}
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
 
-  // gentle parallax
-  const rotateX = useSpring(useTransform(y, [-50, 50, 0], [10, -10, 0]), {
-    stiffness: 50,
-    damping: 15,
-  });
-  const rotateY = useSpring(useTransform(x, [-50, 50, 0], [-10, 10, 0]), {
-    stiffness: 50,
-    damping: 15,
-  });
+  const springConfig = { stiffness: 50, damping: 30 };
+  const dx = useSpring(mouseX, springConfig);
+  const dy = useSpring(mouseY, springConfig);
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = containerRef.current?.getBoundingClientRect();
-      if (!rect) return;
-      const offsetX = e.clientX - rect.left - rect.width / 2;
-      const offsetY = e.clientY - rect.top - rect.height / 2;
-      x.set(offsetX / 10);
-      y.set(offsetY / 10);
-    };
+  const bgX = useTransform(dx, [-300, 300], [15, -15]);
+  const bgY = useTransform(dy, [-300, 300], [15, -15]);
 
-    const handleMouseLeave = () => {
-      x.set(0);
-      y.set(0);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseleave", handleMouseLeave);
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseleave", handleMouseLeave);
-    };
-  }, [x, y]);
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (rect) {
+      mouseX.set(e.clientX - rect.left - rect.width / 2);
+      mouseY.set(e.clientY - rect.top - rect.height / 2);
+    }
+  };
 
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden ">
-      {/* soft glowing background */}
-      {/* <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute w-[700px] h-[700px] bg-gradient-to-r from-sky-500/30 via-violet-500/20 to-purple-400/10 blur-3xl rounded-full -top-40 left-1/2 -translate-x-1/2 animate-pulse" />
-      </div> */}
+    <section
+      id="hero"
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-10"
+    >
+      <motion.div
+        style={{ x: bgX, y: bgY }}
+        className="absolute inset-0 -z-10 pointer-events-none"
+      >
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] animate-pulse-glow" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-sky-400/5 rounded-full blur-[100px]" />
+      </motion.div>
 
-      <div className="relative z-10 grid md:grid-cols-3 gap-14 items-center max-w-6xl mx-auto px-6 md:px-8">
-        {/* Left Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="space-y-6 md:col-span-2"
-        >
-          <div className="space-y-3">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-sky-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-              Habibur Rahman
-            </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground font-medium">
-              🚀 Full Stack Software Engineer | Frontend Expert
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Mail className="h-4 w-4 text-sky-500" />
-              <a
-                href="mailto:devhabib2005@gmail.com"
-                className="hover:text-foreground transition-colors"
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 w-full">
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="lg:col-span-3 space-y-8"
+          >
+            <div className="space-y-5">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-green-600/50 text-white text-sm font-medium"
               >
-                devhabib2005@gmail.com
-              </a>
+                <Sparkles className="w-3.5 h-3.5" />
+                Available for Opportunities
+              </motion.div>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]"
+              >
+                Hi, I&apos;m{" "}
+                <span className="gradient-text">Habibur Rahman</span>
+              </motion.h1>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="text-xl sm:text-2xl lg:text-3xl font-semibold text-muted-foreground h-10"
+              >
+                <TypingText words={ROLES} />
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed"
+              >
+                I build{" "}
+                <span className="text-foreground font-medium">
+                  scalable, high-performance
+                </span>{" "}
+                web applications with modern technologies. Specializing in the MERN stack,
+                Next.js, and cloud infrastructure to deliver production-grade solutions.
+              </motion.p>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-sky-500" />
-              <span>Dhaka, Bangladesh</span>
-            </div>
-          </div>
 
-          <p className="text-muted-foreground text-base leading-relaxed max-w-xl">
-            I’m <b>Habibur Rahman</b>, a passionate <b>Full Stack Developer</b>{" "}
-            who crafts visually stunning, fast, and scalable applications. I
-            combine{" "}
-            <span className="text-sky-500 font-medium">frontend finesse</span>{" "}
-            with{" "}
-            <span className="text-purple-500 font-medium">backend power</span> —
-            using <b>Next.js, React, TypeScript, Node.js</b>, and{" "}
-            <b>AWS Cloud</b> — to build smooth, secure, and future-ready digital
-            experiences.
-          </p>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="flex flex-wrap gap-3"
+            >
+              <Link href="/habib-resume.pdf" target="_blank" download>
+                <Button
+                  size="lg"
+                  className="rounded-xl px-6 gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all"
+                >
+                  <Download className="w-4 h-4" />
+                  Download Resume
+                </Button>
+              </Link>
+              <Link href="#contact" >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="rounded-xl px-5 gap-2 hover:bg-muted"
+                >
+                  <Contact2 className="w-4 h-4" />
+                 Reach Me
+                </Button>
+              </Link>
+            
+              <Link href="https://github.com/habiburRhaman05" target="_blank">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="rounded-xl h-11 w-11 hover:bg-muted"
+                >
+                  <Github className="w-4 h-4" />
+                </Button>
+              </Link>
+            </motion.div>
 
-          <div className="flex flex-wrap gap-3 pt-4">
-            <Link href="/MerajResumeFR.pdf" target="_blank" download>
-              <Button
-                size="sm"
-                className="bg-gradient-to-r from-sky-500 to-purple-500 hover:from-purple-600 hover:to-sky-500 text-white font-semibold shadow-lg shadow-sky-400/30 transition-transform hover:scale-105"
-              >
-                <Download className="mr-2 h-4 w-4" /> Download Resume
-              </Button>
-            </Link>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9 }}
+              className="flex gap-8 pt-6 border-t border-border"
+            >
+              <div>
+                <p className="text-2xl font-bold">4+</p>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mt-0.5">
+                  Projects
+                </p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold">MERN</p>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mt-0.5">
+                  Primary Stack
+                </p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold">3+</p>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mt-0.5">
+                  Years Exp
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
 
-            <Link href="https://github.com/haquedot" target="_blank">
-              <Button
-                variant="outline"
-                size="sm"
-                className="hover:bg-sky-50 dark:hover:bg-sky-950 transition-colors"
-              >
-                <Github className="h-4 w-4 text-sky-600" />
-              </Button>
-            </Link>
-
-            <Link href="https://www.linkedin.com/in/haquedot/" target="_blank">
-              <Button
-                variant="outline"
-                size="sm"
-                className="hover:bg-sky-50 dark:hover:bg-sky-950 transition-colors"
-              >
-                <Linkedin className="h-4 w-4 text-sky-600" />
-              </Button>
-            </Link>
-          </div>
-        </motion.div>
-
-        {/* Right Side Tech Grid */}
-        <motion.div
-          ref={containerRef}
-          style={{ rotateX, rotateY }}
-          className="flex justify-center h-80 md:h-auto perspective-1000"
-        >
+          {/* Profile Image - Modern Visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square"
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="lg:col-span-2 relative hidden lg:flex items-center justify-center"
           >
-            {/* Glowing animated border */}
-            <motion.div
-              className="absolute inset-0 rounded-3xl border border-sky-400/30 shadow-lg shadow-sky-500/20"
-              animate={{
-                scale: [1, 1.02, 1],
-                rotate: [0, 3, -3, 0],
-                boxShadow: [
-                  "0 0 20px rgba(56,189,248,0.3)",
-                  "0 0 40px rgba(147,51,234,0.3)",
-                  "0 0 20px rgba(56,189,248,0.3)",
-                ],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
+            <div className="relative ">
+              {/* <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-purple-500/20 to-pink-500/30 blur-2xl animate-pulse-glow" /> */}
 
-            {/* Tech Icons Grid */}
-            <div className="absolute inset-0 grid grid-cols-2 gap-6 p-4">
-              <TechCard
-                icon={<RiNextjsFill />}
-                color="text-black dark:text-white"
-                glow="sky"
-              />
-              <TechCard
-                icon={<SiExpress />}
-                color="text-green-600"
-                glow="green"
-              />
-              <TechCard
-                icon={<SiPostgresql />}
-                color="text-emerald-600"
-                glow="emerald"
-              />
-              <TechCard
-                icon={<SiDocker />}
-                color="text-yellow-500"
-                glow="yellow"
-              />
+              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-primary via-purple-500 to-pink-500 opacity-20 animate-accordion-up" style={{ animationDuration: '8s' }} />
+
+              <div className="relative w-[400px] h-[500px] rounded-3xl overflow-hidden border-2 border-border/30 shadow-2xl shadow-primary/10">
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-purple-500/10 z-10 pointer-events-none" /> */}
+                <Image
+                  src="https://res.cloudinary.com/drngnsgwy/image/upload/v1775490683/Gemini_Generated_Image__jzxcpb.png"
+                  alt="Habibur Rahman"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+
+             
             </div>
+          </motion.div>
+        </div>
 
-            {/* Floating Tech Badges */}
-            <FloatingBadge label="Next.js" pos="top-left" delay={0} />
-            <FloatingBadge label="Docker" pos="bottom-right" delay={1} />
-            <FloatingBadge label="Express.js" pos="top-right" delay={0.5} />
-            <FloatingBadge label="PostgresQL" pos="bottom-left" delay={1.2} />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+          className="flex justify-center mt-16"
+        >
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Link href="#qualifications">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full h-10 w-10 border border-border"
+              >
+                <ArrowDown className="w-4 h-4 text-muted-foreground" />
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll hint */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: [0, 1, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 text-muted-foreground text-xs sm:text-sm"
-      >
-        ↓ Scroll to explore more
-      </motion.div>
     </section>
-  );
-}
-
-/* ============ Sub Components ============ */
-function TechCard({
-  icon,
-  color,
-  glow,
-}: {
-  icon: React.ReactNode;
-  color?: string;
-  glow?: "sky" | "green" | "emerald" | "yellow";
-}) {
-  const glowMap = {
-    sky: "shadow-sky-400/30",
-    green: "shadow-green-400/30",
-    emerald: "shadow-emerald-400/30",
-    yellow: "shadow-yellow-400/30",
-  };
-  return (
-    <motion.div
-      whileHover={{ scale: 1.07 }}
-      transition={{ type: "spring", stiffness: 300, damping: 12 }}
-      className={`bg-muted/50 backdrop-blur-md border border-border/40 rounded-2xl flex items-center justify-center text-5xl shadow-inner hover:${
-        glowMap[glow!]
-      } hover:shadow-2xl transition-all ${color}`}
-    >
-      {icon}
-    </motion.div>
-  );
-}
-
-function FloatingBadge({
-  label,
-  pos,
-  delay,
-}: {
-  label: string;
-  pos: "top-left" | "top-right" | "bottom-left" | "bottom-right";
-  delay: number;
-}) {
-  const position = {
-    "top-left": "absolute -top-5 -left-5",
-    "top-right": "absolute -top-5 -right-5",
-    "bottom-left": "absolute -bottom-5 -left-5",
-    "bottom-right": "absolute -bottom-5 -right-5",
-  }[pos];
-  return (
-    <motion.div
-      className={`${position} bg-background/70 backdrop-blur-lg border border-border rounded-full px-3 py-1 text-xs sm:text-sm font-medium shadow-md`}
-      animate={{ y: [0, -4, 0], rotate: [0, 5, -5, 0] }}
-      transition={{ duration: 5, repeat: Infinity, delay, ease: "easeInOut" }}
-    >
-      {label}
-    </motion.div>
   );
 }

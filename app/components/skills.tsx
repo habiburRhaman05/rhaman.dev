@@ -10,183 +10,138 @@ import {
   FaJs,
   FaReact,
   FaNodeJs,
-  FaPython,
   FaAws,
   FaDocker,
-  FaDigitalOcean,
 } from "react-icons/fa";
 import { TbBrandGolang } from "react-icons/tb";
 import { BiLogoFlask, BiLogoPostgresql } from "react-icons/bi";
-
-import { SiMongodb, SiMysql, SiExpress, SiRedis } from "react-icons/si";
+import { SiMongodb, SiExpress, SiRedis } from "react-icons/si";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import { IoLogoFigma, IoLogoVercel } from "react-icons/io5";
+import { Code, Database, Cloud, Wrench, Layout } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Front End",
+    title: "Frontend",
+    icon: <Layout className="w-4 h-4" />,
     skills: [
       { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
       { name: "React.js", icon: <FaReact className="text-blue-500" /> },
-      {
-        name: "Next.js",
-        icon: <RiNextjsFill className="text-black dark:text-white" />,
-      },
-      { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
-      { name: "CSS", icon: <FaCss3 className="text-blue-500" /> },
+      { name: "Next.js", icon: <RiNextjsFill className="text-foreground" /> },
+      { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
+      { name: "CSS3", icon: <FaCss3 className="text-blue-500" /> },
       { name: "Bootstrap", icon: <FaBootstrap className="text-purple-500" /> },
-      {
-        name: "Tailwind CSS",
-        icon: <RiTailwindCssFill className="text-cyan-400" />,
-      },
+      { name: "Tailwind CSS", icon: <RiTailwindCssFill className="text-cyan-400" /> },
     ],
   },
   {
     title: "Backend",
+    icon: <Code className="w-4 h-4" />,
     skills: [
-      { name: "Node.js", icon: <FaNodeJs className="text-yellow-400" /> },
-      { name: "Express.js", icon: <SiExpress className="text-blue-500" /> },
-      {
-        name: "Flask",
-        icon: <BiLogoFlask className="text-black dark:text-white" />,
-      },
-      {
-        name: "Go (Golang)",
-        icon: <TbBrandGolang className="text-blue-500" />,
-      },
+      { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
+      { name: "Express.js", icon: <SiExpress className="text-foreground" /> },
+      { name: "Flask", icon: <BiLogoFlask className="text-foreground" /> },
+      { name: "Go", icon: <TbBrandGolang className="text-blue-500" /> },
     ],
   },
   {
     title: "Databases",
+    icon: <Database className="w-4 h-4" />,
     skills: [
-      {
-        name: "PostgressQl",
-        icon: <BiLogoPostgresql className="text-blue-600" />,
-      },
+      { name: "PostgreSQL", icon: <BiLogoPostgresql className="text-blue-600" /> },
       { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-      { name: "Redis", icon: <SiRedis className="text-blue-600" /> },
+      { name: "Redis", icon: <SiRedis className="text-red-500" /> },
     ],
   },
   {
-    title: "Cloud",
+    title: "Cloud & DevOps",
+    icon: <Cloud className="w-4 h-4" />,
     skills: [
-      { name: "AWS", icon: <FaAws className="text-green-500" /> },
-      { name: "Docker", icon: <FaDocker className="text-blue-600" /> },
+      { name: "AWS", icon: <FaAws className="text-amber-500" /> },
+      { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
     ],
   },
   {
-    title: "Tools & Platforms",
+    title: "Tools",
+    icon: <Wrench className="w-4 h-4" />,
     skills: [
       { name: "Git", icon: <FaGitAlt className="text-orange-600" /> },
-      {
-        name: "GitHub",
-        icon: <FaGithub className="text-black dark:text-white" />,
-      },
+      { name: "GitHub", icon: <FaGithub className="text-foreground" /> },
       { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
-      { name: "Figma", icon: <IoLogoFigma className="text-purple-600" /> },
-      {
-        name: "Vercel",
-        icon: <IoLogoVercel className="text-black dark:text-white" />,
-      },
+      { name: "Figma", icon: <IoLogoFigma className="text-purple-500" /> },
+      { name: "Vercel", icon: <IoLogoVercel className="text-foreground" /> },
     ],
   },
 ];
 
 export default function Skills() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-  };
-
   return (
     <section id="skills" className="py-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.5 }}
       >
-        <motion.h2
-          className="text-3xl font-bold mb-6"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          My Skills
-        </motion.h2>
-        <motion.p
-          className="text-muted-foreground mb-10"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          Technologies and tools I've worked with throughout my projects and
-          experience
-        </motion.p>
+        <div className="mb-12">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-sm font-medium text-primary uppercase tracking-wider mb-2"
+          >
+            Tech Stack
+          </motion.p>
+          <h2 className="text-3xl sm:text-4xl font-bold section-heading">
+            Skills & Tools
+          </h2>
+          <p className="text-muted-foreground mt-6 max-w-2xl">
+            Technologies and tools I use to build production-grade applications
+          </p>
+        </div>
 
-        <motion.div
-          className="grid gap-10"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category, index) => (
-            <motion.div key={index} variants={item}>
-              <motion.h3
-                className="text-xl font-semibold mb-4"
-                whileHover={{
-                  x: 5,
-                  transition: { type: "spring", stiffness: 300 },
-                }}
-              >
-                {category.title}
-              </motion.h3>
-              <div className="flex flex-wrap gap-4">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              className="group rounded-2xl border border-border bg-card p-6 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+            >
+              <div className="flex items-center gap-2.5 mb-5">
+                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                  {category.icon}
+                </div>
+                <h3 className="text-base font-semibold">{category.title}</h3>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, idx) => (
                   <motion.div
                     key={idx}
-                    className="flex flex-col items-center gap-2 group"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.1 * idx }}
+                    transition={{ duration: 0.3, delay: 0.1 + idx * 0.03 }}
+                    whileHover={{ y: -2 }}
+                    className="flex items-center gap-2 px-3 py-2 rounded-xl bg-muted border border-border hover:border-primary/20 hover:bg-muted/80 transition-all duration-200 group/skill"
                   >
-                    <motion.div
-                      className={`
-                        w-14 h-14 rounded-full bg-muted flex items-center justify-center text-xl
-                        group-hover:bg-muted/50 transition-colors duration-300
-                        border border-transparent group-hover:border-primary/20
-                      `}
-                      whileHover={{
-                        y: -5,
-                        transition: { type: "spring", stiffness: 300 },
-                      }}
-                    >
+                    <span className="text-lg group-hover/skill:scale-110 transition-transform">
                       {skill.icon}
-                    </motion.div>
-                    <motion.span className="text-xs text-center text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                    </span>
+                    <span className="text-sm font-medium text-muted-foreground group-hover/skill:text-foreground transition-colors">
                       {skill.name}
-                    </motion.span>
+                    </span>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   );

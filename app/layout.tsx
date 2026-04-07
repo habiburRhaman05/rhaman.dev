@@ -1,27 +1,25 @@
 import type React from "react";
 import type { Metadata } from "next/types";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 import Header from "./components/header";
-import AdHeader from "./components/ad-header";
 import { Suspense } from "react";
 import Loading from "./components/loading";
 import { Analytics } from "@vercel/analytics/next";
+import Footer from "./components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
-  title: "Habibur Rhaman - Software Developer",
-  description: "Portfolio website of Habibur Rhaman , a Software Developer",
-  icons: {
-    icon: [
-      { url: "/haquedot.svg", sizes: "any", type: "image/x-icon" },
-      { url: "/haquedot.svg", sizes: "16x16", type: "image/png" },
-      { url: "/haquedot.svg", sizes: "32x32", type: "image/png" },
-    ],
-    apple: "/haquedot.svg",
-  },
+  title: "Habibur Rhaman — Full-Stack Software Engineer",
+  description:
+    "Portfolio of Habibur Rhaman — Full-Stack Software Engineer specializing in MERN, Next.js, and scalable web applications.",
+ 
 };
 
 export default function RootLayout({
@@ -31,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -39,21 +39,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Suspense fallback={<Loading />}>
-            <AdHeader
-              title={"recent project title"}
-              description={""}
-              buttonText={"Visit Now"}
-              href={"https://github.com/habiburRhaman05"}
-            />
-
             <Header />
-            <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              {children}
-            </main>
-            <footer className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-muted-foreground">
-              © {new Date().getFullYear()} HABIB. All rights reserved.
-            </footer>
+            <main>{children}</main>
+            <Footer />
           </Suspense>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

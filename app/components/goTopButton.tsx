@@ -6,39 +6,72 @@ import { ArrowUp } from "lucide-react";
 
 export default function GoTopButton() {
   const [visible, setVisible] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Track scroll position
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+
+      setVisible(scrollTop > 400);
+      setScrollProgress(progress);
     };
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll to top
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const circumference = 2 * Math.PI * 18;
+  const strokeDashoffset = circumference * (1 - scrollProgress);
 
   return (
     <AnimatePresence>
       {visible && (
         <motion.button
           key="go-top"
-          initial={{ opacity: 0, y: 50, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 50, scale: 0.8 }}
-          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.2 }}
           onClick={scrollToTop}
-          aria-label="Go to top"
-          className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gradient-to-r from-sky-500 via-blue-500 to-purple-500 text-white shadow-lg hover:shadow-2xl hover:scale-110 transition-all"
+          aria-label="Scroll to top"
+          className="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transition-all flex items-center justify-center group"
         >
-          <ArrowUp className="h-5 w-5" />
+          <svg
+            className="absolute inset-0 -rotate-90"
+            width="44"
+            height="44"
+            viewBox="0 0 44 44"
+          >
+            <circle
+              cx="22"
+              cy="22"
+              r="18"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              className="opacity-20"
+            />
+            <circle
+              cx="22"
+              cy="22"
+              r="18"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeDasharray={circumference}
+              strokeDashoffset={strokeDashoffset}
+              strokeLinecap="round"
+              className="transition-all duration-150"
+            />
+          </svg>
+          <ArrowUp className="w-4 h-4 relative z-10 group-hover:-translate-y-0.5 transition-transform" />
         </motion.button>
       )}
     </AnimatePresence>
