@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
 "use client";
 
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
@@ -76,6 +80,7 @@ export default function Hero() {
   };
 
   return (
+<<<<<<< HEAD
     <section
       id="hero"
       ref={containerRef}
@@ -105,6 +110,35 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
                 className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-green-600/50 text-white text-sm font-medium"
+=======
+    <section className="relative pb-16 md:pb-24 overflow-hidden ">
+      {/* soft glowing background */}
+    
+
+      <div className="relative z-10 grid md:grid-cols-3 gap-14 items-center max-w-6xl mx-auto px-6 md:px-8">
+        {/* Left Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="space-y-6 md:col-span-2"
+        >
+          <div className="space-y-3">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-sky-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+              Habibur Rahman
+            </h1>
+            <p className="text-lg sm:text-xl text-muted-foreground font-medium">
+              🚀 Full Stack Software Developer | Frontend Expert
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <Mail className="h-4 w-4 text-sky-500" />
+              <a
+                href="mailto:devhabib2005@gmail.com"
+                className="hover:text-foreground transition-colors"
+>>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
               >
                 <Sparkles className="w-3.5 h-3.5" />
                 Available for Opportunities
@@ -144,6 +178,7 @@ export default function Hero() {
               </motion.p>
             </div>
 
+<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -209,6 +244,58 @@ export default function Hero() {
           </motion.div>
 
           {/* Profile Image - Modern Visual */}
+=======
+          <p className="text-muted-foreground text-base leading-relaxed max-w-xl">
+            I’m <b>Habibur Rahman</b>, a passionate <b>Full Stack Developer</b>{" "}
+            who crafts visually stunning, fast, and scalable applications. I
+            combine{" "}
+            <span className="text-sky-500 font-medium">frontend finesse</span>{" "}
+            with{" "}
+            <span className="text-purple-500 font-medium">backend power</span> —
+            using <b>Next.js, React, TypeScript, Express.js,PostgreSQL</b>, and
+            <b> Docker</b> — to build smooth and deploy secure, and future-ready digital
+            experiences.
+          </p>
+
+          <div className="flex flex-wrap gap-3 pt-4">
+            <Link href="./habib-resume.pdf" target="_blank" download>
+              <Button
+                size="sm"
+                className="bg-gradient-to-r from-sky-500 to-purple-500 hover:from-purple-600 hover:to-sky-500 text-white font-semibold shadow-lg shadow-sky-400/30 transition-transform hover:scale-105"
+              >
+                <Download className="mr-2 h-4 w-4" /> Download Resume
+              </Button>
+            </Link>
+
+            <Link href="https://github.com/habiburRhaman05" target="_blank">
+              <Button
+                variant="outline"
+                size="sm"
+                className="hover:bg-sky-50 dark:hover:bg-sky-950 transition-colors"
+              >
+                <Github className="h-4 w-4 text-sky-600" />
+              </Button>
+            </Link>
+
+            <Link href="https://www.linkedin.com/in/habiburRhaman05/" target="_blank">
+              <Button
+                variant="outline"
+                size="sm"
+                className="hover:bg-sky-50 dark:hover:bg-sky-950 transition-colors"
+              >
+                <Linkedin className="h-4 w-4 text-sky-600" />
+              </Button>
+            </Link>
+          </div>
+        </motion.div>
+
+        {/* Right Side Tech Grid */}
+        <motion.div
+          ref={containerRef}
+          style={{ rotateX, rotateY }}
+          className="flex justify-center h-80 md:h-auto perspective-1000"
+        >
+>>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

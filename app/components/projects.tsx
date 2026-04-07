@@ -16,8 +16,13 @@ import Link from "next/link";
 
 const projects = [
   {
+<<<<<<< HEAD
     title: "Blitz Analyzer",
     subtitle: "AI-Powered Resume Intelligence SaaS",
+=======
+    logo: "/humanitycarefoundationLogo.svg",
+    title: "Opportune Hub. Full stack Job Portal App",
+>>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
     description:
       "A production-grade ATS analysis platform that transforms raw resumes into actionable insights. Features a complete user lifecycle from OTP authentication to Stripe-powered premium upgrades.",
     image: "/blitz-analyzer.png",
@@ -64,6 +69,10 @@ const projects = [
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Node.js", "MongoDB"],
     demoUrl: "https://opportune-hub.vercel.app/",
     githubUrl: "https://github.com/habiburRhaman05/OpportuneX",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
     features: [
       "Animated homepage with engaging transitions using Framer Motion",
       "Responsive, mobile-first design with Tailwind CSS",
@@ -410,9 +419,81 @@ export default function Projects() {
           </p>
         </div>
 
+<<<<<<< HEAD
         <div className="space-y-8 mb-10">
           {featuredProjects.map((project, index) => (
             <FeaturedProject key={index} project={project} index={index} />
+=======
+        <div className="grid md:grid-cols-12 grid-cols-6 gap-6">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className=" col-span-6 flex flex-col   border rounded-xl overflow-hidden group"
+            >
+              <div className="overflow-hidden relative h-[300px]  border-b md:border-b-0 md:border-r">
+                <div className="absolute inset-0 overflow-y-auto scrollbar-hide">
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    width={800}
+                    height={1200}
+                    className="w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+
+              <div className="p-6 space-y-4">
+                <h3 className="text-xl font-bold">{project.title}</h3>
+                <p className="text-muted-foreground">{project.description}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, idx) => (
+                    <Badge key={idx} variant="secondary">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+
+                <div className="space-y-2">
+                  <h4 className="font-semibold">Key Features:</h4>
+                  <ul className="list-disc pl-5 space-y-1">
+                    {project.features.map((feature, idx) => (
+                      <li key={idx} className="text-sm">
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex gap-3 pt-2">
+                  <Button size="sm">
+                    <Link
+                      href={project.demoUrl}
+                      className="flex items-center"
+                      target="_blank"
+                    >
+                      <ExternalLink className="mr-2 h-4 w-4" /> Live
+                    </Link>
+                  </Button>
+                  {project.githubUrl && (
+                    <Button size="sm" variant="outline">
+                      <Link
+                        href={project.githubUrl}
+                        className="flex items-center"
+                        target="_blank"
+                      >
+                        <Github className="mr-2 h-4 w-4" /> Code
+                      </Link>
+                    </Button>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+>>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
           ))}
         </div>
 

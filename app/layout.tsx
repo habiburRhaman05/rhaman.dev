@@ -39,6 +39,17 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Suspense fallback={<Loading />}>
+<<<<<<< HEAD
+=======
+            <AdHeader
+            isExternal={true}
+              title={"Opportune Hub"}
+              description={"A modern website for a charitable organization, highlighting their mission, donation options, and community impact with a smooth UI/UX experience."}
+              buttonText={"Visit Now"}
+              href={"https://opportune-hub.vercel.app"}
+            />
+
+>>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
             <Header />
             <main>{children}</main>
             <Footer />
