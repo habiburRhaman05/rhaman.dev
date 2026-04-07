@@ -242,6 +242,15 @@ function ProjectDetailsModal({ project, isOpen, onClose, onImageClick }: { proje
                   <p className="text-muted-foreground leading-relaxed">{project.description}</p>
                 </div>
 
+                 <div className="flex flex-wrap gap-2 pt-2">
+       <h1>Tech Stack</h1>
+
+                  <div className="flex flex-wrap gap-2 pt-2">
+                     {project.tags.map((tag, i) => <span key={i} className="text-[13px] bg-zinc-800 text-white dark:bg-zinc-300 dark:text-zinc-800 p-3 rounded-md font-bold text-muted-foreground uppercase">{tag}</span>)}
+                  </div>
+                </div>
+
+
                 <div className="space-y-4">
                   <h4 className="flex items-center gap-2 font-bold text-sm uppercase tracking-wider">
                     <Zap className="w-4 h-4 text-primary" /> Challenges Faced
@@ -281,6 +290,7 @@ function ProjectDetailsModal({ project, isOpen, onClose, onImageClick }: { proje
                   )}
                 </div>
               </div>
+       
             </div>
           </motion.div>
         </div>

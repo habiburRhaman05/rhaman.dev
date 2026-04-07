@@ -8,7 +8,6 @@ import { Suspense } from "react";
 import Loading from "./components/loading";
 import { Analytics } from "@vercel/analytics/next";
 import Footer from "./components/footer";
-import AdHeader from "./components/ad-header";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({
@@ -19,8 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Habibur Rhaman — Full-Stack Software Engineer",
   description:
-    "Portfolio of Habibur Rhaman — Full-Stack Software Engineer specializing in MERN, Next.js, and scalable web applications.",
- 
+    "Portfolio of Habibur Rhaman — Full-Stack Developer specializing in MERN, Next.js, and scalable web applications.",
 };
 
 export default function RootLayout({
@@ -40,15 +38,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Suspense fallback={<Loading />}>
-
-            {/* <AdHeader
-            isExternal={true}
-              title={"Opportune Hub"}
-              description={"A modern website for a charitable organization, highlighting their mission, donation options, and community impact with a smooth UI/UX experience."}
-              buttonText={"Visit Now"}
-              href={"https://opportune-hub.vercel.app"}
-            /> */}
-
             <Header />
             <main>{children}</main>
             <Footer />

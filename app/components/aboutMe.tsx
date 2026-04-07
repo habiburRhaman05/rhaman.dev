@@ -199,7 +199,10 @@ export default function AboutMe() {
             </div>
 
             {/* Hobbies */}
-            <div className="rounded-3xl border border-border/60 bg-card p-4 sm:p-6 backdrop-blur-xl">
+           
+          </div>
+        </div>
+ <div className="rounded-3xl mt-5 border border-border/60 bg-card p-4 sm:p-6 backdrop-blur-xl">
               <div className="mb-3 flex items-center gap-2">
                 <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-500" />
                 <h3 className="text-base sm:text-lg font-semibold text-foreground">
@@ -235,9 +238,6 @@ export default function AboutMe() {
                 })}
               </div>
             </div>
-          </div>
-        </div>
-
         {/* CTA */}
         <div className="mt-10 relative overflow-hidden rounded-3xl border border-border/60 p-6 sm:p-8 md:p-10 backdrop-blur-xl bg-card">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-8">
