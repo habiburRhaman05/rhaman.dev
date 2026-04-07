@@ -11,22 +11,18 @@ import {
   Sparkles,
   Layers,
   Globe,
+  Lock,
 } from "lucide-react";
 import Link from "next/link";
 
 const projects = [
   {
-<<<<<<< HEAD
     title: "Blitz Analyzer",
     subtitle: "AI-Powered Resume Intelligence SaaS",
-=======
-    logo: "/humanitycarefoundationLogo.svg",
-    title: "Opportune Hub. Full stack Job Portal App",
->>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
     description:
       "A production-grade ATS analysis platform that transforms raw resumes into actionable insights. Features a complete user lifecycle from OTP authentication to Stripe-powered premium upgrades.",
     image: "/blitz-analyzer.png",
-    tags: ["Next.js", "TypeScript", "Redux Toolkit", "shadcn/ui", "Stripe", "Zod"],
+    tags: ["Next.js", "TypeScript", "Postgresql", "Express.js", "Redis", "Stripe", ],
     demoUrl: "https://blitz-analyzer.vercel.app",
     githubUrl: "https://github.com/habiburRhaman05/Blitz-Analyzer",
     features: [
@@ -46,7 +42,7 @@ const projects = [
     description:
       "A comprehensive educational ecosystem featuring complex multi-role workflows. Built with Next.js 15, it bridges the gap between students and tutors with real-time scheduling and secure session management.",
     image: "/skill-bridge.png",
-    tags: ["Next.js 15", "TanStack Query", "Tailwind v4", "Lucide", "Server Actions"],
+    tags: ["Next.js 15", "TanStack Query", "Typescript","Postgresql", "Express.js", ],
     demoUrl: "https://skill-bridge-frontend-gamma.vercel.app",
     githubUrl: "https://github.com/habiburRhaman05/skill-bridge-frontend",
     features: [
@@ -69,10 +65,6 @@ const projects = [
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Node.js", "MongoDB"],
     demoUrl: "https://opportune-hub.vercel.app/",
     githubUrl: "https://github.com/habiburRhaman05/OpportuneX",
-<<<<<<< HEAD
-=======
-
->>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
     features: [
       "Animated homepage with engaging transitions using Framer Motion",
       "Responsive, mobile-first design with Tailwind CSS",
@@ -88,7 +80,7 @@ const projects = [
   subtitle: "Enterprise Document Intelligence Engine",
   description:
     "A high-performance RAG-based platform designed to deconstruct complex legal frameworks and compliance documents into actionable risk-assessment reports.",
-  image: "/lumina-ai.png", 
+  image: "/upcomming.avif", 
   tags: ["Next.js 15", "Golang", "PostgreSQL", "Vector DB", "Redis"],
   demoUrl: "#", // Architectural Design Phase
   githubUrl: "", // Private Enterprise Repository
@@ -105,34 +97,7 @@ const projects = [
 }
 ];
 
-// Helper to render status badge
-function StatusBadge({ status }: { status: string }) {
-  if (status === "live") {
-    return (
-      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-green-500/10 text-green-400 text-[11px] font-semibold border border-green-500/20">
-        <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-        Live
-      </span>
-    );
-  }
-  if (status === "upcoming") {
-    return (
-      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-400 text-[11px] font-semibold border border-amber-500/20">
-        <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-        Planning
-      </span>
-    );
-  }
-  if (status === "running") {
-    return (
-      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-white-400 text-[11px] font-semibold border border-amber-500/20">
-        <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-        Running
-      </span>
-    );
-  }
-  return null;
-}
+
 
 function FeaturedProject({
   project,
@@ -291,6 +256,28 @@ function FeaturedProject({
   );
 }
 
+function StatusBadge({ status }: { status: string }) {
+  const isUpcoming = status === "upcoming";
+  const isRunning = status === "running";
+
+  return (
+    <div className={`
+      flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md
+      ${isUpcoming 
+        ? "bg-amber-500/10 border-amber-500/20 text-amber-500" 
+        : "bg-emerald-500/10 border-emerald-500/20 text-emerald-500"}
+    `}>
+      <span className="relative flex h-2 w-2">
+        {isRunning && (
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        )}
+        <span className={`relative inline-flex rounded-full h-2 w-2 ${isUpcoming ? 'bg-amber-500' : 'bg-emerald-500'}`}></span>
+      </span>
+      {status}
+    </div>
+  );
+}
+
 function ProjectCard({
   project,
   index,
@@ -306,42 +293,52 @@ function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
-      className="group relative rounded-2xl border border-border bg-card overflow-hidden transition-all duration-500 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"
+      className="group relative rounded-2xl border border-border bg-card overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10"
     >
+      {/* Top Gradient Accent */}
       <div
-        className={`absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r ${project.gradient} opacity-50 group-hover:opacity-100 group-hover:h-1 transition-all`}
+        className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${project.gradient} opacity-30 group-hover:opacity-100 transition-opacity duration-500`}
       />
 
+      {/* Image Container */}
       <div className="relative overflow-hidden bg-muted h-[220px]">
         <Image
           src={project.image || "/placeholder.svg"}
           alt={project.title}
-          width={600}
-          height={400}
-          className="w-full h-full object-top transition-transform duration-700 group-hover:scale-105"
+          fill
+          className={`
+            w-full h-full object-cover transition-all duration-700 
+            ${isUpcoming ? "grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100" : "group-hover:scale-110"}
+          `}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-        {/* Quick action buttons only for live projects */}
+        {/* Status-specific Overlays */}
+        {isUpcoming ? (
+          <div className="absolute inset-0 bg-background/60 backdrop-blur-[2px] flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+             <div className="flex flex-col items-center gap-2">
+               <div className="p-2 rounded-full bg-background/80 border border-border shadow-sm">
+                 <Lock className="w-5 h-5 text-muted-foreground" />
+               </div>
+               <span className="text-[10px] font-bold uppercase tracking-tighter text-muted-foreground">In Development</span>
+             </div>
+          </div>
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        )}
+
+        {/* Action Buttons (Visible for Live/Running) */}
         {!isUpcoming && (
-          <div className="absolute bottom-4 left-4 right-4 flex gap-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+          <div className="absolute bottom-4 left-4 right-4 flex gap-2 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
             <Link href={project.demoUrl} target="_blank" className="flex-1">
-              <Button
-                size="sm"
-                className="w-full rounded-lg gap-1.5 shadow-lg text-xs"
-              >
-                <ExternalLink className="w-3 h-3" />
+              <Button size="sm" className="w-full rounded-lg gap-2 shadow-xl bg-white text-black hover:bg-white/90">
+                <ExternalLink className="w-3.5 h-3.5" />
                 Live Demo
               </Button>
             </Link>
             {project.githubUrl && (
               <Link href={project.githubUrl} target="_blank">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="rounded-lg gap-1.5 bg-card border-border text-xs"
-                >
-                  <Github className="w-3 h-3" />
+                <Button variant="outline" size="sm" className="rounded-lg bg-black/50 border-white/20 text-white backdrop-blur-md hover:bg-black/70">
+                  <Github className="w-4 h-4" />
                 </Button>
               </Link>
             )}
@@ -349,38 +346,41 @@ function ProjectCard({
         )}
       </div>
 
+      {/* Content Section */}
       <div className="p-6 space-y-4">
-        <div className="flex items-start justify-between gap-2">
-          <div>
-            <span className="text-[10px] font-semibold text-primary uppercase tracking-widest">
-              {project.subtitle}
-            </span>
-            <h3 className="text-lg font-bold mt-1">{project.title}</h3>
+        <div className="flex items-start justify-between gap-4">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+               <span className={`h-1.5 w-1.5 rounded-full bg-gradient-to-r ${project.gradient}`} />
+               <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em]">
+                 {project.subtitle}
+               </span>
+            </div>
+            <h3 className="text-xl font-bold tracking-tight text-card-foreground group-hover:text-primary transition-colors">
+              {project.title}
+            </h3>
           </div>
           <StatusBadge status={project.status} />
         </div>
 
-        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
-          {project.description}
+        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 italic">
+          "{project.description}"
         </p>
 
-        <div className="flex flex-wrap gap-1.5">
+        {/* Tags with Modern Styling */}
+        <div className="flex flex-wrap gap-2 pt-2">
           {project.tags.slice(0, 4).map((tag, idx) => (
-            <Badge
+            <div
               key={idx}
-              variant="secondary"
-              className="rounded-md text-[10px] font-medium bg-muted hover:bg-primary/10 hover:text-primary border-0 transition-colors px-2 py-0.5"
+              className="px-2.5 py-1 text-[10px] font-semibold rounded-md bg-secondary/50 text-secondary-foreground border border-border/50 group-hover:border-primary/20 transition-colors"
             >
               {tag}
-            </Badge>
+            </div>
           ))}
           {project.tags.length > 4 && (
-            <Badge
-              variant="secondary"
-              className="rounded-md text-[10px] font-medium bg-muted border-0 px-2 py-0.5"
-            >
+            <div className="px-2.5 py-1 text-[10px] font-bold rounded-md bg-muted text-muted-foreground">
               +{project.tags.length - 4}
-            </Badge>
+            </div>
           )}
         </div>
       </div>
@@ -419,81 +419,9 @@ export default function Projects() {
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="space-y-8 mb-10">
           {featuredProjects.map((project, index) => (
             <FeaturedProject key={index} project={project} index={index} />
-=======
-        <div className="grid md:grid-cols-12 grid-cols-6 gap-6">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className=" col-span-6 flex flex-col   border rounded-xl overflow-hidden group"
-            >
-              <div className="overflow-hidden relative h-[300px]  border-b md:border-b-0 md:border-r">
-                <div className="absolute inset-0 overflow-y-auto scrollbar-hide">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    width={800}
-                    height={1200}
-                    className="w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              </div>
-
-              <div className="p-6 space-y-4">
-                <h3 className="text-xl font-bold">{project.title}</h3>
-                <p className="text-muted-foreground">{project.description}</p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, idx) => (
-                    <Badge key={idx} variant="secondary">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-
-                <div className="space-y-2">
-                  <h4 className="font-semibold">Key Features:</h4>
-                  <ul className="list-disc pl-5 space-y-1">
-                    {project.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm">
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex gap-3 pt-2">
-                  <Button size="sm">
-                    <Link
-                      href={project.demoUrl}
-                      className="flex items-center"
-                      target="_blank"
-                    >
-                      <ExternalLink className="mr-2 h-4 w-4" /> Live
-                    </Link>
-                  </Button>
-                  {project.githubUrl && (
-                    <Button size="sm" variant="outline">
-                      <Link
-                        href={project.githubUrl}
-                        className="flex items-center"
-                        target="_blank"
-                      >
-                        <Github className="mr-2 h-4 w-4" /> Code
-                      </Link>
-                    </Button>
-                  )}
-                </div>
-              </div>
-            </motion.div>
->>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
           ))}
         </div>
 

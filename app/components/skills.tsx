@@ -41,7 +41,6 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
       { name: "Express.js", icon: <SiExpress className="text-foreground" /> },
-      { name: "Flask", icon: <BiLogoFlask className="text-foreground" /> },
       { name: "Go", icon: <TbBrandGolang className="text-blue-500" /> },
     ],
   },

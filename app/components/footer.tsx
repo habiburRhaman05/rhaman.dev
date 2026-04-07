@@ -54,7 +54,7 @@ export default function Footer() {
               <span className="text-primary">.</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Full-Stack Software Engineer building scalable web applications
+              Full-Stack Developer building scalable web applications
               with modern technologies.
             </p>
           </div>

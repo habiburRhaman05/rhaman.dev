@@ -58,7 +58,7 @@ const experiences = [
 type Tab = "experience" | "education";
 
 export default function Qualifications() {
-  const [activeTab, setActiveTab] = useState<Tab>("experience");
+  const [activeTab, setActiveTab] = useState<Tab>("education");
 
   const items = activeTab === "education" ? education : experiences;
   const Icon = activeTab === "education" ? GraduationCap : Briefcase;

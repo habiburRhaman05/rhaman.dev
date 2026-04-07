@@ -9,9 +9,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { name: "About", href: "#" },
+  { name: "Hero", href: "#" },
   { name: "Services", href: "#services" },
   { name: "Qualifications", href: "#qualifications" },
+  { name: "About Me", href: "#about" },
+
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
@@ -62,7 +64,6 @@ export default function Header() {
         isScrolled ? "py-2 px-4" : "py-4 px-4"
       )}
     >
-<<<<<<< HEAD
       <nav
         className={cn(
           "mx-auto max-w-7xl rounded-2xl transition-all duration-300",
@@ -140,14 +141,6 @@ export default function Header() {
                 )}
               </motion.div>
             </Button>
-=======
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold">
-              Habib.
-            </Link>
->>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
           </div>
 
           <div className="flex md:hidden items-center gap-1.5">

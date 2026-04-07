@@ -16,7 +16,6 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-<<<<<<< HEAD
 const contactInfo = [
   {
     icon: <Mail className="w-5 h-5" />,
@@ -49,8 +48,6 @@ const contactInfo = [
     href: "https://github.com/habiburRhaman05",
   },
 ];
-=======
->>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -66,10 +63,6 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState(false);
-<<<<<<< HEAD
-=======
-
->>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
 
   const validateForm = () => {
     const errors = {
@@ -124,7 +117,6 @@ export default function Contact() {
     setError(false);
 
     try {
-<<<<<<< HEAD
       // Dummy delay to simulate sending
       await new Promise((resolve) => setTimeout(resolve, 1500));
       
@@ -134,35 +126,6 @@ export default function Contact() {
       setFormErrors({ name: "", email: "", message: "" });
     } catch {
       setError(true);
-=======
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setIsSuccess(true);
-        setError(false)
-      
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
-      } else {
-        throw new Error(data.message || "Failed to send message");
-      }
-    } catch (error) {
-   
-setError(true)
-
-     
->>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
     } finally {
       setIsSubmitting(false);
     }
@@ -204,7 +167,6 @@ setError(true)
             className="lg:col-span-2 space-y-6"
           >
             <div className="space-y-4">
-<<<<<<< HEAD
               {contactInfo.map((item, index) => (
                 <motion.div
                   key={index}
@@ -237,63 +199,6 @@ setError(true)
                   </div>
                 </motion.div>
               ))}
-=======
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
-                  <Mail className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <Link
-                    href="mailto:haquedot@gmail.com"
-                    className="font-medium hover:underline"
-                  >
-                    devhabib2005@gmail.com
-                  </Link>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
-                  <Phone className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Phone</p>
-                  <Link
-                    href="tel:7502461630"
-                    className="font-medium hover:underline"
-                  >
-                    +880 01605746821
-                  </Link>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
-                  <MapPin className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="font-medium">Dhaka, Bangladesh</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
-                  <Linkedin className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">LinkedIn</p>
-                  <Link
-                    href="https://www.linkedin.com/in/haquedot/"
-                    target="_blank"
-                    className="font-medium hover:underline"
-                  >
-                    linkedin.com/in/habiburRhaman05
-                  </Link>
-                </div>
-              </div>
->>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
             </div>
 
             <div className="rounded-2xl border border-border bg-muted p-5 mt-6">
@@ -446,16 +351,12 @@ setError(true)
                       </>
                     )}
                   </Button>
-<<<<<<< HEAD
 
                   {error && !isSuccess && (
                     <p className="text-center text-sm text-destructive font-medium">
                       Something went wrong. Please try again.
                     </p>
                   )}
-=======
-                  {error && !isSuccess && <p className=" text-center text-red-800 font-bold text-xl">Somethink was wrong! plz try again</p>}
->>>>>>> 49a038448808b6807498a0298a8dea590629d6d4
                 </form>
               </div>
             )}
