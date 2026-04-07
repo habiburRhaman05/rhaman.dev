@@ -9,9 +9,8 @@ import Image from "next/image";
 
 const ROLES = [
   "Full-Stack Developer",
-  "MERN Stack Developer",
+  "MERN Stack Expert",
   "Frontend Developer",
-  "SaaS Builder",
 ];
 
 function TypingText({ words }: { words: string[] }) {
@@ -194,12 +193,7 @@ export default function Hero() {
                   Projects
                 </p>
               </div>
-              <div>
-                <p className="text-2xl font-bold">MERN</p>
-                <p className="text-xs uppercase tracking-wider text-muted-foreground mt-0.5">
-                  Primary Stack
-                </p>
-              </div>
+             
               <div>
                 <p className="text-2xl font-bold">3+</p>
                 <p className="text-xs uppercase tracking-wider text-muted-foreground mt-0.5">
