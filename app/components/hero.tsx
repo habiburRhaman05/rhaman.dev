@@ -90,7 +90,7 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-sky-400/5 rounded-full blur-[100px]" />
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 w-full">
+      <div className="max-w-7xl mx-auto sm:mt-0  mt-10 px-6 sm:px-8 w-full">
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
