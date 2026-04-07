@@ -26,7 +26,7 @@ const contactInfo = [
   {
     icon: <Phone className="w-5 h-5" />,
     label: "Phone",
-    value: "+880 01605746821",
+    value: "+880 01605746821 - (Whatsapp)",
     href: "tel:+88001605746821",
   },
   {

@@ -34,10 +34,10 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="relative mt-20">
+    <footer className="relative sm:mt-20">
       <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 py-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

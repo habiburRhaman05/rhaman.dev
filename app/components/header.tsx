@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { name: "Hero", href: "#" },
+  { name: "Home", href: "#" },
   { name: "Services", href: "#services" },
   { name: "Qualifications", href: "#qualifications" },
   { name: "About Me", href: "#about" },
