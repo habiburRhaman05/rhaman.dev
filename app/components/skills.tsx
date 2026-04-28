@@ -13,13 +13,13 @@ import {
   FaAws,
   FaDocker,
 } from "react-icons/fa";
-import { TbBrandGolang } from "react-icons/tb";
+import { TbApi, TbBrandGolang } from "react-icons/tb";
 import { BiLogoFlask, BiLogoPostgresql } from "react-icons/bi";
-import { SiMongodb, SiExpress, SiRedis } from "react-icons/si";
+import { SiMongodb, SiExpress, SiRedis, SiJest, SiVitest, SiTypescript, SiGraphql, SiPrisma, SiGithubactions, SiLangchain, SiOpenai, SiPostman } from "react-icons/si";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import { IoLogoFigma, IoLogoVercel } from "react-icons/io5";
-import { Code, Database, Cloud, Wrench, Layout } from "lucide-react";
+import { Code, Database, Cloud, Wrench, Layout, FlaskConical, Sparkles, Cpu, GitMerge, BrainCircuit } from "lucide-react";
 
 const skillCategories = [
   {
@@ -42,6 +42,9 @@ const skillCategories = [
       { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
       { name: "Express.js", icon: <SiExpress className="text-foreground" /> },
       { name: "Go", icon: <TbBrandGolang className="text-blue-500" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+      { name: "REST API", icon: <TbApi className="text-green-400" /> },
+      { name: "GraphQL", icon: <SiGraphql className="text-pink-500" /> },
     ],
   },
   {
@@ -51,6 +54,8 @@ const skillCategories = [
       { name: "PostgreSQL", icon: <BiLogoPostgresql className="text-blue-600" /> },
       { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
       { name: "Redis", icon: <SiRedis className="text-red-500" /> },
+      { name: "Prisma ORM", icon: <SiPrisma className="text-foreground" /> },
+      { name: "Vector DB", icon: <Database className="w-4 h-4 text-purple-500" /> },
     ],
   },
   {
@@ -59,6 +64,29 @@ const skillCategories = [
     skills: [
       { name: "AWS", icon: <FaAws className="text-amber-500" /> },
       { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
+      { name: "CI/CD", icon: <SiGithubactions className="text-foreground" /> },
+      { name: "Vercel", icon: <IoLogoVercel className="text-foreground" /> },
+    ],
+  },
+  {
+    title: "Testing",
+    icon: <FlaskConical className="w-4 h-4" />,
+    skills: [
+      { name: "Jest", icon: <SiJest className="text-red-600" /> },
+      { name: "Vitest", icon: <SiVitest className="text-yellow-400" /> },
+      { name: "Supertest", icon: <SiExpress className="text-foreground" /> },
+    ],
+  },
+  // ✅ NEW — AI & ML Category
+  {
+    title: "AI & ML",
+    icon: <Sparkles className="w-4 h-4" />,
+    skills: [
+      { name: "LangChain", icon: <SiLangchain className="text-green-500" /> },
+      { name: "OpenAI API", icon: <SiOpenai className="text-foreground" /> },
+      { name: "RAG Pipeline", icon: <GitMerge className="w-4 h-4 text-blue-400" /> },
+      { name: "Embeddings", icon: <BrainCircuit className="w-4 h-4 text-violet-500" /> },
+      { name: "pgvector", icon: <BiLogoPostgresql className="text-blue-400" /> },
     ],
   },
   {
@@ -69,11 +97,10 @@ const skillCategories = [
       { name: "GitHub", icon: <FaGithub className="text-foreground" /> },
       { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
       { name: "Figma", icon: <IoLogoFigma className="text-purple-500" /> },
-      { name: "Vercel", icon: <IoLogoVercel className="text-foreground" /> },
+      { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
     ],
   },
 ];
-
 export default function Skills() {
   return (
     <section id="skills" className="py-20">

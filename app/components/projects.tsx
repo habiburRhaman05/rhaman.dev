@@ -25,40 +25,77 @@ const projects = [
     id: "blitz",
     title: "Blitz Analyzer",
     subtitle: "AI-Powered Resume Intelligence SaaS",
-    description: "A production-grade ATS analysis platform that transforms raw resumes into actionable insights.",
+    description:
+      "A production-grade ATS analysis platform that transforms raw resumes into actionable insights using AI scoring and PDF report generation.",
     image: "/blitz-analyzer.png",
-    tags: ["Next.js", "TypeScript", "Postgresql", "Express.js", "Redis", "Stripe"],
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Express.js", "Redis", "Stripe", "Groq API", "Prisma"],
     demoUrl: "https://blitz-analyzer.vercel.app",
     githubUrl: "https://github.com/habiburRhaman05/Blitz-Analyzer",
+    backendUrl: "https://github.com/habiburRhaman05/Blitz-Analyzer-Backend",
     features: [
       "Secure Auth flow with OTP verification and RBAC",
-      "Dynamic Resume Analysis with PDF reports",
-      "Interactive Template Builder with custom canvas",
-      "Full-stack payment integration using Stripe",
+      "AI-driven Resume Analysis with Job Matching Score via Groq API",
+      "PDF Report Download & save with Stripe payment gating",
+      "Template-based + Custom Resume Builder with interactive canvas",
+      "Admin dashboard to manage users, track analytics and operations",
     ],
     challenges: [
       "Optimizing PDF parsing to handle non-standard resume layouts without data loss.",
       "Managing high-concurrency Redis sessions during peak traffic hours.",
-      "Ensuring Stripe webhook reliability for real-time subscription gating."
+      "Ensuring Stripe webhook reliability for real-time subscription gating.",
     ],
     futurePlans: [
       "Implement AI-generated mock interview questions based on analyzed resumes.",
       "Add team/enterprise accounts for recruitment agencies.",
-      "Introduce browser-based resume preview with direct annotation tools."
+      "Introduce browser-based resume preview with direct annotation tools.",
     ],
     featured: true,
     gradient: "from-emerald-500 via-teal-500 to-cyan-500",
     status: "live",
   },
   {
+    id: "eduspark",
+    title: "EduSpark Academy",
+    subtitle: "Full-Scale EdTech SaaS Platform",
+    description:
+      "A comprehensive online education ecosystem bridging mentors and students through real-time video, AI dashboards, and smart scheduling.",
+    image: "/eduspark.png",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Express.js", "ZegoCloud", "Socket.io", "Redis", "BullMQ", "Stripe"],
+    demoUrl: "https://edu-spark-zone.vercel.app",
+    githubUrl: "https://github.com/habiburRhaman05/EduSpark-modern-learning-platfrom",
+    backendUrl: "https://github.com/habiburRhaman05/Edu-Saprk-Backend",
+    features: [
+      "AI-Powered student dashboard with activity tracking and progress scores",
+      "High-quality real-time video sessions powered by ZegoCloud",
+      "Secure payment integration with Stripe for course purchases",
+      "Full mentor/tutor control panel — sessions, earnings, reviews, schedules",
+      "Background job processing with BullMQ for notifications and reminders",
+    ],
+    challenges: [
+      "Synchronizing real-time socket events with video session lifecycle management.",
+      "Designing a scalable BullMQ job queue for scheduling reminders across timezones.",
+      "Handling concurrent session bookings without double-booking conflicts.",
+    ],
+    futurePlans: [
+      "Integrate AI-generated personalized learning paths based on student progress.",
+      "Add certificate generation upon course completion.",
+      "Build a mobile app with React Native for on-the-go learning.",
+    ],
+    featured: true,
+    gradient: "from-violet-500 via-purple-500 to-indigo-500",
+    status: "live",
+  },
+  {
     id: "skillbridge",
     title: "SkillBridge",
     subtitle: "High-Performance Tutor Marketplace",
-    description: "A comprehensive educational ecosystem featuring complex multi-role workflows and scheduling.",
+    description:
+      "A comprehensive educational ecosystem featuring complex multi-role workflows and smart scheduling.",
     image: "/skill-bridge.png",
-    tags: ["Next.js 15", "TanStack Query", "Typescript", "Postgresql", "Express.js"],
+    tags: ["Next.js 15", "TanStack Query", "TypeScript", "PostgreSQL", "Express.js"],
     demoUrl: "https://skill-bridge-frontend-gamma.vercel.app",
     githubUrl: "https://github.com/habiburRhaman05/skill-bridge-frontend",
+    backendUrl: "",
     features: [
       "Advanced RBAC for Students, Tutors, and Admins",
       "Custom Availability Engine for recurring schedules",
@@ -67,12 +104,12 @@ const projects = [
     challenges: [
       "Building a performant availability engine that handles timezone conversions for global users.",
       "Designing a complex database schema to prevent overlapping session bookings.",
-      "Implementing smooth page transitions without breaking Lenis inertia scrolling."
+      "Implementing smooth page transitions without breaking Lenis inertia scrolling.",
     ],
     futurePlans: [
       "Integrate WebRTC for direct in-platform video tutoring sessions.",
       "AI-driven tutor matching based on student learning speed and history.",
-      "Develop a mobile-first Progressive Web App (PWA) for on-the-go scheduling."
+      "Develop a mobile-first Progressive Web App (PWA) for on-the-go scheduling.",
     ],
     featured: false,
     gradient: "from-indigo-600 via-violet-600 to-purple-600",
@@ -82,11 +119,13 @@ const projects = [
     id: "opportune",
     title: "Opportune Hub",
     subtitle: "Full-Stack Job Portal",
-    description: "A modern job portal platform with real-time listings, advanced search, and smooth UI/UX.",
+    description:
+      "A modern job portal platform with real-time listings, advanced search, and smooth UI/UX.",
     image: "/opportune-hub.png",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Node.js", "MongoDB"],
     demoUrl: "https://opportune-hub.vercel.app/",
     githubUrl: "https://github.com/habiburRhaman05/OpportuneX",
+    backendUrl: "",
     features: [
       "Animated homepage transitions using Framer Motion",
       "Responsive, mobile-first design with Tailwind CSS",
@@ -95,12 +134,12 @@ const projects = [
     challenges: [
       "Achieving sub-second search results using MongoDB full-text search indexing.",
       "Ensuring form security and preventing spam using Nodemailer with rate-limiting.",
-      "Managing complex state across nested filter components."
+      "Managing complex state across nested filter components.",
     ],
     futurePlans: [
       "Add a one-click apply feature that auto-generates cover letters.",
       "Integrate LinkedIn API for easier profile importing.",
-      "Implement real-time notification system for job alerts using Socket.io."
+      "Implement real-time notification system for job alerts using Socket.io.",
     ],
     featured: false,
     gradient: "from-blue-500 via-indigo-500 to-purple-500",
@@ -110,11 +149,13 @@ const projects = [
     id: "lumina",
     title: "Lumina Compliance AI",
     subtitle: "Enterprise Document Intelligence Engine",
-    description: "A RAG-based platform designed to deconstruct legal frameworks into actionable risk reports.",
+    description:
+      "A RAG-based platform designed to deconstruct legal frameworks into actionable risk reports.",
     image: "/upcomming.avif",
-    tags: ["Next.js 15", "Golang", "PostgreSQL", "Vector DB", "Redis"],
+    tags: ["Next.js 15", "Golang", "PostgreSQL", "Vector DB", "Redis", "LangChain"],
     demoUrl: "#",
     githubUrl: "",
+    backendUrl: "",
     features: [
       "Neural Document Parsing: Extracting structured data from legal PDFs",
       "Contextual RAG Engine: High-speed semantic search using Vector embeddings",
@@ -123,17 +164,17 @@ const projects = [
     challenges: [
       "Architecting a low-latency Go-to-Python bridge for AI inference tasks.",
       "Ensuring 99% accuracy in source-citation from multi-page legal documents.",
-      "Handling massive vector embedding updates without system downtime."
+      "Handling massive vector embedding updates without system downtime.",
     ],
     futurePlans: [
       "Automated legal drafting for mitigation strategy documents.",
       "Multi-language support for international compliance standards.",
-      "On-premise deployment options for highly sensitive government data."
+      "On-premise deployment options for highly sensitive government data.",
     ],
     featured: false,
     gradient: "from-slate-900 via-slate-800 to-slate-900",
     status: "upcoming",
-  }
+  },
 ];
 
 // --- Sub-Components ---

@@ -38,8 +38,8 @@ const contactInfo = [
   {
     icon: <Linkedin className="w-5 h-5" />,
     label: "LinkedIn",
-    value: "linkedin.com/in/cdxhabib",
-    href: "https://linkedin.com/in/cdxhabib",
+    value: "linkedin.com/in/habiburrhaman05/",
+    href: "https://www.linkedin.com/in/habiburrhaman05/",
   },
   {
     icon: <Github className="w-5 h-5" />,

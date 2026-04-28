@@ -22,7 +22,7 @@ const socials = [
   },
   {
     icon: <Linkedin className="w-4 h-4" />,
-    href: "https://linkedin.com/in/cdxhabib",
+    href: "https://www.linkedin.com/in/habiburrhaman05/",
     label: "LinkedIn",
   },
   {

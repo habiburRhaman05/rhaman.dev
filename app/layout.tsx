@@ -19,7 +19,12 @@ export const metadata: Metadata = {
   title: "Habibur Rhaman — Full-Stack Software Engineer",
   description:
     "Portfolio of Habibur Rhaman — Full-Stack Developer specializing in MERN, Next.js, and scalable web applications.",
+     icons: {
+    icon: '/habib.svg', 
+   
+  },
 };
+
 
 export default function RootLayout({
   children,

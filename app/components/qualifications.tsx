@@ -14,8 +14,8 @@ import {
 const education = [
   {
     title: "Higher Secondary Certificate (HSC)",
-    organization: "Begumgonj Gov.t Pailot Collage", 
-    period: "2023 - 2024", 
+    organization: "Shrestha Shahid Md. Ruhul Amin Degree College",
+    period: "2023 - 2024",
     location: "Bangladesh",
     highlights: [
       "Group: Science",
@@ -26,9 +26,9 @@ const education = [
   },
   {
     title: "Computer Science & Engineering",
-    organization: "Shrestha Shahid Md. Ruhul Amin Degree College",
-    period: "Oct 2025 - Running",
-    location: "Noakhali, Bangladesh",
+    organization: "Sonargaon University",
+    period: "Mar 2025 - Expected Graduation: 2029",
+    location: "Narayangonj, Dhaka",
     highlights: [
       "CGPA: Running",
       "Specialized in Software Engineering & Data Structures",
@@ -36,15 +36,30 @@ const education = [
     ],
     badge: "CGPA: Running",
   },
-  
+];
+
+const courses = [
+  {
+    title: "Full-Stack Web Development",
+    organization: "Programming Hero",
+    period: "October 2025 – April 2026",
+    location: "Online",
+    highlights: [
+      "Mastered React.js, Next.js, Node.js, and PostgreSQL from scratch",
+      "Built real-world full-stack projects with REST APIs and authentication",
+      "Learned MongoDB, Express.js, JWT, and deployment best practices",
+    ],
+    certificate: "https://web.programming-hero.com/",
+    badge: "Full-Stack",
+  },
 ];
 
 const experiences = [
   {
     title: "Frontend Developer Intern",
     organization: "Zas Apparels Pvt Ltd",
-    period: "May 2023 - Present",
-    location: "Remote",
+    period: "May 2023 - Dec 2023",
+    location: "On-Site",
     highlights: [
       "Building responsive user interfaces with React and TypeScript",
       "Collaborating with design and backend teams for seamless integration",
@@ -55,12 +70,12 @@ const experiences = [
   },
 ];
 
-type Tab = "experience" | "education";
+type Tab = "experience" | "education" | "cretificates"
 
 export default function Qualifications() {
   const [activeTab, setActiveTab] = useState<Tab>("education");
 
-  const items = activeTab === "education" ? education : experiences;
+  const items = activeTab === "education" ? education : activeTab === "cretificates" ? courses : experiences
   const Icon = activeTab === "education" ? GraduationCap : Briefcase;
 
   return (
@@ -127,6 +142,24 @@ export default function Qualifications() {
               )}
               <GraduationCap className="w-4 h-4 relative z-10" />
               <span className="relative z-10">Education</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("cretificates")}
+              className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
+                activeTab === "cretificates"
+                  ? "text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {activeTab === "cretificates" && (
+                <motion.div
+                  layoutId="qualTab"
+                  className="absolute inset-0 bg-primary rounded-xl shadow-lg shadow-primary/20"
+                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                />
+              )}
+              <GraduationCap className="w-4 h-4 relative z-10" />
+              <span className="relative z-10"> Courses & Cretificates</span>
             </button>
           </div>
         </div>
