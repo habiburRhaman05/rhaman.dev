@@ -57,8 +57,8 @@ const courses = [
 const experiences = [
   {
     title: "Frontend Developer Intern",
-    organization: "Zas Apparels Pvt Ltd",
-    period: "May 2023 - Dec 2023",
+    organization: "Nix Software",
+    period: "Dec 2025 - Feb 2026",
     location: "On-Site",
     highlights: [
       "Building responsive user interfaces with React and TypeScript",
