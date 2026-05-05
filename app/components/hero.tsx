@@ -150,7 +150,7 @@ export default function Hero() {
               transition={{ delay: 0.7 }}
               className="flex flex-wrap gap-3"
             >
-              <Link href="/habib-resume.pdf" target="_blank" download>
+              <Link href="/Resume_of_Habibur_Rahman.pdf" target="_blank" download>
                 <Button
                   size="lg"
                   className="rounded-xl px-6 gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all"
