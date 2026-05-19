@@ -13,29 +13,18 @@ import {
 
 const education = [
   {
-    title: "Higher Secondary Certificate (HSC)",
-    organization: "Shrestha Shahid Md. Ruhul Amin Degree College",
-    period: "2023 - 2024",
+    title: "Secondary School Certificate (SSC)",
+    organization: "Mir Kashem Bhumuki High School",
+    period: "2021 - 2022",
     location: "Bangladesh",
     highlights: [
       "Group: Science",
       "Strong foundation in Physics, Chemistry & Mathematics",
       "Participated in academic and co-curricular activities",
     ],
-    badge: "HSC",
+    badge: "SSC",
   },
-  {
-    title: "Computer Science & Engineering",
-    organization: "Sonargaon University",
-    period: "Mar 2025 - Expected Graduation: 2029",
-    location: "Narayangonj, Dhaka",
-    highlights: [
-      "CGPA: Running",
-      "Specialized in Software Engineering & Data Structures",
-      "Active member of the Computer Science Society",
-    ],
-    badge: "CGPA: Running",
-  },
+
 ];
 
 const courses = [
@@ -54,28 +43,14 @@ const courses = [
   },
 ];
 
-const experiences = [
-  {
-    title: "Frontend Developer Intern",
-    organization: "Nix Software",
-    period: "Dec 2025 - Feb 2026",
-    location: "On-Site",
-    highlights: [
-      "Building responsive user interfaces with React and TypeScript",
-      "Collaborating with design and backend teams for seamless integration",
-      "Implementing reusable component libraries following design system standards",
-      "Optimizing web performance and improving Core Web Vitals scores",
-    ],
-    skills: ["React", "TypeScript", "Material UI", "SCSS"],
-  },
-];
 
-type Tab = "experience" | "education" | "cretificates"
+
+type Tab =   "education" | "cretificates"
 
 export default function Qualifications() {
   const [activeTab, setActiveTab] = useState<Tab>("education");
 
-  const items = activeTab === "education" ? education : activeTab === "cretificates" ? courses : experiences
+  const items = activeTab === "education" ? education :  courses 
   const Icon = activeTab === "education" ? GraduationCap : Briefcase;
 
   return (
@@ -107,24 +82,7 @@ export default function Qualifications() {
         {/* Toggle Tabs */}
         <div className="flex justify-center mb-12">
           <div className="inline-flex items-center gap-1 p-1 rounded-2xl border border-border bg-muted">
-            <button
-              onClick={() => setActiveTab("experience")}
-              className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
-                activeTab === "experience"
-                  ? "text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {activeTab === "experience" && (
-                <motion.div
-                  layoutId="qualTab"
-                  className="absolute inset-0 bg-primary rounded-xl shadow-lg shadow-primary/20"
-                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                />
-              )}
-              <Briefcase className="w-4 h-4 relative z-10" />
-              <span className="relative z-10">Experience</span>
-            </button>
+            
             <button
               onClick={() => setActiveTab("education")}
               className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
@@ -237,19 +195,7 @@ export default function Qualifications() {
                         ))}
                       </ul>
 
-                      {"skills" in item && item.skills && (
-                        <div className="flex flex-wrap gap-2">
-                          {item.skills.map((skill, idx) => (
-                            <Badge
-                              key={idx}
-                              variant="secondary"
-                              className="rounded-lg text-xs font-medium bg-muted/80 hover:bg-muted transition-colors"
-                            >
-                              {skill}
-                            </Badge>
-                          ))}
-                        </div>
-                      )}
+                     
                     </div>
                   </motion.div>
                 ))}
