@@ -1,52 +1,35 @@
-import type React from "react";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "./components/theme-provider";
-import Header from "./components/header";
-import { Suspense } from "react";
-import Loading from "./components/loading";
 import { Analytics } from "@vercel/analytics/next";
-import Footer from "./components/footer";
+import { ThemeProvider } from "./components/theme-provider";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-});
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Habibur Rhaman — Full-Stack Software Engineer",
+  metadataBase: new URL("https://rhaman.vercel.app"),
+  title: "Habibur Rahman | Full-Stack Developer & AI Automation",
   description:
-    "Portfolio of Habibur Rhaman — Full-Stack Developer specializing in MERN, Next.js, and scalable web applications.",
-     icons: {
-    icon: '/habib.svg', 
-   
+    "Habibur Rahman builds full-stack web and mobile applications, GoHighLevel and n8n automations, AI voice solutions, and cloud integrations. Explore selected engineering work and get in touch.",
+  openGraph: {
+    title: "Habibur Rahman | Software Engineering & Automation",
+    description: "Full-stack software, AI automation, and thoughtful systems built for real business needs.",
+    url: "https://rhaman.vercel.app",
+    siteName: "Habibur Rahman Portfolio",
+    type: "website",
   },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
+  icons: { icon: "/habib.svg" },
 };
 
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Suspense fallback={<Loading />}>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </Suspense>
+      <body className={`${inter.variable} ${mono.variable} font-sans antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          {children}
           <Analytics />
         </ThemeProvider>
       </body>
