@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ai-receptionist",
+    "category": "AI VOICE / AUTOMATION",
+    "title": "AI Receptionist & Booking Assistant",
+    "industry": "Home services · demo content",
+    "summary": "A sample AI-powered caller journey that captures inquiries, updates a CRM, and supports appointment scheduling.",
+    "challenge": "Incoming calls and booking requests can be missed when teams are busy.",
+    "solution": "Connect a voice assistant to CRM contact records, booking workflows, and team notifications.",
+    "outcome": "Replace with your verified client result before publishing as real work.",
+    "technologies": [
+      "AI Voice",
+      "GoHighLevel",
+      "Webhooks",
+      "CRM Automation"
+    ],
+    "visual": "voice",
+    "demoVideoUrl": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    "demoVideoLabel": "Watch sample video",
+    "demoVideoNote": "CC0 stock sample from MDN; not footage of a client implementation. Replace this URL with your own project walkthrough.",
+    "liveUrl": "",
+    "placeholder": true
+  },
+  {
+    "id": "workflow-integration",
+    "category": "INTEGRATIONS / CRM",
+    "title": "Lead Routing & Workflow Automation",
+    "industry": "Marketing agency · demo content",
+    "summary": "A sample lead-management pipeline connecting inbound forms, validation, CRM records, and follow-up tasks.",
+    "challenge": "Manual lead routing creates delays and inconsistent CRM data.",
+    "solution": "Use webhook-driven automation to validate leads, sync contact data, and notify the right team.",
+    "outcome": "Add a real outcome or remove this field when replacing the placeholder.",
+    "technologies": [
+      "n8n",
+      "GoHighLevel",
+      "REST APIs",
+      "Webhooks"
+    ],
+    "visual": "flow",
+    "demoVideoUrl": "",
+    "demoVideoLabel": "Watch demo",
+    "demoVideoNote": "",
+    "liveUrl": "",
+    "placeholder": true
+  },
+  {
+    "id": "operations-dashboard",
+    "category": "FULL-STACK / DASHBOARDS",
+    "title": "Custom Operations Dashboard",
+    "industry": "Service business · demo content",
+    "summary": "A sample unified workspace for managing appointments, operational data, and business activity.",
+    "challenge": "Disconnected tools make it difficult to review activity in one place.",
+    "solution": "Develop a role-based dashboard with API integrations, searchable records, and actionable views.",
+    "outcome": "Replace with verified scope and results from an approved client project.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "API Integrations"
+    ],
+    "visual": "dashboard",
+    "demoVideoUrl": "",
+    "demoVideoLabel": "Watch demo",
+    "demoVideoNote": "",
+    "liveUrl": "",
+    "placeholder": true
+  }
+]
