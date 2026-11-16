@@ -1,0 +1,3 @@
+Generated with the built-in image generation tool.
+Prompt: Premium landscape Veritas Pathways portfolio montage using the supplied public website, SEO dashboard and gallery screenshots. Dominant front-facing website frame, smaller gallery and SEO panels, pale mint/off-white studio background, teal accents, soft shadows and restrained editorial title. Preserve recognizable source UI; exclude account footers, private emails, invented stats and mobile screens.
+The montage is an illustrative presentation; original screenshots are included separately in the project gallery.

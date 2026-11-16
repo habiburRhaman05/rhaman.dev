@@ -19,7 +19,7 @@ import { SiMongodb, SiExpress, SiRedis, SiJest, SiVitest, SiTypescript, SiGraphq
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import { IoLogoFigma, IoLogoVercel } from "react-icons/io5";
-import { Code, Database, Cloud, Wrench, Layout, FlaskConical, Sparkles, Cpu, GitMerge, BrainCircuit } from "lucide-react";
+import { Code, Database, Cloud, Wrench, Layout, FlaskConical, Sparkles, Cpu, GitMerge, BrainCircuit, Workflow, MessageSquare, Phone, Mic, Mail } from "lucide-react";
 
 const skillCategories = [
   {
@@ -90,6 +90,22 @@ const skillCategories = [
     ],
   },
   {
+    title: "Automation & CRM",
+    icon: <Workflow className="w-4 h-4" />,
+    skills: [
+      { name: "GoHighLevel", icon: <Workflow className="w-4 h-4 text-green-500" /> },
+      { name: "n8n", icon: <GitMerge className="w-4 h-4 text-rose-500" /> },
+      { name: "Zapier", icon: <Workflow className="w-4 h-4 text-orange-500" /> },
+      { name: "Make.com", icon: <GitMerge className="w-4 h-4 text-purple-500" /> },
+      { name: "ManyChat", icon: <MessageSquare className="w-4 h-4 text-blue-500" /> },
+      { name: "Retell AI", icon: <Phone className="w-4 h-4 text-foreground" /> },
+      { name: "ElevenLabs", icon: <Mic className="w-4 h-4 text-foreground" /> },
+      { name: "Voiceflow", icon: <BrainCircuit className="w-4 h-4 text-blue-500" /> },
+      { name: "Constant Contact", icon: <Mail className="w-4 h-4 text-blue-400" /> },
+      { name: "Webhooks", icon: <TbApi className="text-green-400" /> },
+    ],
+  },
+  {
     title: "Tools",
     icon: <Wrench className="w-4 h-4" />,
     skills: [
@@ -124,7 +140,7 @@ export default function Skills() {
             Skills & Tools
           </h2>
           <p className="text-muted-foreground mt-6 max-w-2xl">
-            Technologies and tools I use to build production-grade applications
+            Technologies and tools I use to build software, AI agents, and business automations
           </p>
         </div>
 

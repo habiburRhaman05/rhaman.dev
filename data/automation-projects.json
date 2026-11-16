@@ -1,0 +1,3303 @@
+{
+  "schemaVersion": 1,
+  "collection": "automation-crm-projects",
+  "title": "Automation & CRM Client Projects",
+  "description": "Company-delivered CRM, voice AI and workflow automation projects.",
+  "agencies": [
+    {
+      "id": "ghlprime",
+      "name": "GHLPrime",
+      "websiteUrl": "https://ghlprime.com",
+      "badgeLabel": "GHLPrime · Company Work"
+    },
+    {
+      "id": "octopidigital",
+      "name": "OctopiDigital",
+      "websiteUrl": null,
+      "badgeLabel": "OctopiDigital · Company Work"
+    }
+  ],
+  "attribution": {
+    "displayBadges": [
+      "ghlprime",
+      "octopidigital"
+    ],
+    "scope": "project",
+    "note": "Owner confirmed GHLPrime as the delivering company for these projects. OctopiDigital remains a listed company affiliation."
+  },
+  "ui": {
+    "card": {
+      "contentOrder": [
+        "imageCarousel",
+        "agencyBadges",
+        "title",
+        "subtitle",
+        "overview",
+        "actions"
+      ],
+      "imageCarousel": {
+        "enabled": true,
+        "showPreviousNext": true,
+        "showIndicators": true,
+        "loop": true,
+        "autoplay": false,
+        "hideControlsForSingleImage": true
+      },
+      "actions": [
+        "website",
+        "liveTest",
+        "viewMore"
+      ]
+    },
+    "details": {
+      "presentation": "modal",
+      "sections": [
+        "overview",
+        "deliveryContext",
+        "keyFeatures",
+        "detailSections",
+        "techStack",
+        "challenges",
+        "gallery",
+        "links"
+      ],
+      "closeOnEscape": true,
+      "trapFocus": true,
+      "restoreFocus": true,
+      "lockBackgroundScroll": true
+    },
+    "gallery": {
+      "lightbox": true,
+      "zoom": true,
+      "keyboardNavigation": true
+    }
+  },
+  "editorialNotes": [
+    "Implementation details are based on the user’s descriptions, not independently tested.",
+    "Challenges are editorial drafts requiring confirmation, not verified accounts of incidents.",
+    "Suggested enhancements are separate from delivered features.",
+    "Live-test phone links initiate a user-selected call; no test calls have been placed.",
+    "No compliance certification, A2P approval or quantified business outcome is asserted.",
+    "Existing website montages illustrate brand and website context; they are not evidence of backend automation.",
+    "Automation screenshots are mapped by visible branding and filenames. New screenshot-derived showcases have unconfirmed delivery attribution and no invented results or challenge resolutions."
+  ],
+  "projects": [
+    {
+      "id": "bright-solutions",
+      "sortOrder": 1,
+      "title": "Bright Solutions US",
+      "subtitle": "Multi-channel voice automation for HVAC and roofing enquiries",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "HVAC & roofing",
+      "status": "client-work",
+      "featured": true,
+      "overview": "Implemented inbound and outbound voice workflows using Retell AI and SimpleTalk, with GoHighLevel serving as the primary CRM data source. The wider delivery included dropped-call callback logic, website lead follow-up and multi-staff calendar automation.",
+      "description": "Implemented inbound and outbound voice workflows using Retell AI and SimpleTalk, with GoHighLevel serving as the primary CRM data source. The wider delivery included dropped-call callback logic, website lead follow-up and multi-staff calendar automation.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": null
+      },
+      "websiteUrl": "https://www.brightsolutionsus.com/",
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/bright-voice-ai-workflow.png",
+      "images": [
+        {
+          "id": "bright-solutions-automation-1",
+          "src": "/automstions-images/bright-voice-ai-workflow.png",
+          "alt": "Bright Solutions voice-agent workflow with pre-call and post-call processing.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Bright Solutions voice-agent workflow with pre-call and post-call processing.",
+          "aspect": 1.870352
+        },
+        {
+          "id": "bright-solutions-automation-2",
+          "src": "/automstions-images/bright-voice-ai-retelland%20ghl.png",
+          "alt": "Bright Solutions HVAC inbound-agent prompt and available actions.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Bright Solutions HVAC inbound-agent prompt and available actions.",
+          "aspect": 1.924471
+        },
+        {
+          "id": "bright-solutions-automation-3",
+          "src": "/automstions-images/bright-voice-ai-ghl-calling-workflow.png",
+          "alt": "GoHighLevel outbound-call trigger, waiting steps and webhook handoff.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "GoHighLevel outbound-call trigger, waiting steps and webhook handoff.",
+          "aspect": 1.013528
+        },
+        {
+          "id": "bright-solutions-automation-4",
+          "src": "/automstions-images/bright-voice-ai-ghl-team-notify.png",
+          "alt": "Callback notification workflow with contact lookup and creation branches.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Callback notification workflow with contact lookup and creation branches.",
+          "aspect": 1.990615
+        },
+        {
+          "id": "bright-solutions-automation-5",
+          "src": "/automstions-images/bright-voice-ai-ghl-transcript-recedive.png",
+          "alt": "Call-summary webhook processing and CRM contact matching.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Call-summary webhook processing and CRM contact matching.",
+          "aspect": 1.981289
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://www.brightsolutionsus.com/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "liveTest",
+          "label": "Call Voice AI Demo",
+          "href": "tel:+19788007846",
+          "type": "phone",
+          "phoneNumber": "+19788007846",
+          "availabilityVerified": false
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "bright-solutions"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Inbound and outbound voice AI for HVAC and roofing",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "GoHighLevel as the primary lead data source",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Dropped-call callback automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Agent conversation rules configured around client-provided compliance requirements",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Website lead-form automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Lead follow-up workflows",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Multiple staff calendar automation",
+          "evidence": "user-provided"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Implemented inbound and outbound voice workflows using Retell AI and SimpleTalk, with GoHighLevel serving as the primary CRM data source. The wider delivery included dropped-call callback logic, website lead follow-up and multi-staff calendar automation."
+        },
+        {
+          "title": "Business need",
+          "body": "Coordinate home-service enquiries across voice interactions, CRM records and staff scheduling."
+        },
+        {
+          "title": "My contribution",
+          "body": "Built voice-agent workflows and callback automation, configured client-provided conversation rules, and connected website follow-up with staff calendar workflows."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "Voice interactions use the CRM as their main data context. Dropped-call events trigger the configured callback flow, while website enquiries enter follow-up workflows. Calendar automation supports scheduling across multiple staff members."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Reported delivery scope, based on the project brief.",
+          "items": [
+            "Inbound and outbound voice AI for HVAC and roofing",
+            "GoHighLevel as the primary lead data source",
+            "Dropped-call callback automation",
+            "Agent conversation rules configured around client-provided compliance requirements",
+            "Website lead-form automation",
+            "Lead follow-up workflows",
+            "Multiple staff calendar automation"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to coordinate home-service enquiries across voice interactions, CRM records and staff scheduling."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "Retell AI",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "SimpleTalk",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Keeping lead context consistent across voice platforms and the CRM",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Controlling callback triggers to avoid duplicate or inappropriate repeat calls",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Routing enquiries across multiple staff calendars",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Representing client-provided conversation rules consistently across agents",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "user-provided-project-summary",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Review draft challenges",
+        "Supply automation screenshots where only website imagery or placeholders are available"
+      ],
+      "businessNeed": "Coordinate home-service enquiries across voice interactions, CRM records and staff scheduling.",
+      "myContribution": "Built voice-agent workflows and callback automation, configured client-provided conversation rules, and connected website follow-up with staff calendar workflows.",
+      "workflowNarrative": "Voice interactions use the CRM as their main data context. Dropped-call events trigger the configured callback flow, while website enquiries enter follow-up workflows. Calendar automation supports scheduling across multiple staff members.",
+      "valueStatement": "Designed to coordinate home-service enquiries across voice interactions, CRM records and staff scheduling.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      }
+    },
+    {
+      "id": "savannah-automation",
+      "sortOrder": 2,
+      "title": "Savannah Age Management Medicine & SkinMed",
+      "subtitle": "Cross-website CRM and renewal workflows for a healthcare practice",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "Healthcare & medical aesthetics",
+      "status": "client-work",
+      "featured": false,
+      "overview": "Delivered CRM and booking-related automation across Savannah’s healthcare and medical-aesthetics websites. The implementation covered website enquiries, Optimantra booking workflows, annual-renewal pipelines, automated renewal messages and specials-related bookings.",
+      "description": "Delivered CRM and booking-related automation across Savannah’s healthcare and medical-aesthetics websites. The implementation covered website enquiries, Optimantra booking workflows, annual-renewal pipelines, automated renewal messages and specials-related bookings.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": null
+      },
+      "websiteUrl": "https://www.savannahskinmed.com/",
+      "additionalWebsites": [
+        {
+          "label": "Age Management Medicine",
+          "url": "https://agemanagementmed.com/"
+        }
+      ],
+      "thumbnail": "/automstions-images/samm-booking-om.png",
+      "images": [
+        {
+          "id": "savannah-automation-automation-1",
+          "src": "/automstions-images/samm-booking-om.png",
+          "alt": "Optimantra booking workflow with conditional appointment-processing branches.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Optimantra booking workflow with conditional appointment-processing branches.",
+          "aspect": 1.756048
+        },
+        {
+          "id": "savannah-automation-automation-2",
+          "src": "/automstions-images/samm-booking-om-1.png",
+          "alt": "Booking webhook intake, contact processing and downstream workflow actions.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Booking webhook intake, contact processing and downstream workflow actions.",
+          "aspect": 1.928499
+        },
+        {
+          "id": "savannah-automation-automation-3",
+          "src": "/automstions-images/samm-website-form-submit.png",
+          "alt": "Website form intake with existing-contact and new-contact branches.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Website form intake with existing-contact and new-contact branches.",
+          "aspect": 1.477432
+        },
+        {
+          "id": "savannah-automation-automation-4",
+          "src": "/automstions-images/samm-google-ads-workflow.png",
+          "alt": "SAMM Google Ads campaign-attribution workflow.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "SAMM Google Ads campaign-attribution workflow.",
+          "aspect": 1.908543
+        },
+        {
+          "id": "savannah-automation-1",
+          "src": "/portfolio-montages/aesthetics-thumbnail.png",
+          "alt": "Savannah Age Management Medicine & SkinMed — project cover",
+          "type": "website-montage",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Website presentation; automation workflows described separately.",
+          "aspect": 1.3333
+        },
+        {
+          "id": "savannah-automation-2",
+          "src": "/portfolio-montages/samm-admin.png",
+          "alt": "Savannah Age Management Medicine & SkinMed — website showcase",
+          "type": "website-montage",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Website presentation; automation workflows described separately.",
+          "aspect": 1.7768
+        },
+        {
+          "id": "savannah-automation-3",
+          "src": "/portfolio-montages/aesthetics-admin.png",
+          "alt": "Savannah Age Management Medicine & SkinMed — website showcase",
+          "type": "website-montage",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Website presentation; automation workflows described separately.",
+          "aspect": 1.7768
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://www.savannahskinmed.com/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "savannah-automation"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "CRM management across healthcare and aesthetics enquiries",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Website lead-capture automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Optimantra booking automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Annual renewal pipeline",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Automated renewal message follow-up",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Specials booking automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Google Ads campaign-attribution routing and CRM field updates",
+          "evidence": "screenshot-observed"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Delivered CRM and booking-related automation across Savannah’s healthcare and medical-aesthetics websites. The implementation covered website enquiries, Optimantra booking workflows, annual-renewal pipelines, automated renewal messages and specials-related bookings."
+        },
+        {
+          "title": "Business need",
+          "body": "Keep enquiries, booking activity and recurring renewal communication organized across two service websites."
+        },
+        {
+          "title": "My contribution",
+          "body": "Managed CRM workflows and implemented website lead capture, Optimantra booking automation, renewal tracking and promotional booking journeys."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "Website enquiries enter CRM workflows, while Optimantra booking automation supports the appointment journey. Annual renewals are tracked through a dedicated pipeline with automated message follow-up; specials bookings follow their own promotional journey."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Reported delivery scope, based on the project brief.",
+          "items": [
+            "CRM management across healthcare and aesthetics enquiries",
+            "Website lead-capture automation",
+            "Optimantra booking automation",
+            "Annual renewal pipeline",
+            "Automated renewal message follow-up",
+            "Specials booking automation"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to keep enquiries, booking activity and recurring renewal communication organized across two service websites."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "inferred-from-user-context",
+          "verificationRequired": true
+        },
+        {
+          "name": "Optimantra",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Keeping enquiries from two websites organized in a shared CRM workflow",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Coordinating booking events with renewal and promotional follow-up",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Preventing overlapping messages across annual-renewal and specials journeys",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [
+        {
+          "title": "Enquiry segmentation by website and service",
+          "status": "proposed-not-confirmed-delivered"
+        },
+        {
+          "title": "Appointment rescheduling follow-up",
+          "status": "proposed-not-confirmed-delivered"
+        },
+        {
+          "title": "Staff notifications for overdue renewal tasks",
+          "status": "proposed-not-confirmed-delivered"
+        }
+      ],
+      "results": [],
+      "contentSource": "user-provided-project-summary",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Review draft challenges",
+        "Supply automation screenshots where only website imagery or placeholders are available"
+      ],
+      "businessNeed": "Keep enquiries, booking activity and recurring renewal communication organized across two service websites.",
+      "myContribution": "Managed CRM workflows and implemented website lead capture, Optimantra booking automation, renewal tracking and promotional booking journeys.",
+      "workflowNarrative": "Website enquiries enter CRM workflows, while Optimantra booking automation supports the appointment journey. Annual renewals are tracked through a dedicated pipeline with automated message follow-up; specials bookings follow their own promotional journey.",
+      "valueStatement": "Designed to keep enquiries, booking activity and recurring renewal communication organized across two service websites.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      }
+    },
+    {
+      "id": "isa-melo",
+      "sortOrder": 3,
+      "title": "Isa Melo Real Estate",
+      "subtitle": "Attribution-aware real estate funnels and social follow-up",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "Real estate",
+      "status": "client-work",
+      "featured": false,
+      "overview": "Built a real estate lead-generation funnel with enquiry, investment and quiz forms, preserving UTM information for campaign context. WhatsApp follow-up and Instagram comment automation connected the funnel with ManyChat and GoHighLevel communication workflows.",
+      "description": "Built a real estate lead-generation funnel with enquiry, investment and quiz forms, preserving UTM information for campaign context. WhatsApp follow-up and Instagram comment automation connected the funnel with ManyChat and GoHighLevel communication workflows.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": null
+      },
+      "websiteUrl": "https://find.isamelorealestate.com/",
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/instagram-automation-1.png",
+      "images": [
+        {
+          "id": "isa-melo-automation-1",
+          "src": "/automstions-images/instagram-automation-1.png",
+          "alt": "Instagram direct-message lead workflow in GoHighLevel.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Instagram direct-message lead workflow in GoHighLevel.",
+          "aspect": 1.926485
+        },
+        {
+          "id": "isa-melo-automation-2",
+          "src": "/automstions-images/instagram-atumation-2.png",
+          "alt": "Instagram comment-triggered lead workflow in GoHighLevel.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Instagram comment-triggered lead workflow in GoHighLevel.",
+          "aspect": 1.205617
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://find.isamelorealestate.com/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "isa-melo"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Real estate funnel implementation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Enquiry and investment-form automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Quiz-form lead capture",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "UTM collection for campaign attribution",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "WhatsApp lead follow-up",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Instagram comment automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "ManyChat and GoHighLevel workflow integration",
+          "evidence": "user-provided"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Built a real estate lead-generation funnel with enquiry, investment and quiz forms, preserving UTM information for campaign context. WhatsApp follow-up and Instagram comment automation connected the funnel with ManyChat and GoHighLevel communication workflows."
+        },
+        {
+          "title": "Business need",
+          "body": "Capture useful lead context and campaign attribution while connecting paid and social traffic to follow-up."
+        },
+        {
+          "title": "My contribution",
+          "body": "Implemented the funnel, form and quiz automation, UTM capture, WhatsApp follow-up, and Instagram comment workflows using ManyChat and GoHighLevel."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "Prospects submit enquiry or quiz information through the funnel, with UTM data collected for campaign context. WhatsApp workflows support follow-up, while Instagram comment automation creates an additional social engagement pathway."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Reported delivery scope, based on the project brief.",
+          "items": [
+            "Real estate funnel implementation",
+            "Enquiry and investment-form automation",
+            "Quiz-form lead capture",
+            "UTM collection for campaign attribution",
+            "WhatsApp lead follow-up",
+            "Instagram comment automation",
+            "ManyChat and GoHighLevel workflow integration"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to capture useful lead context and campaign attribution while connecting paid and social traffic to follow-up."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "ManyChat",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "WhatsApp",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "Instagram",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Preserving campaign attribution across form submissions and follow-up",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Connecting social interactions to CRM contacts without duplicate records",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Using quiz responses to provide relevant follow-up context",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "user-provided-project-summary",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Review draft challenges",
+        "Supply automation screenshots where only website imagery or placeholders are available",
+        "Instagram screenshots match the reported social automation scope, but contain no visible Isa Melo branding; confirm client association."
+      ],
+      "businessNeed": "Capture useful lead context and campaign attribution while connecting paid and social traffic to follow-up.",
+      "myContribution": "Implemented the funnel, form and quiz automation, UTM capture, WhatsApp follow-up, and Instagram comment workflows using ManyChat and GoHighLevel.",
+      "workflowNarrative": "Prospects submit enquiry or quiz information through the funnel, with UTM data collected for campaign context. WhatsApp workflows support follow-up, while Instagram comment automation creates an additional social engagement pathway.",
+      "valueStatement": "Designed to capture useful lead context and campaign attribution while connecting paid and social traffic to follow-up.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      }
+    },
+    {
+      "id": "coaching-academy",
+      "sortOrder": 4,
+      "title": "The Coaching Academy",
+      "subtitle": "Recurring payment communication and student membership delivery",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "Education & coaching",
+      "status": "client-work",
+      "featured": false,
+      "overview": "Implemented payment follow-up, monthly renewal reminders and appointment-booked nurture for The Coaching Academy. Stripe payment communication and GoHighLevel workflows connect booking events, contact tagging, email and SMS follow-up with a dedicated student membership portal and community.",
+      "description": "Implemented payment follow-up, monthly renewal reminders and appointment-booked nurture for The Coaching Academy. Stripe payment communication and GoHighLevel workflows connect booking events, contact tagging, email and SMS follow-up with a dedicated student membership portal and community.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": null
+      },
+      "websiteUrl": "https://www.coachingacademy.com/",
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/raj-coaching%20-%20payment%20automation.png",
+      "images": [
+        {
+          "id": "coaching-academy-automation-1",
+          "src": "/automstions-images/raj-coaching%20-%20payment%20automation.png",
+          "alt": "Payment-success workflow with conditional follow-up branches.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Payment-success workflow with conditional follow-up branches.",
+          "aspect": 1.748231
+        },
+        {
+          "id": "coaching-academy-automation-2",
+          "src": "/automstions-images/raj-coaching-1.png",
+          "alt": "Appointment-booked nurture sequence with tags, email and SMS.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Appointment-booked nurture sequence with tags, email and SMS.",
+          "aspect": 1.624748
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://www.coachingacademy.com/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "coaching-academy"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Stripe payment follow-up automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Monthly renewal reminder workflows",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "GoHighLevel student membership portal",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Student community setup",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Payment-success workflow with conditional branches",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Appointment-status trigger",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Booked-call tag management",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Email and SMS booking nurture",
+          "evidence": "screenshot-observed"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Implemented payment follow-up, monthly renewal reminders and appointment-booked nurture for The Coaching Academy. Stripe payment communication and GoHighLevel workflows connect booking events, contact tagging, email and SMS follow-up with a dedicated student membership portal and community."
+        },
+        {
+          "title": "Business need",
+          "body": "Support recurring payment communication and provide students with a dedicated membership and community environment."
+        },
+        {
+          "title": "My contribution",
+          "body": "Built payment and renewal workflows, configured appointment-status triggers and booked-call tags, and connected email and SMS nurture with the student membership portal and community in GoHighLevel."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "Payment-success events enter conditional follow-up workflows, while monthly reminders support the renewal cycle. Appointment bookings trigger contact-tag updates followed by email and SMS nurture. The GoHighLevel membership portal and community provide the student-facing environment."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Scope documented in the owner brief and supplied workflow screenshots.",
+          "items": [
+            "Stripe payment follow-up automation",
+            "Monthly renewal reminder workflows",
+            "GoHighLevel student membership portal",
+            "Student community setup",
+            "Payment-success workflow with conditional branches",
+            "Appointment-status trigger",
+            "Booked-call tag management",
+            "Email and SMS booking nurture"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to support recurring payment communication and provide students with a dedicated membership and community environment."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "Stripe",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Coordinating recurring payment communication with membership workflows",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Keeping renewal reminders relevant to the correct billing period",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Organizing student access and community touchpoints",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "user-provided-project-summary-and-screenshots",
+      "reviewRequired": [
+        "Review draft challenges"
+      ],
+      "businessNeed": "Support recurring payment communication and provide students with a dedicated membership and community environment.",
+      "myContribution": "Built payment and renewal workflows, configured appointment-status triggers and booked-call tags, and connected email and SMS nurture with the student membership portal and community in GoHighLevel.",
+      "workflowNarrative": "Payment-success events enter conditional follow-up workflows, while monthly reminders support the renewal cycle. Appointment bookings trigger contact-tag updates followed by email and SMS nurture. The GoHighLevel membership portal and community provide the student-facing environment.",
+      "valueStatement": "Designed to support recurring payment communication and provide students with a dedicated membership and community environment.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      },
+      "aliases": [
+        "Raj Coaching"
+      ]
+    },
+    {
+      "id": "jj-flooring",
+      "sortOrder": 5,
+      "title": "JJ Flooring World",
+      "subtitle": "Lead-to-estimate automation for a flooring business",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "Flooring",
+      "status": "client-work",
+      "featured": true,
+      "overview": "Connected the customer enquiry journey with estimating, sales follow-up and payment communication. The implementation combined GoHighLevel workflows with a custom estimating dashboard, allowing estimate creation and sending to operate alongside CRM pipeline management.",
+      "description": "Connected the customer enquiry journey with estimating, sales follow-up and payment communication. The implementation combined GoHighLevel workflows with a custom estimating dashboard, allowing estimate creation and sending to operate alongside CRM pipeline management.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": null
+      },
+      "websiteUrl": "https://jjflooringworld.com/",
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/jj-flooring.png",
+      "images": [
+        {
+          "id": "jj-flooring-website-screenshot",
+          "src": "/automstions-images/jj-flooring.png",
+          "alt": "JJ Flooring World client website screenshot",
+          "type": "website-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Client website and brand context for JJ Flooring World. Automation implementation details are documented separately in this case study.",
+          "aspect": 1.84879
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://jjflooringworld.com/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "jj-flooring"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Website lead-form capture and CRM automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Estimate-form intake automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Inbound voice AI",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Estimate creation and sending from a custom dashboard synchronized with GoHighLevel",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Sales pipeline management",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Lead follow-up workflows",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Payment received, payment failed and payment reminder workflows",
+          "evidence": "user-provided"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Connected the customer enquiry journey with estimating, sales follow-up and payment communication. The implementation combined GoHighLevel workflows with a custom estimating dashboard, allowing estimate creation and sending to operate alongside CRM pipeline management."
+        },
+        {
+          "title": "Business need",
+          "body": "Bring website enquiries, estimate preparation and follow-up into a coordinated operating process."
+        },
+        {
+          "title": "My contribution",
+          "body": "Implemented website and estimate-form automation, inbound voice AI, dashboard-to-CRM synchronization, pipeline management, and payment-event communication."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "An enquiry enters the CRM through the website or estimate form. Estimate creation and sending are handled through the connected dashboard, while pipeline and follow-up workflows organize the sales journey. Payment-received, failed-payment and reminder branches cover the payment communication stage."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Reported delivery scope, based on the project brief.",
+          "items": [
+            "Website lead-form capture and CRM automation",
+            "Estimate-form intake automation",
+            "Inbound voice AI",
+            "Estimate creation and sending from a custom dashboard synchronized with GoHighLevel",
+            "Sales pipeline management",
+            "Lead follow-up workflows",
+            "Payment received, payment failed and payment reminder workflows"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to bring website enquiries, estimate preparation and follow-up into a coordinated operating process."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "Custom Dashboard",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Keeping dashboard estimates and CRM pipeline records synchronized",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Preventing duplicate follow-ups when a lead changes stage",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Separating payment-success, failure and reminder branches",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "user-provided-project-summary",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Review draft challenges",
+        "Supply automation screenshots where only website imagery or placeholders are available"
+      ],
+      "businessNeed": "Bring website enquiries, estimate preparation and follow-up into a coordinated operating process.",
+      "myContribution": "Implemented website and estimate-form automation, inbound voice AI, dashboard-to-CRM synchronization, pipeline management, and payment-event communication.",
+      "workflowNarrative": "An enquiry enters the CRM through the website or estimate form. Estimate creation and sending are handled through the connected dashboard, while pipeline and follow-up workflows organize the sales journey. Payment-received, failed-payment and reminder branches cover the payment communication stage.",
+      "valueStatement": "Designed to bring website enquiries, estimate preparation and follow-up into a coordinated operating process.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      }
+    },
+    {
+      "id": "quicktax-automation",
+      "sortOrder": 6,
+      "title": "QuickTaxnBooks",
+      "subtitle": "Client lifecycle automation for a tax and bookkeeping practice",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "Tax & bookkeeping",
+      "status": "client-work",
+      "featured": true,
+      "overview": "Implemented a connected client journey spanning enquiry capture, voice AI, paid consultations, Stripe payments, recurring reminders and a branded membership portal. The work extended beyond individual automations to include client communication channels, staff assignment, file sharing and account branding.",
+      "description": "Implemented a connected client journey spanning enquiry capture, voice AI, paid consultations, Stripe payments, recurring reminders and a branded membership portal. The work extended beyond individual automations to include client communication channels, staff assignment, file sharing and account branding.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": null
+      },
+      "websiteUrl": "https://quicktaxnbooks.com/",
+      "additionalWebsites": [],
+      "thumbnail": "/portfolio-montages/quicktax-thumbnail.png",
+      "images": [
+        {
+          "id": "quicktax-automation-1",
+          "src": "/portfolio-montages/quicktax-thumbnail.png",
+          "alt": "QuickTaxnBooks — project cover",
+          "type": "website-montage",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Website presentation; automation workflows described separately.",
+          "aspect": 1.3333
+        },
+        {
+          "id": "quicktax-automation-2",
+          "src": "/portfolio-montages/quicktax-hero.png",
+          "alt": "QuickTaxnBooks — website showcase",
+          "type": "website-montage",
+          "isPlaceholder": false,
+          "isMobileConcept": true,
+          "caption": "Website presentation; automation workflows described separately.",
+          "aspect": 1.7768
+        },
+        {
+          "id": "quicktax-automation-3",
+          "src": "/portfolio-montages/quicktax-pricing-booking.png",
+          "alt": "QuickTaxnBooks — website showcase",
+          "type": "website-montage",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Website presentation; automation workflows described separately.",
+          "aspect": 1.7768
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://quicktaxnbooks.com/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "liveTest",
+          "label": "Call Voice AI Demo",
+          "href": "tel:+15186082322",
+          "type": "phone",
+          "phoneNumber": "+15186082322",
+          "availabilityVerified": false
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "quicktax-automation"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Contact, booking and custom-quote request automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Inbound and outbound voice AI",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Stripe-connected payment automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Monthly renewal reminder workflows",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Paid calendar booking with reminders and follow-up",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Social publishing management inside GoHighLevel",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Google organic booking setup",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Client and membership portal implementation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "File sharing and staff assignment workflows",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Email and SMS campaigns",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "White-label configuration and branded domain setup",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "A2P submission and registration process support",
+          "evidence": "user-provided"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Implemented a connected client journey spanning enquiry capture, voice AI, paid consultations, Stripe payments, recurring reminders and a branded membership portal. The work extended beyond individual automations to include client communication channels, staff assignment, file sharing and account branding."
+        },
+        {
+          "title": "Business need",
+          "body": "Coordinate client acquisition, appointment booking, payment communication and recurring engagement across a professional-services practice."
+        },
+        {
+          "title": "My contribution",
+          "body": "Configured GoHighLevel workflows and Stripe-connected payment journeys; built inbound and outbound voice AI, paid calendar automation, client portal workflows, campaigns and branded account infrastructure."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "Website contact, booking and quote requests feed the CRM. Voice AI and calendar workflows support the consultation journey. Payment and renewal events drive communication, while portal access, file sharing and staff assignment support ongoing client service."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Reported delivery scope, based on the project brief.",
+          "items": [
+            "Contact, booking and custom-quote request automation",
+            "Inbound and outbound voice AI",
+            "Stripe-connected payment automation",
+            "Monthly renewal reminder workflows",
+            "Paid calendar booking with reminders and follow-up",
+            "Social publishing management inside GoHighLevel",
+            "Google organic booking setup",
+            "Client and membership portal implementation",
+            "File sharing and staff assignment workflows",
+            "Email and SMS campaigns",
+            "White-label configuration and branded domain setup",
+            "A2P submission and registration process support"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to coordinate client acquisition, appointment booking, payment communication and recurring engagement across a professional-services practice."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "Stripe",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Coordinating paid booking and payment state without sending conflicting messages",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Separating renewal, booking and lead follow-up sequences",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Managing branded portal access and staff assignment across the client journey",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Preparing consistent messaging configuration for the A2P submission process",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [
+        {
+          "title": "Portal onboarding checklist",
+          "status": "proposed-not-confirmed-delivered"
+        },
+        {
+          "title": "Document-request reminders",
+          "status": "proposed-not-confirmed-delivered"
+        },
+        {
+          "title": "Staff handoff notifications",
+          "status": "proposed-not-confirmed-delivered"
+        }
+      ],
+      "results": [],
+      "contentSource": "user-provided-project-summary",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Review draft challenges",
+        "Supply automation screenshots where only website imagery or placeholders are available"
+      ],
+      "businessNeed": "Coordinate client acquisition, appointment booking, payment communication and recurring engagement across a professional-services practice.",
+      "myContribution": "Configured GoHighLevel workflows and Stripe-connected payment journeys; built inbound and outbound voice AI, paid calendar automation, client portal workflows, campaigns and branded account infrastructure.",
+      "workflowNarrative": "Website contact, booking and quote requests feed the CRM. Voice AI and calendar workflows support the consultation journey. Payment and renewal events drive communication, while portal access, file sharing and staff assignment support ongoing client service.",
+      "valueStatement": "Designed to coordinate client acquisition, appointment booking, payment communication and recurring engagement across a professional-services practice.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      }
+    },
+    {
+      "id": "ghlevelup",
+      "sortOrder": 7,
+      "title": "GHLevelUp",
+      "subtitle": "White-label agency setup with conversational lead capture",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "Agency services",
+      "status": "client-work",
+      "featured": false,
+      "overview": "Established a branded GoHighLevel agency setup with website automation, voice AI and a website chatbot. The delivery connected the agency’s public-facing enquiry channels with its CRM foundation and white-label presentation.",
+      "description": "Established a branded GoHighLevel agency setup with website automation, voice AI and a website chatbot. The delivery connected the agency’s public-facing enquiry channels with its CRM foundation and white-label presentation.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": null
+      },
+      "websiteUrl": "https://www.ghlevelup.com/",
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/ghlevelup.png",
+      "images": [
+        {
+          "id": "ghlevelup-website-screenshot",
+          "src": "/automstions-images/ghlevelup.png",
+          "alt": "GHLevelUp client website screenshot",
+          "type": "website-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Client website and brand context for GHLevelUp. Automation implementation details are documented separately in this case study.",
+          "aspect": 1.780341
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://www.ghlevelup.com/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "liveTest",
+          "label": "Call Voice AI Demo",
+          "href": "tel:+15189418455",
+          "type": "phone",
+          "phoneNumber": "+15189418455",
+          "availabilityVerified": false
+        },
+        {
+          "id": "chatbot",
+          "label": "Try Website Chatbot",
+          "href": "https://www.ghlevelup.com/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "ghlevelup"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Website enquiry automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "White-label configuration",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Agency account setup",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Voice AI implementation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Website chatbot implementation",
+          "evidence": "user-provided"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Established a branded GoHighLevel agency setup with website automation, voice AI and a website chatbot. The delivery connected the agency’s public-facing enquiry channels with its CRM foundation and white-label presentation."
+        },
+        {
+          "title": "Business need",
+          "body": "Create a consistent agency identity and an organized foundation for enquiries across web, voice and chat."
+        },
+        {
+          "title": "My contribution",
+          "body": "Configured the agency environment and white-label setup, implemented website automation, and built voice AI and chatbot experiences."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "Visitors can engage through the website, voice AI or chatbot. The implementation brings these enquiry channels into the agency’s GoHighLevel setup, supported by consistent branding and website automation."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Reported delivery scope, based on the project brief.",
+          "items": [
+            "Website enquiry automation",
+            "White-label configuration",
+            "Agency account setup",
+            "Voice AI implementation",
+            "Website chatbot implementation"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to create a consistent agency identity and an organized foundation for enquiries across web, voice and chat."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Aligning agency branding across website and CRM touchpoints",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Coordinating voice and chat enquiries with website lead capture",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "user-provided-project-summary",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Review draft challenges",
+        "Supply automation screenshots where only website imagery or placeholders are available"
+      ],
+      "businessNeed": "Create a consistent agency identity and an organized foundation for enquiries across web, voice and chat.",
+      "myContribution": "Configured the agency environment and white-label setup, implemented website automation, and built voice AI and chatbot experiences.",
+      "workflowNarrative": "Visitors can engage through the website, voice AI or chatbot. The implementation brings these enquiry channels into the agency’s GoHighLevel setup, supported by consistent branding and website automation.",
+      "valueStatement": "Designed to create a consistent agency identity and an organized foundation for enquiries across web, voice and chat.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      }
+    },
+    {
+      "id": "dutch-fc-automation",
+      "sortOrder": 8,
+      "title": "Dutch Football Club",
+      "subtitle": "Player routing and reporting automation for club operations",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "Youth football & sports operations",
+      "status": "client-work",
+      "featured": true,
+      "overview": "Implemented age-group-based player workflows, coach assignment and coach pipelines alongside Meta Ads reporting automation and a chatbot. A branded internal dashboard synchronized with GoHighLevel supports the club’s team-facing operating experience.",
+      "description": "Implemented age-group-based player workflows, coach assignment and coach pipelines alongside Meta Ads reporting automation and a chatbot. A branded internal dashboard synchronized with GoHighLevel supports the club’s team-facing operating experience.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": null
+      },
+      "websiteUrl": "https://www.dutchfc.com/",
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/dutch-fc.png",
+      "images": [
+        {
+          "id": "dutch-fc-automation-website-screenshot",
+          "src": "/automstions-images/dutch-fc.png",
+          "alt": "Dutch Football Club client website screenshot",
+          "type": "website-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Client website and brand context for Dutch Football Club. Automation implementation details are documented separately in this case study.",
+          "aspect": 1.683417
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://www.dutchfc.com/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "dutch-fc-automation"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Meta Ads reporting automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Chatbot implementation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Player workflow branching by age group",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Coach assignment automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Coach pipeline management",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Internal dashboard for team operations",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "White-label dashboard interface",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "GoHighLevel data synchronization",
+          "evidence": "user-provided"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Implemented age-group-based player workflows, coach assignment and coach pipelines alongside Meta Ads reporting automation and a chatbot. A branded internal dashboard synchronized with GoHighLevel supports the club’s team-facing operating experience."
+        },
+        {
+          "title": "Business need",
+          "body": "Organize player enquiries and coach assignment while bringing CRM data and reporting into an internal team interface."
+        },
+        {
+          "title": "My contribution",
+          "body": "Built player workflow branches, coach assignment automation, pipeline workflows, Meta Ads reporting automation, chatbot functionality and dashboard-to-CRM synchronization."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "Player information drives age-group workflow branches and coach assignments. Coach pipelines organize follow-up, while the internal dashboard synchronizes with GoHighLevel. Meta Ads reporting automation supports visibility into advertising activity."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Reported delivery scope, based on the project brief.",
+          "items": [
+            "Meta Ads reporting automation",
+            "Chatbot implementation",
+            "Player workflow branching by age group",
+            "Coach assignment automation",
+            "Coach pipeline management",
+            "Internal dashboard for team operations",
+            "White-label dashboard interface",
+            "GoHighLevel data synchronization"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to organize player enquiries and coach assignment while bringing CRM data and reporting into an internal team interface."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "Meta Ads",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "Custom Dashboard",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Handling player age-group variations consistently during assignment",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Keeping coach pipelines and the internal dashboard synchronized",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Organizing reporting inputs for useful team visibility",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "user-provided-project-summary",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Review draft challenges",
+        "Supply automation screenshots where only website imagery or placeholders are available"
+      ],
+      "businessNeed": "Organize player enquiries and coach assignment while bringing CRM data and reporting into an internal team interface.",
+      "myContribution": "Built player workflow branches, coach assignment automation, pipeline workflows, Meta Ads reporting automation, chatbot functionality and dashboard-to-CRM synchronization.",
+      "workflowNarrative": "Player information drives age-group workflow branches and coach assignments. Coach pipelines organize follow-up, while the internal dashboard synchronizes with GoHighLevel. Meta Ads reporting automation supports visibility into advertising activity.",
+      "valueStatement": "Designed to organize player enquiries and coach assignment while bringing CRM data and reporting into an internal team interface.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      }
+    },
+    {
+      "id": "bellesynk-automation",
+      "sortOrder": 9,
+      "title": "BelleSynk AI",
+      "subtitle": "Collaborative voice AI and calendar automation delivery",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "AI reception & medical-spa services",
+      "status": "client-work",
+      "featured": false,
+      "overview": "Co-delivered voice AI, website contact-form automation and calendar workflows for BelleSynk AI alongside another team member. The contribution focused on connecting conversational enquiries with the website and scheduling journey.",
+      "description": "Co-delivered voice AI, website contact-form automation and calendar workflows for BelleSynk AI alongside another team member. The contribution focused on connecting conversational enquiries with the website and scheduling journey.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": "Co-worked with another team member; individual feature ownership is not specified."
+      },
+      "websiteUrl": "https://bellesynk.ai/",
+      "additionalWebsites": [],
+      "thumbnail": "/portfolio-montages/bellesynk-thumbnail.png",
+      "images": [
+        {
+          "id": "bellesynk-automation-1",
+          "src": "/portfolio-montages/bellesynk-thumbnail.png",
+          "alt": "BelleSynk AI — project cover",
+          "type": "website-montage",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Website presentation; automation workflows described separately.",
+          "aspect": 1.3333
+        },
+        {
+          "id": "bellesynk-automation-2",
+          "src": "/portfolio-montages/bellesynk-hero-iphone.png",
+          "alt": "BelleSynk AI — website showcase",
+          "type": "website-montage",
+          "isPlaceholder": false,
+          "isMobileConcept": true,
+          "caption": "Website presentation; automation workflows described separately.",
+          "aspect": 1.7768
+        },
+        {
+          "id": "bellesynk-automation-3",
+          "src": "/portfolio-montages/bellesynk-pricing-demo.png",
+          "alt": "BelleSynk AI — website showcase",
+          "type": "website-montage",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Website presentation; automation workflows described separately.",
+          "aspect": 1.7768
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://bellesynk.ai/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "bellesynk-automation"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Voice AI implementation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Website contact-form automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Calendar automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Collaborative implementation with another team member",
+          "evidence": "user-provided"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Co-delivered voice AI, website contact-form automation and calendar workflows for BelleSynk AI alongside another team member. The contribution focused on connecting conversational enquiries with the website and scheduling journey."
+        },
+        {
+          "title": "Business need",
+          "body": "Support a coherent enquiry and booking experience across voice AI, website forms and calendars."
+        },
+        {
+          "title": "My contribution",
+          "body": "Worked with a teammate on voice AI implementation, contact-form automation and calendar workflows. Individual ownership of each subsystem has not been specified."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "Website forms capture enquiries, voice AI provides a conversational entry point, and calendar automation supports scheduling. The project was delivered collaboratively rather than represented as sole-authored work."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Reported delivery scope, based on the project brief.",
+          "items": [
+            "Voice AI implementation",
+            "Website contact-form automation",
+            "Calendar automation",
+            "Collaborative implementation with another team member"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to support a coherent enquiry and booking experience across voice AI, website forms and calendars."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "inferred-from-user-context",
+          "verificationRequired": true
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Coordinating implementation responsibilities with a teammate",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Keeping voice enquiries and calendar workflows aligned",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "user-provided-project-summary",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Review draft challenges",
+        "Supply automation screenshots where only website imagery or placeholders are available"
+      ],
+      "businessNeed": "Support a coherent enquiry and booking experience across voice AI, website forms and calendars.",
+      "myContribution": "Worked with a teammate on voice AI implementation, contact-form automation and calendar workflows. Individual ownership of each subsystem has not been specified.",
+      "workflowNarrative": "Website forms capture enquiries, voice AI provides a conversational entry point, and calendar automation supports scheduling. The project was delivered collaboratively rather than represented as sole-authored work.",
+      "valueStatement": "Designed to support a coherent enquiry and booking experience across voice AI, website forms and calendars.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      }
+    },
+    {
+      "id": "cassia-spa",
+      "sortOrder": 10,
+      "title": "Cassia Elegant Spa",
+      "subtitle": "Booking and client communication workflows for a spa",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "Spa & wellness",
+      "status": "client-work",
+      "featured": false,
+      "overview": "Implemented website and calendar automation together with CRM management and email campaigns for Cassia Elegant Spa. The scope brought booking-related touchpoints and ongoing client communication into an organized CRM workflow.",
+      "description": "Implemented website and calendar automation together with CRM management and email campaigns for Cassia Elegant Spa. The scope brought booking-related touchpoints and ongoing client communication into an organized CRM workflow.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": null
+      },
+      "websiteUrl": "https://cassiaelegantspa.com/",
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/cassiaelegentspa.png",
+      "images": [
+        {
+          "id": "cassia-spa-website-screenshot",
+          "src": "/automstions-images/cassiaelegentspa.png",
+          "alt": "Cassia Elegant Spa client website screenshot",
+          "type": "website-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Client website and brand context for Cassia Elegant Spa. Automation implementation details are documented separately in this case study.",
+          "aspect": 1.929435
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://cassiaelegantspa.com/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "cassia-spa"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Calendar automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Website enquiry automation",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "CRM management",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Email campaign setup and management",
+          "evidence": "user-provided"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Implemented website and calendar automation together with CRM management and email campaigns for Cassia Elegant Spa. The scope brought booking-related touchpoints and ongoing client communication into an organized CRM workflow."
+        },
+        {
+          "title": "Business need",
+          "body": "Connect website enquiries and booking activity with consistent client communication."
+        },
+        {
+          "title": "My contribution",
+          "body": "Configured website and calendar workflows, managed CRM organization, and set up email campaigns."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "Website enquiries and calendar workflows support the booking journey. CRM management organizes client records, while email campaigns provide a separate channel for ongoing communication."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Reported delivery scope, based on the project brief.",
+          "items": [
+            "Calendar automation",
+            "Website enquiry automation",
+            "CRM management",
+            "Email campaign setup and management"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to connect website enquiries and booking activity with consistent client communication."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "inferred-from-user-context",
+          "verificationRequired": true
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Keeping booking and enquiry records organized",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Separating appointment communication from promotional email campaigns",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "user-provided-project-summary",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Review draft challenges",
+        "Supply automation screenshots where only website imagery or placeholders are available"
+      ],
+      "businessNeed": "Connect website enquiries and booking activity with consistent client communication.",
+      "myContribution": "Configured website and calendar workflows, managed CRM organization, and set up email campaigns.",
+      "workflowNarrative": "Website enquiries and calendar workflows support the booking journey. CRM management organizes client records, while email campaigns provide a separate channel for ongoing communication.",
+      "valueStatement": "Designed to connect website enquiries and booking activity with consistent client communication.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      }
+    },
+    {
+      "id": "veritas-pathways",
+      "sortOrder": 11,
+      "title": "Veritas Pathways",
+      "subtitle": "Branded email delivery and lead management for education services",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "Education services",
+      "status": "client-work",
+      "featured": false,
+      "overview": "Designed premium branded email templates and managed campaigns and leads using GoHighLevel and Constant Contact. The delivery combined visual communication design with the CRM organization needed to support repeatable outreach.",
+      "description": "Designed premium branded email templates and managed campaigns and leads using GoHighLevel and Constant Contact. The delivery combined visual communication design with the CRM organization needed to support repeatable outreach.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": null
+      },
+      "websiteUrl": "https://veritaspathways.co.uk/",
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/veritaspathways.co.uk.png",
+      "images": [
+        {
+          "id": "veritas-pathways-website-screenshot",
+          "src": "/automstions-images/veritaspathways.co.uk.png",
+          "alt": "Veritas Pathways client website screenshot",
+          "type": "website-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Client website and brand context for Veritas Pathways. Automation implementation details are documented separately in this case study.",
+          "aspect": 1.916834
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://veritaspathways.co.uk/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "veritas-pathways"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Premium branded email template design",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Email campaign setup and management",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Lead organization and management",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Supporting campaign automation",
+          "evidence": "user-provided"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Designed premium branded email templates and managed campaigns and leads using GoHighLevel and Constant Contact. The delivery combined visual communication design with the CRM organization needed to support repeatable outreach."
+        },
+        {
+          "title": "Business need",
+          "body": "Present a consistent brand in email and keep campaign audiences and enquiries organized."
+        },
+        {
+          "title": "My contribution",
+          "body": "Designed email templates, configured and managed campaigns, and supported lead-management and campaign automation workflows across the two platforms."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "Branded templates provide the campaign presentation layer. Campaign management and lead organization support audience preparation and follow-up. Detailed trigger rules and platform-to-platform synchronization have not been supplied."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Reported delivery scope, based on the project brief.",
+          "items": [
+            "Premium branded email template design",
+            "Email campaign setup and management",
+            "Lead organization and management",
+            "Supporting campaign automation"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to present a consistent brand in email and keep campaign audiences and enquiries organized."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "Constant Contact",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Maintaining consistent branding across email platforms",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Keeping campaign audiences and lead records organized",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Ensuring email layouts remain readable across devices",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "user-provided-project-summary",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Review draft challenges",
+        "Supply automation screenshots where only website imagery or placeholders are available"
+      ],
+      "businessNeed": "Present a consistent brand in email and keep campaign audiences and enquiries organized.",
+      "myContribution": "Designed email templates, configured and managed campaigns, and supported lead-management and campaign automation workflows across the two platforms.",
+      "workflowNarrative": "Branded templates provide the campaign presentation layer. Campaign management and lead organization support audience preparation and follow-up. Detailed trigger rules and platform-to-platform synchronization have not been supplied.",
+      "valueStatement": "Designed to present a consistent brand in email and keep campaign audiences and enquiries organized.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      }
+    },
+    {
+      "id": "london-language-club",
+      "sortOrder": 12,
+      "title": "London Language Club",
+      "subtitle": "Email campaign design and CRM organization for language education",
+      "category": "company-client",
+      "projectType": "automation-crm",
+      "industry": "Language education",
+      "status": "client-work",
+      "featured": false,
+      "overview": "Created branded email templates and supported campaign delivery and lead management using GoHighLevel and Constant Contact. The work focused on a cohesive communication experience and organized outreach operations for a language education business.",
+      "description": "Created branded email templates and supported campaign delivery and lead management using GoHighLevel and Constant Contact. The work focused on a cohesive communication experience and organized outreach operations for a language education business.",
+      "deliveryContext": {
+        "relationship": "Company client project",
+        "agencyId": "ghlprime",
+        "agencyAssignmentStatus": "confirmed-by-owner",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": null
+      },
+      "websiteUrl": "https://londonlanguageclub.co.uk/",
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/londonlanguageclud.png",
+      "images": [
+        {
+          "id": "london-language-club-website-screenshot",
+          "src": "/automstions-images/londonlanguageclud.png",
+          "alt": "London Language Club client website screenshot",
+          "type": "website-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Client website and brand context for London Language Club. Automation implementation details are documented separately in this case study.",
+          "aspect": 1.772317
+        }
+      ],
+      "actions": [
+        {
+          "id": "website",
+          "label": "Visit Client Website",
+          "href": "https://londonlanguageclub.co.uk/",
+          "type": "external",
+          "target": "_blank"
+        },
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "london-language-club"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Premium branded email template design",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Email campaign setup and management",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Lead organization and management",
+          "evidence": "user-provided"
+        },
+        {
+          "title": "Supporting campaign automation",
+          "evidence": "user-provided"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "Created branded email templates and supported campaign delivery and lead management using GoHighLevel and Constant Contact. The work focused on a cohesive communication experience and organized outreach operations for a language education business."
+        },
+        {
+          "title": "Business need",
+          "body": "Maintain consistent email presentation and an organized foundation for prospective-student communication."
+        },
+        {
+          "title": "My contribution",
+          "body": "Designed premium email templates, managed campaigns and leads, and supported related communication automation."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "Reusable branded templates support email campaigns, while lead-management work keeps audience and enquiry information organized. Detailed automation triggers and any direct synchronization between platforms remain unspecified."
+        },
+        {
+          "title": "Implementation scope",
+          "body": "Reported delivery scope, based on the project brief.",
+          "items": [
+            "Premium branded email template design",
+            "Email campaign setup and management",
+            "Lead organization and management",
+            "Supporting campaign automation"
+          ]
+        },
+        {
+          "title": "Operational value",
+          "body": "Designed to maintain consistent email presentation and an organized foundation for prospective-student communication."
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        },
+        {
+          "name": "Constant Contact",
+          "evidence": "user-provided",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Adapting branded email layouts to different devices",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Maintaining organized campaign audiences across tools",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        },
+        {
+          "title": "Keeping enquiry context available for follow-up",
+          "status": "draft-needs-confirmation",
+          "resolution": null,
+          "discussionPrompt": "Confirm the actual constraint, implementation decision and resolution before presenting this as a completed case-study challenge."
+        }
+      ],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "user-provided-project-summary",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Review draft challenges",
+        "Supply automation screenshots where only website imagery or placeholders are available"
+      ],
+      "businessNeed": "Maintain consistent email presentation and an organized foundation for prospective-student communication.",
+      "myContribution": "Designed premium email templates, managed campaigns and leads, and supported related communication automation.",
+      "workflowNarrative": "Reusable branded templates support email campaigns, while lead-management work keeps audience and enquiry information organized. Detailed automation triggers and any direct synchronization between platforms remain unspecified.",
+      "valueStatement": "Designed to maintain consistent email presentation and an organized foundation for prospective-student communication.",
+      "valueStatementType": "intended-operational-value-not-measured-outcome",
+      "caseStudyReadiness": {
+        "overview": "ready-from-user-brief",
+        "deliveredScope": "user-reported",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "confirmation-required"
+      }
+    },
+    {
+      "id": "optimaimd",
+      "sortOrder": 13,
+      "title": "OptimaIMD",
+      "subtitle": "Voice and conversational AI for healthcare enquiries",
+      "category": "automation-showcase",
+      "projectType": "automation-crm",
+      "industry": "Healthcare",
+      "status": "showcase",
+      "featured": false,
+      "overview": "The supplied configuration screens show a coordinated voice and chat assistant setup for OptimaIMD. The voice assistant is configured to explain membership services, capture enquiry details and route callers to relevant teams, while keeping clinical advice outside its support role.",
+      "description": "The supplied configuration screens show a coordinated voice and chat assistant setup for OptimaIMD. The voice assistant is configured to explain membership services, capture enquiry details and route callers to relevant teams, while keeping clinical advice outside its support role.",
+      "deliveryContext": {
+        "relationship": "Automation workflow showcase",
+        "agencyId": null,
+        "agencyAssignmentStatus": "confirmation-required",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": "Project-specific delivery attribution requires confirmation."
+      },
+      "websiteUrl": null,
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/quicktaxnbooks-voice-ai.png",
+      "images": [
+        {
+          "id": "optimaimd-automation-1",
+          "src": "/automstions-images/quicktaxnbooks-voice-ai.png",
+          "alt": "OptimaIMD voice-agent instructions, call transfers and contact extraction.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "OptimaIMD voice-agent instructions, call transfers and contact extraction.",
+          "aspect": 2.259887
+        },
+        {
+          "id": "optimaimd-automation-2",
+          "src": "/automstions-images/quicktanxbooks-conversational-bot.png",
+          "alt": "OptimaIMD conversational-bot configuration.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "OptimaIMD conversational-bot configuration.",
+          "aspect": 2.110818
+        }
+      ],
+      "actions": [
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "optimaimd"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Healthcare-specific assistant identity and instructions",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Caller routing to pharmacy, clinic and care-coordination teams",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Lead-detail capture for follow-up",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Conversational bot configuration",
+          "evidence": "screenshot-observed"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "The supplied configuration screens show a coordinated voice and chat assistant setup for OptimaIMD. The voice assistant is configured to explain membership services, capture enquiry details and route callers to relevant teams, while keeping clinical advice outside its support role."
+        },
+        {
+          "title": "Visible workflow scope",
+          "items": [
+            "Healthcare-specific assistant identity and instructions",
+            "Caller routing to pharmacy, clinic and care-coordination teams",
+            "Lead-detail capture for follow-up",
+            "Conversational bot configuration"
+          ]
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "supplied-automation-screenshots",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Confirm delivered scope and implementation ownership",
+        "These filenames say QuickTax, but the visible business name is OptimaIMD. Keep separate from QuickTax; confirm final client spelling and public URL."
+      ],
+      "businessNeed": null,
+      "myContribution": null,
+      "workflowNarrative": "The supplied configuration screens show a coordinated voice and chat assistant setup for OptimaIMD. The voice assistant is configured to explain membership services, capture enquiry details and route callers to relevant teams, while keeping clinical advice outside its support role.",
+      "valueStatement": null,
+      "valueStatementType": "not-asserted-from-screenshot",
+      "caseStudyReadiness": {
+        "overview": "screenshot-based",
+        "deliveredScope": "confirmation-required",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "not-provided"
+      }
+    },
+    {
+      "id": "n8n-whatsapp-ai-agent",
+      "sortOrder": 14,
+      "title": "WhatsApp AI Appointment & Support Agent",
+      "subtitle": "Conversational assistance connected to scheduling and ticket capture",
+      "category": "automation-showcase",
+      "projectType": "automation-crm",
+      "industry": "Customer service automation",
+      "status": "showcase",
+      "featured": false,
+      "overview": "An n8n workflow connects incoming WhatsApp messages to an AI assistant with conversation memory and tools for scheduling and support. The agent can retrieve Google Calendar events, create appointments and append ticket records to Google Sheets before sending a reply through WhatsApp.",
+      "description": "An n8n workflow connects incoming WhatsApp messages to an AI assistant with conversation memory and tools for scheduling and support. The agent can retrieve Google Calendar events, create appointments and append ticket records to Google Sheets before sending a reply through WhatsApp.",
+      "deliveryContext": {
+        "relationship": "Automation workflow showcase",
+        "agencyId": null,
+        "agencyAssignmentStatus": "confirmation-required",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": "Project-specific delivery attribution requires confirmation."
+      },
+      "websiteUrl": null,
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/Dark%20Workflow%20Automation%20Dashboard%20%281%29.png",
+      "images": [
+        {
+          "id": "n8n-whatsapp-ai-agent-automation-1",
+          "src": "/automstions-images/Dark%20Workflow%20Automation%20Dashboard%20%281%29.png",
+          "alt": "n8n WhatsApp AI agent connected to OpenAI, conversation memory, Google Calendar and Google Sheets.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "WhatsApp message intake, AI agent processing, scheduling and ticket tools, and response delivery.",
+          "aspect": 1.826509
+        }
+      ],
+      "actions": [
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "n8n-whatsapp-ai-agent"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "WhatsApp-triggered conversational workflow",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Conditional routing before agent processing",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "OpenAI-powered assistant with conversation memory",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Google Calendar event retrieval for availability checks",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Appointment creation in Google Calendar",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Support-ticket capture in Google Sheets",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Automated WhatsApp response delivery",
+          "evidence": "screenshot-observed"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "An n8n workflow connects incoming WhatsApp messages to an AI assistant with conversation memory and tools for scheduling and support. The agent can retrieve Google Calendar events, create appointments and append ticket records to Google Sheets before sending a reply through WhatsApp."
+        },
+        {
+          "title": "How the workflow fits together",
+          "body": "A WhatsApp message triggers the workflow and passes through a conditional gate. The AI Agent uses an OpenAI chat model and Simple Memory, with connected tools to retrieve calendar events, create appointments and append support tickets to a sheet. The resulting response is sent back through WhatsApp."
+        },
+        {
+          "title": "Connected agent tools",
+          "items": [
+            "check_availability retrieves Google Calendar events to inform scheduling.",
+            "book_appointment creates a calendar event.",
+            "create_ticket appends a record to Google Sheets."
+          ]
+        }
+      ],
+      "techStack": [
+        {
+          "name": "n8n",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "WhatsApp",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "OpenAI",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "Google Calendar",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "Google Sheets",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "supplied-automation-screenshots",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment and client identity",
+        "Confirm production deployment and actual workflow execution results"
+      ],
+      "businessNeed": null,
+      "myContribution": null,
+      "workflowNarrative": "A WhatsApp message triggers the workflow and passes through a conditional gate. The AI Agent uses an OpenAI chat model and Simple Memory, with connected tools to retrieve calendar events, create appointments and append support tickets to a sheet. The resulting response is sent back through WhatsApp.",
+      "valueStatement": null,
+      "valueStatementType": "not-asserted-from-screenshot",
+      "caseStudyReadiness": {
+        "overview": "screenshot-based",
+        "deliveredScope": "confirmation-required",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "not-provided"
+      }
+    },
+    {
+      "id": "n8n-ai-video",
+      "sortOrder": 15,
+      "title": "AI Video Production Workflow",
+      "subtitle": "From an incoming idea to generated video delivery",
+      "category": "automation-showcase",
+      "projectType": "automation-crm",
+      "industry": "Content automation",
+      "status": "showcase",
+      "featured": false,
+      "overview": "A visual n8n pipeline connects idea and script generation with video creation and delivery. Structured AI outputs feed the video request, while status checks and waiting branches coordinate asynchronous rendering before download and Telegram delivery.",
+      "description": "A visual n8n pipeline connects idea and script generation with video creation and delivery. Structured AI outputs feed the video request, while status checks and waiting branches coordinate asynchronous rendering before download and Telegram delivery.",
+      "deliveryContext": {
+        "relationship": "Automation workflow showcase",
+        "agencyId": null,
+        "agencyAssignmentStatus": "confirmation-required",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": "Project-specific delivery attribution requires confirmation."
+      },
+      "websiteUrl": null,
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/n8n-ai-video-generation.png",
+      "images": [
+        {
+          "id": "n8n-ai-video-automation-1",
+          "src": "/automstions-images/n8n-ai-video-generation.png",
+          "alt": "n8n AI video-generation workflow with render-status checks and Telegram delivery.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "n8n AI video-generation workflow with render-status checks and Telegram delivery.",
+          "aspect": 1.081886
+        }
+      ],
+      "actions": [
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "n8n-ai-video"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Webhook-driven workflow entry",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "AI idea and script generation",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Structured output parsing",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Video render status checks and wait routing",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Download and Telegram delivery",
+          "evidence": "screenshot-observed"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "A visual n8n pipeline connects idea and script generation with video creation and delivery. Structured AI outputs feed the video request, while status checks and waiting branches coordinate asynchronous rendering before download and Telegram delivery."
+        },
+        {
+          "title": "Visible workflow scope",
+          "items": [
+            "Webhook-driven workflow entry",
+            "AI idea and script generation",
+            "Structured output parsing",
+            "Video render status checks and wait routing",
+            "Download and Telegram delivery"
+          ]
+        }
+      ],
+      "techStack": [
+        {
+          "name": "n8n",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "Google Gemini",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "Telegram",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "supplied-automation-screenshots",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Confirm delivered scope and implementation ownership",
+        "Client identity and production deployment are not visible; presented as a workflow showcase."
+      ],
+      "businessNeed": null,
+      "myContribution": null,
+      "workflowNarrative": "A visual n8n pipeline connects idea and script generation with video creation and delivery. Structured AI outputs feed the video request, while status checks and waiting branches coordinate asynchronous rendering before download and Telegram delivery.",
+      "valueStatement": null,
+      "valueStatementType": "not-asserted-from-screenshot",
+      "caseStudyReadiness": {
+        "overview": "screenshot-based",
+        "deliveredScope": "confirmation-required",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "not-provided"
+      }
+    },
+    {
+      "id": "n8n-data-migration",
+      "sortOrder": 16,
+      "title": "Data Migration & Transformation",
+      "subtitle": "Batch processing and structured record transformation",
+      "category": "automation-showcase",
+      "projectType": "automation-crm",
+      "industry": "Data operations",
+      "status": "showcase",
+      "featured": false,
+      "overview": "The workflow diagram shows a multi-step n8n data-processing pipeline that retrieves records, applies transformation logic and coordinates batches before writing output. It illustrates the orchestration needed to move structured data through several processing stages.",
+      "description": "The workflow diagram shows a multi-step n8n data-processing pipeline that retrieves records, applies transformation logic and coordinates batches before writing output. It illustrates the orchestration needed to move structured data through several processing stages.",
+      "deliveryContext": {
+        "relationship": "Automation workflow showcase",
+        "agencyId": null,
+        "agencyAssignmentStatus": "confirmation-required",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": "Project-specific delivery attribution requires confirmation."
+      },
+      "websiteUrl": null,
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/n8n-data-migration.png",
+      "images": [
+        {
+          "id": "n8n-data-migration-automation-1",
+          "src": "/automstions-images/n8n-data-migration.png",
+          "alt": "n8n data migration workflow with transformation, merging and batch processing.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "n8n data migration workflow with transformation, merging and batch processing.",
+          "aspect": 2.496503
+        }
+      ],
+      "actions": [
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "n8n-data-migration"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Multi-step source-data retrieval",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Code-based record transformation",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Merge and mapping stages",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Batch iteration and output insertion",
+          "evidence": "screenshot-observed"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "The workflow diagram shows a multi-step n8n data-processing pipeline that retrieves records, applies transformation logic and coordinates batches before writing output. It illustrates the orchestration needed to move structured data through several processing stages."
+        },
+        {
+          "title": "Visible workflow scope",
+          "items": [
+            "Multi-step source-data retrieval",
+            "Code-based record transformation",
+            "Merge and mapping stages",
+            "Batch iteration and output insertion"
+          ]
+        }
+      ],
+      "techStack": [
+        {
+          "name": "n8n",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "supplied-automation-screenshots",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Confirm delivered scope and implementation ownership",
+        "Confirm source and destination systems, client identity and completed migration scope; no migration volume or success rate is asserted."
+      ],
+      "businessNeed": null,
+      "myContribution": null,
+      "workflowNarrative": "The workflow diagram shows a multi-step n8n data-processing pipeline that retrieves records, applies transformation logic and coordinates batches before writing output. It illustrates the orchestration needed to move structured data through several processing stages.",
+      "valueStatement": null,
+      "valueStatementType": "not-asserted-from-screenshot",
+      "caseStudyReadiness": {
+        "overview": "screenshot-based",
+        "deliveredScope": "confirmation-required",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "not-provided"
+      }
+    },
+    {
+      "id": "make-voiceflow",
+      "sortOrder": 17,
+      "title": "Voiceflow Integration Workflow",
+      "subtitle": "Webhook-driven conversation and CRM orchestration",
+      "category": "automation-showcase",
+      "projectType": "automation-crm",
+      "industry": "Conversational automation",
+      "status": "showcase",
+      "featured": false,
+      "overview": "The Make scenario shows a Voiceflow-triggered integration assembled from webhook intake, JSON processing, HTTP requests and routing. The connected modules illustrate how conversational events can be passed through external services and CRM actions in one workflow.",
+      "description": "The Make scenario shows a Voiceflow-triggered integration assembled from webhook intake, JSON processing, HTTP requests and routing. The connected modules illustrate how conversational events can be passed through external services and CRM actions in one workflow.",
+      "deliveryContext": {
+        "relationship": "Automation workflow showcase",
+        "agencyId": null,
+        "agencyAssignmentStatus": "confirmation-required",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": "Project-specific delivery attribution requires confirmation."
+      },
+      "websiteUrl": null,
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/make-voiceflow-integration.png",
+      "images": [
+        {
+          "id": "make-voiceflow-automation-1",
+          "src": "/automstions-images/make-voiceflow-integration.png",
+          "alt": "Make scenario for Voiceflow trigger processing, HTTP requests and routed integrations.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Make scenario for Voiceflow trigger processing, HTTP requests and routed integrations.",
+          "aspect": 1.608696
+        }
+      ],
+      "actions": [
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "make-voiceflow"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Voiceflow-triggered webhook entry",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "JSON payload processing",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "HTTP service requests",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Conditional routing and connected CRM modules",
+          "evidence": "screenshot-observed"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "The Make scenario shows a Voiceflow-triggered integration assembled from webhook intake, JSON processing, HTTP requests and routing. The connected modules illustrate how conversational events can be passed through external services and CRM actions in one workflow."
+        },
+        {
+          "title": "Visible workflow scope",
+          "items": [
+            "Voiceflow-triggered webhook entry",
+            "JSON payload processing",
+            "HTTP service requests",
+            "Conditional routing and connected CRM modules"
+          ]
+        }
+      ],
+      "techStack": [
+        {
+          "name": "Make",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "Voiceflow",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "HTTP APIs",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "GoHighLevel",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "supplied-automation-screenshots",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Confirm delivered scope and implementation ownership",
+        "Confirm client identity and exact connected services before presenting this as a deployed client implementation."
+      ],
+      "businessNeed": null,
+      "myContribution": null,
+      "workflowNarrative": "The Make scenario shows a Voiceflow-triggered integration assembled from webhook intake, JSON processing, HTTP requests and routing. The connected modules illustrate how conversational events can be passed through external services and CRM actions in one workflow.",
+      "valueStatement": null,
+      "valueStatementType": "not-asserted-from-screenshot",
+      "caseStudyReadiness": {
+        "overview": "screenshot-based",
+        "deliveredScope": "confirmation-required",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "not-provided"
+      }
+    },
+    {
+      "id": "elevenlabs-voice",
+      "sortOrder": 18,
+      "title": "AI Voice Library Configuration",
+      "subtitle": "Voice selection for conversational experiences",
+      "category": "automation-showcase",
+      "projectType": "automation-crm",
+      "industry": "Voice AI",
+      "status": "showcase",
+      "featured": false,
+      "overview": "The supplied ElevenLabs screen documents a voice library containing configured voice assets. This showcase focuses on the voice-selection layer of an AI experience; the screenshot does not establish a deployed calling integration or a completed end-to-end agent.",
+      "description": "The supplied ElevenLabs screen documents a voice library containing configured voice assets. This showcase focuses on the voice-selection layer of an AI experience; the screenshot does not establish a deployed calling integration or a completed end-to-end agent.",
+      "deliveryContext": {
+        "relationship": "Automation workflow showcase",
+        "agencyId": null,
+        "agencyAssignmentStatus": "confirmation-required",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": "Project-specific delivery attribution requires confirmation."
+      },
+      "websiteUrl": null,
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/elevenlabs-voice.png",
+      "images": [
+        {
+          "id": "elevenlabs-voice-automation-1",
+          "src": "/automstions-images/elevenlabs-voice.png",
+          "alt": "ElevenLabs voice library showing configured voice assets.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "ElevenLabs voice library showing configured voice assets.",
+          "aspect": 1.72043
+        }
+      ],
+      "actions": [
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "elevenlabs-voice"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Central voice-library organization",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Configured voice assets",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Voice selection for agent experiences",
+          "evidence": "screenshot-observed"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "The supplied ElevenLabs screen documents a voice library containing configured voice assets. This showcase focuses on the voice-selection layer of an AI experience; the screenshot does not establish a deployed calling integration or a completed end-to-end agent."
+        },
+        {
+          "title": "Visible workflow scope",
+          "items": [
+            "Central voice-library organization",
+            "Configured voice assets",
+            "Voice selection for agent experiences"
+          ]
+        }
+      ],
+      "techStack": [
+        {
+          "name": "ElevenLabs",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "supplied-automation-screenshots",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Confirm delivered scope and implementation ownership",
+        "Confirm client identity, voice usage permissions and implementation scope. Do not infer a live agent from the library view."
+      ],
+      "businessNeed": null,
+      "myContribution": null,
+      "workflowNarrative": "The supplied ElevenLabs screen documents a voice library containing configured voice assets. This showcase focuses on the voice-selection layer of an AI experience; the screenshot does not establish a deployed calling integration or a completed end-to-end agent.",
+      "valueStatement": null,
+      "valueStatementType": "not-asserted-from-screenshot",
+      "caseStudyReadiness": {
+        "overview": "screenshot-based",
+        "deliveredScope": "confirmation-required",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "not-provided"
+      }
+    },
+    {
+      "id": "ghl-pipeline-scheduling",
+      "sortOrder": 19,
+      "title": "CRM Pipeline & Scheduling",
+      "subtitle": "Sales-stage visibility and team calendar operations",
+      "category": "automation-showcase",
+      "projectType": "automation-crm",
+      "industry": "CRM operations",
+      "status": "showcase",
+      "featured": false,
+      "overview": "These GoHighLevel views illustrate two operational workspaces: an opportunity pipeline organized by contact progress and a booking calendar for team scheduling. Together they show how staff can review sales activity and scheduled commitments within the CRM.",
+      "description": "These GoHighLevel views illustrate two operational workspaces: an opportunity pipeline organized by contact progress and a booking calendar for team scheduling. Together they show how staff can review sales activity and scheduled commitments within the CRM.",
+      "deliveryContext": {
+        "relationship": "Automation workflow showcase",
+        "agencyId": null,
+        "agencyAssignmentStatus": "confirmation-required",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": "Project-specific delivery attribution requires confirmation."
+      },
+      "websiteUrl": null,
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/pipeline-automation-ghl.png",
+      "images": [
+        {
+          "id": "ghl-pipeline-scheduling-automation-1",
+          "src": "/automstions-images/pipeline-automation-ghl.png",
+          "alt": "GoHighLevel opportunity board organized by lead-progress stages.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "GoHighLevel opportunity board organized by lead-progress stages.",
+          "aspect": 1.958384
+        },
+        {
+          "id": "ghl-pipeline-scheduling-automation-2",
+          "src": "/automstions-images/Meeting%20Booking%20Automation.png",
+          "alt": "GoHighLevel calendar view for team appointments.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "GoHighLevel calendar view for team appointments.",
+          "aspect": 1.95122
+        }
+      ],
+      "actions": [
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "ghl-pipeline-scheduling"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Opportunity stages for lead progress",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Contacted, replied and follow-up stage organization",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Team calendar overview",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Appointment visibility across staff",
+          "evidence": "screenshot-observed"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "These GoHighLevel views illustrate two operational workspaces: an opportunity pipeline organized by contact progress and a booking calendar for team scheduling. Together they show how staff can review sales activity and scheduled commitments within the CRM."
+        },
+        {
+          "title": "Visible workflow scope",
+          "items": [
+            "Opportunity stages for lead progress",
+            "Contacted, replied and follow-up stage organization",
+            "Team calendar overview",
+            "Appointment visibility across staff"
+          ]
+        }
+      ],
+      "techStack": [
+        {
+          "name": "GoHighLevel",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "supplied-automation-screenshots",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Confirm delivered scope and implementation ownership",
+        "Client association is unconfirmed; these may be separate implementations. Review visible contact details before public use. Screenshots alone do not establish automatic stage updates."
+      ],
+      "businessNeed": null,
+      "myContribution": null,
+      "workflowNarrative": "These GoHighLevel views illustrate two operational workspaces: an opportunity pipeline organized by contact progress and a booking calendar for team scheduling. Together they show how staff can review sales activity and scheduled commitments within the CRM.",
+      "valueStatement": null,
+      "valueStatementType": "not-asserted-from-screenshot",
+      "caseStudyReadiness": {
+        "overview": "screenshot-based",
+        "deliveredScope": "confirmation-required",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "not-provided"
+      }
+    },
+    {
+      "id": "zapier-workflows",
+      "sortOrder": 20,
+      "title": "Zapier Integration Patterns",
+      "subtitle": "Lead routing and connected-app workflow examples",
+      "category": "automation-showcase",
+      "projectType": "automation-crm",
+      "industry": "Workflow automation",
+      "status": "showcase",
+      "featured": false,
+      "overview": "This collection illustrates Zapier patterns for lead intake, AI-assisted routing and conditional follow-up. Additional examples show a Webflow-to-HubSpot-to-Slack handoff and the use of filters and paths to direct actions. The images are treated as workflow examples rather than evidence of a named client deployment.",
+      "description": "This collection illustrates Zapier patterns for lead intake, AI-assisted routing and conditional follow-up. Additional examples show a Webflow-to-HubSpot-to-Slack handoff and the use of filters and paths to direct actions. The images are treated as workflow examples rather than evidence of a named client deployment.",
+      "deliveryContext": {
+        "relationship": "Automation workflow showcase",
+        "agencyId": null,
+        "agencyAssignmentStatus": "confirmation-required",
+        "badgeIds": [
+          "ghlprime",
+          "octopidigital"
+        ],
+        "badgeScope": "company-affiliation-not-project-ownership",
+        "role": "CRM and automation implementation",
+        "collaborationNote": "Project-specific delivery attribution requires confirmation."
+      },
+      "websiteUrl": null,
+      "additionalWebsites": [],
+      "thumbnail": "/automstions-images/zapier-ai-lead-routing.jpg",
+      "images": [
+        {
+          "id": "zapier-workflows-automation-1",
+          "src": "/automstions-images/zapier-ai-lead-routing.jpg",
+          "alt": "Zapier lead-routing and nurture workflow example.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Zapier lead-routing and nurture workflow example.",
+          "aspect": 1.473923
+        },
+        {
+          "id": "zapier-workflows-automation-2",
+          "src": "/automstions-images/zapier-copilot-ai-builder.webp",
+          "alt": "Zapier Copilot example connecting Webflow forms, HubSpot contacts and Slack messages.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Zapier Copilot example connecting Webflow forms, HubSpot contacts and Slack messages.",
+          "aspect": 1.491634
+        },
+        {
+          "id": "zapier-workflows-automation-3",
+          "src": "/automstions-images/zapier-filter-paths-examples.png",
+          "alt": "Zapier filter and branching-path examples.",
+          "type": "automation-screenshot",
+          "isPlaceholder": false,
+          "isMobileConcept": false,
+          "caption": "Zapier filter and branching-path examples.",
+          "aspect": 1.919101
+        }
+      ],
+      "actions": [
+        {
+          "id": "viewMore",
+          "label": "View Project Details",
+          "type": "open-modal",
+          "projectId": "zapier-workflows"
+        }
+      ],
+      "keyFeatures": [
+        {
+          "title": "Webhook-based lead intake and routing example",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "AI-assisted lead-processing example",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Webflow, HubSpot and Slack integration example",
+          "evidence": "screenshot-observed"
+        },
+        {
+          "title": "Conditional filters and branching paths",
+          "evidence": "screenshot-observed"
+        }
+      ],
+      "detailSections": [
+        {
+          "title": "Project overview",
+          "body": "This collection illustrates Zapier patterns for lead intake, AI-assisted routing and conditional follow-up. Additional examples show a Webflow-to-HubSpot-to-Slack handoff and the use of filters and paths to direct actions. The images are treated as workflow examples rather than evidence of a named client deployment."
+        },
+        {
+          "title": "Visible workflow scope",
+          "items": [
+            "Webhook-based lead intake and routing example",
+            "AI-assisted lead-processing example",
+            "Webflow, HubSpot and Slack integration example",
+            "Conditional filters and branching paths"
+          ]
+        }
+      ],
+      "techStack": [
+        {
+          "name": "Zapier",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "Webflow",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "HubSpot",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        },
+        {
+          "name": "Slack",
+          "evidence": "screenshot-observed",
+          "verificationRequired": false
+        }
+      ],
+      "challenges": [],
+      "suggestedEnhancements": [],
+      "results": [],
+      "contentSource": "supplied-automation-screenshots",
+      "reviewRequired": [
+        "Confirm project-specific agency assignment",
+        "Confirm delivered scope and implementation ownership",
+        "Confirm authorship and delivered scope: screenshots include example/template workflows and do not establish client ownership."
+      ],
+      "businessNeed": null,
+      "myContribution": null,
+      "workflowNarrative": "This collection illustrates Zapier patterns for lead intake, AI-assisted routing and conditional follow-up. Additional examples show a Webflow-to-HubSpot-to-Slack handoff and the use of filters and paths to direct actions. The images are treated as workflow examples rather than evidence of a named client deployment.",
+      "valueStatement": null,
+      "valueStatementType": "not-asserted-from-screenshot",
+      "caseStudyReadiness": {
+        "overview": "screenshot-based",
+        "deliveredScope": "confirmation-required",
+        "measuredResults": "not-provided",
+        "challengeResolutions": "not-provided"
+      }
+    }
+  ]
+}

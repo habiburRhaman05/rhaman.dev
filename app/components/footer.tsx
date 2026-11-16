@@ -6,12 +6,12 @@ import Link from "next/link";
 import { Button } from "../components/ui/button";
 
 const quickLinks = [
-  { name: "About", href: "#" },
-  { name: "Services", href: "#services" },
-  { name: "Qualifications", href: "#qualifications" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "About", href: "/" },
+  { name: "Services", href: "/#services" },
+  { name: "Qualifications", href: "/#qualifications" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 const socials = [

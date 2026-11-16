@@ -6,6 +6,14 @@ import { Award, Briefcase, Calendar, ExternalLink, GraduationCap, MapPin } from 
 
 const education = [
   {
+    title: "Higher Secondary Certificate (HSC)",
+    organization: "Victoria College",
+    period: "2024 - 2026",
+    location: "Narayanganj, Bangladesh",
+    highlights: [],
+    badge: "HSC",
+  },
+  {
     title: "Secondary School Certificate (SSC)",
     organization: "Mir Kashem Bhumuki High School",
     period: "2021 - 2022",

@@ -1,0 +1,1003 @@
+{
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "id": "personal",
+      "label": "Personal Projects"
+    },
+    {
+      "id": "client",
+      "label": "Company & Client Projects"
+    },
+    {
+      "id": "upcoming",
+      "label": "Upcoming Projects"
+    }
+  ],
+  "notes": {
+    "imagePaths": "Root-relative URLs served from public; do not prefix URLs with /public.",
+    "clientFeatures": "Client descriptions summarize supplied screenshots; SAMM technology was also checked against its source. Marketing-site content does not establish implementation of the advertised underlying services.",
+    "mobileViews": "Mobile mockups in generated montages are concepts, not verified screenshots of responsive implementations.",
+    "unknownDetails": "Unverified technology stacks, delivery dates, personal roles and measured outcomes are omitted."
+  },
+  "projects": [
+    {
+      "id": "blitz",
+      "title": "Blitz Analyzer",
+      "subtitle": "AI-Powered Resume Intelligence SaaS",
+      "description": "A production-grade ATS analysis platform that transforms raw resumes into actionable insights using AI scoring and PDF report generation.",
+      "image": "/blitz-analyzer.png",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Express.js",
+        "Redis",
+        "Stripe",
+        "Groq API",
+        "Prisma"
+      ],
+      "demoUrl": "https://blitz-analyzer.vercel.app",
+      "githubUrl": "https://github.com/habiburRhaman05/Blitz-Analyzer",
+      "backendUrl": "https://github.com/habiburRhaman05/Blitz-Analyzer-Backend",
+      "features": [
+        "Secure Auth flow with OTP verification and RBAC",
+        "AI-driven Resume Analysis with Job Matching Score via Groq API",
+        "PDF Report Download & save with Stripe payment gating",
+        "Template-based + Custom Resume Builder with interactive canvas",
+        "Admin dashboard to manage users, track analytics and operations"
+      ],
+      "challenges": [
+        "Optimizing PDF parsing to handle non-standard resume layouts without data loss.",
+        "Managing high-concurrency Redis sessions during peak traffic hours.",
+        "Ensuring Stripe webhook reliability for real-time subscription gating."
+      ],
+      "futurePlans": [
+        "Implement AI-generated mock interview questions based on analyzed resumes.",
+        "Add team/enterprise accounts for recruitment agencies.",
+        "Introduce browser-based resume preview with direct annotation tools."
+      ],
+      "featured": true,
+      "gradient": "from-emerald-500 via-teal-500 to-cyan-500",
+      "status": "live",
+      "category": "personal",
+      "client": null,
+      "industry": null,
+      "heroImage": "/blitz-analyzer.png",
+      "gallery": [
+        {
+          "src": "/blitz-analyzer.png",
+          "alt": "Blitz Analyzer project preview",
+          "kind": "preview",
+          "isConcept": false,
+          "aspect": 0.3232
+        }
+      ],
+      "contentSource": "existing-portfolio",
+      "tagsType": "technology",
+      "websiteUrl": "https://blitz-analyzer.vercel.app",
+      "imageAspect": 0.3232,
+      "heroAspect": 0.3232
+    },
+    {
+      "id": "eduspark",
+      "title": "EduSpark Academy",
+      "subtitle": "Full-Scale EdTech SaaS Platform",
+      "description": "A comprehensive online education ecosystem bridging mentors and students through real-time video, AI dashboards, and smart scheduling.",
+      "image": "/eduspark.png",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Express.js",
+        "ZegoCloud",
+        "Socket.io",
+        "Redis",
+        "BullMQ",
+        "Stripe"
+      ],
+      "demoUrl": "https://edu-spark-zone.vercel.app",
+      "githubUrl": "https://github.com/habiburRhaman05/EduSpark-modern-learning-platfrom",
+      "backendUrl": "https://github.com/habiburRhaman05/Edu-Saprk-Backend",
+      "features": [
+        "AI-Powered student dashboard with activity tracking and progress scores",
+        "High-quality real-time video sessions powered by ZegoCloud",
+        "Secure payment integration with Stripe for course purchases",
+        "Full mentor/tutor control panel — sessions, earnings, reviews, schedules",
+        "Background job processing with BullMQ for notifications and reminders"
+      ],
+      "challenges": [
+        "Synchronizing real-time socket events with video session lifecycle management.",
+        "Designing a scalable BullMQ job queue for scheduling reminders across timezones.",
+        "Handling concurrent session bookings without double-booking conflicts."
+      ],
+      "futurePlans": [
+        "Integrate AI-generated personalized learning paths based on student progress.",
+        "Add certificate generation upon course completion.",
+        "Build a mobile app with React Native for on-the-go learning."
+      ],
+      "featured": true,
+      "gradient": "from-violet-500 via-purple-500 to-indigo-500",
+      "status": "live",
+      "category": "personal",
+      "client": null,
+      "industry": null,
+      "heroImage": "/eduspark.png",
+      "gallery": [
+        {
+          "src": "/eduspark.png",
+          "alt": "EduSpark Academy project preview",
+          "kind": "preview",
+          "isConcept": false,
+          "aspect": 1.7426
+        }
+      ],
+      "contentSource": "existing-portfolio",
+      "tagsType": "technology",
+      "websiteUrl": "https://edu-spark-zone.vercel.app",
+      "imageAspect": 1.7426,
+      "heroAspect": 1.7426
+    },
+    {
+      "id": "skillbridge",
+      "title": "SkillBridge",
+      "subtitle": "High-Performance Tutor Marketplace",
+      "description": "A comprehensive educational ecosystem featuring complex multi-role workflows and smart scheduling.",
+      "image": "/skill-bridge.png",
+      "tags": [
+        "Next.js 15",
+        "TanStack Query",
+        "TypeScript",
+        "PostgreSQL",
+        "Express.js"
+      ],
+      "demoUrl": "https://skill-bridge-frontend-gamma.vercel.app",
+      "githubUrl": "https://github.com/habiburRhaman05/skill-bridge-frontend",
+      "backendUrl": "",
+      "features": [
+        "Advanced RBAC for Students, Tutors, and Admins",
+        "Custom Availability Engine for recurring schedules",
+        "Hybrid Data Strategy using Server Components and TanStack Query"
+      ],
+      "challenges": [
+        "Building a performant availability engine that handles timezone conversions for global users.",
+        "Designing a complex database schema to prevent overlapping session bookings.",
+        "Implementing smooth page transitions without breaking Lenis inertia scrolling."
+      ],
+      "futurePlans": [
+        "Integrate WebRTC for direct in-platform video tutoring sessions.",
+        "AI-driven tutor matching based on student learning speed and history.",
+        "Develop a mobile-first Progressive Web App (PWA) for on-the-go scheduling."
+      ],
+      "featured": false,
+      "gradient": "from-indigo-600 via-violet-600 to-purple-600",
+      "status": "live",
+      "category": "personal",
+      "client": null,
+      "industry": null,
+      "heroImage": "/skill-bridge.png",
+      "gallery": [
+        {
+          "src": "/skill-bridge.png",
+          "alt": "SkillBridge project preview",
+          "kind": "preview",
+          "isConcept": false,
+          "aspect": 1.261
+        }
+      ],
+      "contentSource": "existing-portfolio",
+      "tagsType": "technology",
+      "websiteUrl": "https://skill-bridge-frontend-gamma.vercel.app",
+      "imageAspect": 1.261,
+      "heroAspect": 1.261
+    },
+    {
+      "id": "opportune",
+      "title": "Opportune Hub",
+      "subtitle": "Full-Stack Job Portal",
+      "description": "A modern job portal platform with real-time listings, advanced search, and smooth UI/UX.",
+      "image": "/opportune-hub.png",
+      "tags": [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Node.js",
+        "MongoDB"
+      ],
+      "demoUrl": "https://opportune-hub.vercel.app/",
+      "githubUrl": "https://github.com/habiburRhaman05/OpportuneX",
+      "backendUrl": "",
+      "features": [
+        "Animated homepage transitions using Framer Motion",
+        "Responsive, mobile-first design with Tailwind CSS",
+        "Contact form with Nodemailer handling"
+      ],
+      "challenges": [
+        "Achieving sub-second search results using MongoDB full-text search indexing.",
+        "Ensuring form security and preventing spam using Nodemailer with rate-limiting.",
+        "Managing complex state across nested filter components."
+      ],
+      "futurePlans": [
+        "Add a one-click apply feature that auto-generates cover letters.",
+        "Integrate LinkedIn API for easier profile importing.",
+        "Implement real-time notification system for job alerts using Socket.io."
+      ],
+      "featured": false,
+      "gradient": "from-blue-500 via-indigo-500 to-purple-500",
+      "status": "running",
+      "category": "personal",
+      "client": null,
+      "industry": null,
+      "heroImage": "/opportune-hub.png",
+      "gallery": [
+        {
+          "src": "/opportune-hub.png",
+          "alt": "Opportune Hub project preview",
+          "kind": "preview",
+          "isConcept": false,
+          "aspect": 1.2057
+        }
+      ],
+      "contentSource": "existing-portfolio",
+      "tagsType": "technology",
+      "websiteUrl": "https://opportune-hub.vercel.app/",
+      "imageAspect": 1.2057,
+      "heroAspect": 1.2057
+    },
+    {
+      "id": "lumina",
+      "title": "Lumina Compliance AI",
+      "subtitle": "Enterprise Document Intelligence Engine",
+      "description": "A RAG-based platform designed to deconstruct legal frameworks into actionable risk reports.",
+      "image": "/upcomming.avif",
+      "tags": [
+        "Next.js 15",
+        "Golang",
+        "PostgreSQL",
+        "Vector DB",
+        "Redis",
+        "LangChain"
+      ],
+      "demoUrl": "#",
+      "githubUrl": "",
+      "backendUrl": "",
+      "features": [
+        "Neural Document Parsing: Extracting structured data from legal PDFs",
+        "Contextual RAG Engine: High-speed semantic search using Vector embeddings",
+        "Risk Score Synthesis: AI-driven compliance gap analysis"
+      ],
+      "challenges": [
+        "Architecting a low-latency Go-to-Python bridge for AI inference tasks.",
+        "Ensuring 99% accuracy in source-citation from multi-page legal documents.",
+        "Handling massive vector embedding updates without system downtime."
+      ],
+      "futurePlans": [
+        "Automated legal drafting for mitigation strategy documents.",
+        "Multi-language support for international compliance standards.",
+        "On-premise deployment options for highly sensitive government data."
+      ],
+      "featured": false,
+      "gradient": "from-slate-900 via-slate-800 to-slate-900",
+      "status": "upcoming",
+      "category": "upcoming",
+      "client": null,
+      "industry": null,
+      "heroImage": "/upcomming.avif",
+      "gallery": [
+        {
+          "src": "/upcomming.avif",
+          "alt": "Lumina Compliance AI project preview",
+          "kind": "preview",
+          "isConcept": false,
+          "aspect": 1
+        }
+      ],
+      "contentSource": "existing-portfolio",
+      "tagsType": "technology",
+      "websiteUrl": null,
+      "imageAspect": 1,
+      "heroAspect": 1
+    },
+    {
+      "id": "veritas-pathways-development",
+      "title": "Veritas Pathways",
+      "subtitle": "Education Website & Content Management Platform",
+      "description": "Collaborated with my teammate Mahabub on the Veritas Pathways website and administration platform. The project brings student-facing programme discovery together with a central workspace for educational content, media, page-level SEO and enquiry submissions, supporting both prospective students and the team managing the website.",
+      "category": "client",
+      "discipline": "web-software",
+      "status": "live",
+      "featured": true,
+      "client": "Veritas Pathways",
+      "industry": "International education",
+      "image": "/portfolio-montages/veritas-pathways/montage.png",
+      "heroImage": "/portfolio-montages/veritas-pathways/montage.png",
+      "imageAspect": 1.6,
+      "heroAspect": 1.6,
+      "gallery": [
+        {
+          "src": "/portfolio-montages/veritas-pathways/montage.png",
+          "alt": "Veritas Pathways website and CMS portfolio montage",
+          "kind": "Product montage",
+          "isConcept": true,
+          "aspect": 1.6
+        },
+        {
+          "src": "/portfolio-montages/veritas-pathways/website.png",
+          "alt": "Veritas Pathways public website with foundation programme information",
+          "kind": "Public website",
+          "isConcept": false
+        },
+        {
+          "src": "/portfolio-montages/veritas-pathways/seo.png",
+          "alt": "Page-level metadata and sitemap entry management",
+          "kind": "SEO management",
+          "isConcept": false
+        },
+        {
+          "src": "/portfolio-montages/veritas-pathways/gallery.png",
+          "alt": "Gallery arrangement and image format conversion controls",
+          "kind": "Media management",
+          "isConcept": false
+        },
+        {
+          "src": "/portfolio-montages/veritas-pathways/ai-writer.png",
+          "alt": "AI Blog Writer account connection screen within the admin dashboard",
+          "kind": "AI writing integration",
+          "isConcept": false
+        }
+      ],
+      "tags": [
+        "Education Website",
+        "Custom CMS",
+        "SEO Management",
+        "Media Library",
+        "Enquiry Workflows"
+      ],
+      "tagsType": "capabilities",
+      "features": [
+        "Student-facing programme discovery with Medical Foundation and International Foundation Year information.",
+        "Administration areas for courses, universities, countries and blog content.",
+        "Page-level SEO controls covering titles, descriptions, social metadata, structured data, canonical URLs, hreflang and sitemap settings.",
+        "Visual gallery management with positioning controls, image format conversion, output quality and maximum-size settings.",
+        "Centralised enquiry submission views with unread filters and webhook delivery indicators.",
+        "AI Blog Writer connection interface accessible from the administration dashboard.",
+        "Administrator account and outbound email configuration interfaces."
+      ],
+      "challenges": [],
+      "futurePlans": [],
+      "websiteUrl": "https://veritaspathways.co.uk/",
+      "demoUrl": null,
+      "githubUrl": null,
+      "backendUrl": null,
+      "gradient": "from-teal-500 via-cyan-500 to-emerald-400",
+      "contentSource": "Owner-confirmed team collaboration; feature descriptions based on supplied screenshots. Technology stack and individual feature ownership not supplied.",
+      "collaborators": [
+        {
+          "name": "Mahabub",
+          "role": "Development teammate"
+        }
+      ]
+    },
+    {
+      "id": "quicktax",
+      "title": "QuickTaxnBooks",
+      "subtitle": "Tax, Bookkeeping & Financial Advisory Website",
+      "description": "A professional financial-services website that brings practice-area discovery, bookkeeping plans, specialist information, appointment booking, and an interactive penalty calculator into one experience.",
+      "category": "client",
+      "client": "QuickTaxnBooks",
+      "industry": "Financial services",
+      "status": "delivered",
+      "featured": false,
+      "image": "/portfolio-montages/quicktax-thumbnail.png",
+      "heroImage": "/portfolio-montages/quicktax-hero.png",
+      "gallery": [
+        {
+          "src": "/portfolio-montages/quicktax-thumbnail.png",
+          "alt": "QuickTaxnBooks — thumbnail",
+          "kind": "thumbnail",
+          "isConcept": false,
+          "aspect": 1.3333
+        },
+        {
+          "src": "/portfolio-montages/quicktax-hero.png",
+          "alt": "QuickTaxnBooks — hero",
+          "kind": "hero",
+          "isConcept": true,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/quicktax-services.png",
+          "alt": "QuickTaxnBooks — services and process",
+          "kind": "services and process",
+          "isConcept": false,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/quicktax-pricing-booking.png",
+          "alt": "QuickTaxnBooks — pricing and booking",
+          "kind": "pricing and booking",
+          "isConcept": false,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/quicktax-calculator.png",
+          "alt": "QuickTaxnBooks — penalty calculator",
+          "kind": "penalty calculator",
+          "isConcept": false,
+          "aspect": 1.7768
+        }
+      ],
+      "websiteUrl": "https://www.quicktaxnbooks.com/",
+      "demoUrl": "https://www.quicktaxnbooks.com/",
+      "githubUrl": "",
+      "backendUrl": "",
+      "tags": [
+        "Service Directory",
+        "Appointment Booking",
+        "Interactive Calculator"
+      ],
+      "tagsType": "capabilities",
+      "features": [
+        "Searchable service directory with practice-area categories",
+        "Tax preparation, entity formation, bookkeeping and payroll service presentations",
+        "Bookkeeping pricing tiers and quotation calls to action",
+        "Specialist profile and four-step client process",
+        "Appointment enquiry and booking form",
+        "IRS penalty and interest calculator interface with scenario inputs, breakdowns and charts",
+        "Client portal entry point"
+      ],
+      "challenges": [],
+      "futurePlans": [],
+      "gradient": "from-slate-900 via-emerald-900 to-slate-800",
+      "contentSource": "supplied-screenshots",
+      "imageAspect": 1.3333,
+      "heroAspect": 1.7768,
+      "discipline": "web-software"
+    },
+    {
+      "id": "samm",
+      "title": "Savannah Age Management Medicine",
+      "subtitle": "Healthcare Website & Custom CMS",
+      "description": "A healthcare website paired with a custom administration platform for treatment content, provider profiles, articles, appointment requests, and enquiries.",
+      "category": "client",
+      "client": "Savannah Age Management Medicine",
+      "industry": "Healthcare",
+      "status": "delivered",
+      "featured": true,
+      "image": "/portfolio-montages/samm-thumbnail.png",
+      "heroImage": "/portfolio-montages/samm-desktop-mobile.png",
+      "gallery": [
+        {
+          "src": "/portfolio-montages/samm-thumbnail.png",
+          "alt": "Savannah Age Management Medicine — thumbnail",
+          "kind": "thumbnail",
+          "isConcept": false,
+          "aspect": 1.3333
+        },
+        {
+          "src": "/portfolio-montages/samm-desktop-mobile.png",
+          "alt": "Savannah Age Management Medicine — hero",
+          "kind": "hero",
+          "isConcept": true,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/samm-homepage-montage-v2.png",
+          "alt": "Savannah Age Management Medicine — homepage",
+          "kind": "homepage",
+          "isConcept": false,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/samm-hero.png",
+          "alt": "Savannah Age Management Medicine — services and providers",
+          "kind": "services and providers",
+          "isConcept": false,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/samm-admin.png",
+          "alt": "Savannah Age Management Medicine — administration",
+          "kind": "administration",
+          "isConcept": false,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/samm-development-montage.png",
+          "alt": "Savannah Age Management Medicine — development",
+          "kind": "development",
+          "isConcept": false,
+          "aspect": 1.7768
+        }
+      ],
+      "websiteUrl": "https://www.agemanagementmed.com/",
+      "demoUrl": "https://www.agemanagementmed.com/",
+      "githubUrl": "",
+      "backendUrl": "",
+      "tags": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Prisma",
+        "PostgreSQL"
+      ],
+      "tagsType": "technology",
+      "features": [
+        "Service and treatment content management",
+        "Provider directory and individual expert pages",
+        "Blog publishing with categories, tags and provider attribution",
+        "Appointment request and lead management",
+        "CSV and Excel lead exports",
+        "Newsletter subscriber management",
+        "SEO metadata, canonical fields, JSON-LD and sitemap support",
+        "Authenticated administration with signed JWTs and hashed passwords"
+      ],
+      "challenges": [],
+      "futurePlans": [],
+      "gradient": "from-blue-950 via-teal-700 to-slate-800",
+      "contentSource": "screenshots-and-source-review",
+      "imageAspect": 1.3333,
+      "heroAspect": 1.7768,
+      "discipline": "web-software"
+    },
+    {
+      "id": "samm-aesthetics",
+      "title": "SAMM Medical Aesthetics",
+      "subtitle": "Medical Aesthetics Website & Administration",
+      "description": "A dedicated aesthetics website for the SAMM practice, presenting treatments, membership offers, clinic information, and appointment pathways alongside content and enquiry administration.",
+      "category": "client",
+      "client": "Savannah Age Management Medicine",
+      "industry": "Medical aesthetics",
+      "status": "delivered",
+      "featured": false,
+      "image": "/portfolio-montages/aesthetics-thumbnail.png",
+      "heroImage": "/portfolio-montages/aesthetics-hero.png",
+      "gallery": [
+        {
+          "src": "/portfolio-montages/aesthetics-thumbnail.png",
+          "alt": "SAMM Medical Aesthetics — thumbnail",
+          "kind": "thumbnail",
+          "isConcept": false,
+          "aspect": 1.3333
+        },
+        {
+          "src": "/portfolio-montages/aesthetics-hero.png",
+          "alt": "SAMM Medical Aesthetics — hero",
+          "kind": "hero",
+          "isConcept": false,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/aesthetics-admin.png",
+          "alt": "SAMM Medical Aesthetics — administration",
+          "kind": "administration",
+          "isConcept": false,
+          "aspect": 1.7768
+        }
+      ],
+      "githubUrl": "",
+      "backendUrl": "",
+      "tags": [
+        "Treatment Pages",
+        "Membership Offers",
+        "Admin Dashboard",
+        "SEO Management"
+      ],
+      "tagsType": "capabilities",
+      "features": [
+        "Medical aesthetics treatment pages",
+        "Location-based offer browsing",
+        "Aesthetic membership programme presentation",
+        "Clinic contact details and map section",
+        "Appointment calls to action",
+        "Admin overview for submissions, bookings, claims and membership requests",
+        "Per-page SEO metadata administration",
+        "Admin navigation for team, offers, blogs, locations and hours"
+      ],
+      "challenges": [],
+      "futurePlans": [],
+      "gradient": "from-orange-200 via-stone-100 to-blue-950",
+      "contentSource": "supplied-screenshots",
+      "imageAspect": 1.3333,
+      "heroAspect": 1.7768,
+      "discipline": "web-software",
+      "websiteUrl": "https://www.savannahskinmed.com/",
+      "demoUrl": "https://www.savannahskinmed.com/"
+    },
+    {
+      "id": "opsroi",
+      "title": "OpsROI",
+      "subtitle": "Business Software Marketing Website",
+      "description": "A marketing website for a contractor-focused business software company, organizing its platform story, capability catalogue, founder background, and contact journey.",
+      "category": "client",
+      "client": "OpsROI",
+      "industry": "Business software",
+      "status": "delivered",
+      "featured": false,
+      "image": "/portfolio-montages/opsroi-desktop-mobile-montage.png",
+      "heroImage": "/portfolio-montages/opsroi-desktop-mobile-montage.png",
+      "gallery": [
+        {
+          "src": "/portfolio-montages/opsroi-desktop-mobile-montage.png",
+          "alt": "OpsROI — thumbnail",
+          "kind": "thumbnail",
+          "isConcept": true,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/opsroi-features.png",
+          "alt": "OpsROI — platform features",
+          "kind": "platform features",
+          "isConcept": false,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/opsroi-contact.png",
+          "alt": "OpsROI — contact",
+          "kind": "contact",
+          "isConcept": false,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/opsroi-story.png",
+          "alt": "OpsROI — founder story",
+          "kind": "founder story",
+          "isConcept": false,
+          "aspect": 1.7768
+        }
+      ],
+      "websiteUrl": "https://opsroi.com/",
+      "demoUrl": "https://opsroi.com/",
+      "githubUrl": "",
+      "backendUrl": "",
+      "tags": [
+        "Marketing Website",
+        "Feature Catalogue",
+        "Contact Forms"
+      ],
+      "tagsType": "capabilities",
+      "features": [
+        "Platform introduction with product-tour visual",
+        "Capability cards for CRM, HR, payroll, workflow automation and inventory",
+        "Presentation of AI reception, invoicing and email marketing offerings",
+        "Founder story section",
+        "Business enquiry form and direct contact information",
+        "Demo and platform exploration calls to action"
+      ],
+      "challenges": [],
+      "futurePlans": [],
+      "gradient": "from-teal-900 via-cyan-900 to-lime-500",
+      "contentSource": "supplied-screenshots",
+      "imageAspect": 1.7768,
+      "heroAspect": 1.7768,
+      "discipline": "web-software"
+    },
+    {
+      "id": "elevated-health",
+      "title": "Elevated Health Care Dashboard",
+      "subtitle": "Healthcare Workflow & Operations Dashboard",
+      "description": "A care-operations dashboard presenting patient pipeline oversight, onboarding checklists, scheduling, team workload, reporting, and document organization.",
+      "category": "client",
+      "client": "Elevated Core Health",
+      "industry": "Healthcare operations",
+      "status": "delivered",
+      "featured": true,
+      "image": "/portfolio-montages/elevated-thumbnail.png",
+      "heroImage": "/portfolio-montages/elevated-hero-iphone.png",
+      "gallery": [
+        {
+          "src": "/portfolio-montages/elevated-thumbnail.png",
+          "alt": "Elevated Health Care Dashboard — thumbnail",
+          "kind": "thumbnail",
+          "isConcept": false,
+          "aspect": 1.3333
+        },
+        {
+          "src": "/portfolio-montages/elevated-hero-iphone.png",
+          "alt": "Elevated Health Care Dashboard — hero",
+          "kind": "hero",
+          "isConcept": true,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/elevated-workflow.png",
+          "alt": "Elevated Health Care Dashboard — care workflows",
+          "kind": "care workflows",
+          "isConcept": false,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/elevated-reporting.png",
+          "alt": "Elevated Health Care Dashboard — reporting and documents",
+          "kind": "reporting and documents",
+          "isConcept": false,
+          "aspect": 1.7768
+        }
+      ],
+      "websiteUrl": "https://elevatedcorehealth.com/",
+      "demoUrl": "https://elevatedcorehealth.com/",
+      "githubUrl": "",
+      "backendUrl": "",
+      "tags": [
+        "Care Workflows",
+        "Scheduling",
+        "Reporting",
+        "Document Management"
+      ],
+      "tagsType": "capabilities",
+      "features": [
+        "Patient pipeline overview with stage counts and stale-card indicators",
+        "Patient record panel with onboarding checklist and completion progress",
+        "Appointment, assignment and eligibility information",
+        "Workload calendar with month, week, day and list controls",
+        "Reporting charts and staff workload comparisons",
+        "User-management interface with administrator and staff roles",
+        "Document folders, search, sorting and upload controls",
+        "Navigation for messages, activity logs and CRM integration"
+      ],
+      "challenges": [],
+      "futurePlans": [],
+      "gradient": "from-emerald-950 via-emerald-700 to-green-300",
+      "contentSource": "supplied-screenshots",
+      "imageAspect": 1.3333,
+      "heroAspect": 1.7768,
+      "discipline": "web-software"
+    },
+    {
+      "id": "bellesynk",
+      "title": "BelleSynk AI",
+      "subtitle": "AI Receptionist Marketing Website",
+      "description": "A purple and lavender website introducing Maya, an AI receptionist offering for medical spas, through voice-focused visuals, capability cards, pricing, and consultation booking.",
+      "category": "client",
+      "client": "BelleSynk AI",
+      "industry": "AI services",
+      "status": "delivered",
+      "featured": false,
+      "image": "/portfolio-montages/bellesynk-thumbnail.png",
+      "heroImage": "/portfolio-montages/bellesynk-hero-iphone.png",
+      "gallery": [
+        {
+          "src": "/portfolio-montages/bellesynk-thumbnail.png",
+          "alt": "BelleSynk AI — thumbnail",
+          "kind": "thumbnail",
+          "isConcept": false,
+          "aspect": 1.3333
+        },
+        {
+          "src": "/portfolio-montages/bellesynk-hero-iphone.png",
+          "alt": "BelleSynk AI — hero",
+          "kind": "hero",
+          "isConcept": true,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/bellesynk-features.png",
+          "alt": "BelleSynk AI — AI capabilities",
+          "kind": "AI capabilities",
+          "isConcept": false,
+          "aspect": 1.7768
+        },
+        {
+          "src": "/portfolio-montages/bellesynk-pricing-demo.png",
+          "alt": "BelleSynk AI — pricing and demo booking",
+          "kind": "pricing and demo booking",
+          "isConcept": false,
+          "aspect": 1.7768
+        }
+      ],
+      "websiteUrl": "https://bellesynk.ai/",
+      "demoUrl": "https://bellesynk.ai/",
+      "githubUrl": "",
+      "backendUrl": "",
+      "tags": [
+        "AI Services Website",
+        "Pricing",
+        "Demo Booking"
+      ],
+      "tagsType": "capabilities",
+      "features": [
+        "Voice-orb demonstration entry point",
+        "Presentation of voice AI, web chat and SMS capabilities",
+        "Missed-call text-back and lead-nurture feature sections",
+        "Appointment reminder and Facebook lead integration presentations",
+        "Core, Growth and Enterprise plan comparison",
+        "Demo consultation scheduling interface",
+        "Introductory-call and sales enquiry calls to action"
+      ],
+      "challenges": [],
+      "futurePlans": [],
+      "gradient": "from-purple-950 via-purple-600 to-fuchsia-200",
+      "contentSource": "supplied-screenshots",
+      "imageAspect": 1.3333,
+      "heroAspect": 1.7768,
+      "discipline": "web-software"
+    },
+    {
+      "id": "adler-restaurants",
+      "title": "Adler Restaurant System",
+      "subtitle": "Coming soon",
+      "description": "An upcoming restaurant management project. Full project details and screenshots will be added when ready.",
+      "category": "upcoming",
+      "client": null,
+      "industry": "Hospitality",
+      "status": "upcoming",
+      "featured": false,
+      "image": "/upcomming.avif",
+      "heroImage": "/upcomming.avif",
+      "gallery": [
+        {
+          "src": "/upcomming.avif",
+          "alt": "Adler Restaurant System — coming soon",
+          "kind": "placeholder",
+          "isConcept": false,
+          "aspect": 1
+        }
+      ],
+      "websiteUrl": "https://adler-restaurants-system-sepia.vercel.app/login",
+      "demoUrl": "https://adler-restaurants-system-sepia.vercel.app/login",
+      "githubUrl": "",
+      "backendUrl": "",
+      "tags": [],
+      "tagsType": "technology",
+      "features": [],
+      "challenges": [],
+      "futurePlans": [],
+      "gradient": "from-slate-900 via-slate-800 to-slate-700",
+      "contentSource": "user-provided-name-and-url",
+      "imageAspect": 1,
+      "heroAspect": 1
+    },
+    {
+      "id": "dutch-fc-reporting",
+      "title": "Dutch FC Weekly Reporting Dashboard",
+      "subtitle": "Coming soon",
+      "description": "An upcoming weekly reporting dashboard. Full project details and screenshots will be added when ready.",
+      "category": "upcoming",
+      "client": null,
+      "industry": "Reporting",
+      "status": "upcoming",
+      "featured": false,
+      "image": "/upcomming.avif",
+      "heroImage": "/upcomming.avif",
+      "gallery": [
+        {
+          "src": "/upcomming.avif",
+          "alt": "Dutch FC Weekly Reporting Dashboard — coming soon",
+          "kind": "placeholder",
+          "isConcept": false,
+          "aspect": 1
+        }
+      ],
+      "websiteUrl": "https://dutch-fc-weekly-reporting-dashboard.vercel.app/",
+      "demoUrl": "https://dutch-fc-weekly-reporting-dashboard.vercel.app/",
+      "githubUrl": "",
+      "backendUrl": "",
+      "tags": [],
+      "tagsType": "technology",
+      "features": [],
+      "challenges": [],
+      "futurePlans": [],
+      "gradient": "from-slate-900 via-slate-800 to-slate-700",
+      "contentSource": "user-provided-name-and-url",
+      "imageAspect": 1,
+      "heroAspect": 1
+    },
+    {
+      "id": "followly",
+      "title": "Followly",
+      "subtitle": "Freelancer Follow-up Assistant",
+      "description": "A personal mobile app in development to help freelancers organize client conversations, track proposals and follow up consistently.",
+      "category": "personal",
+      "status": "in-development",
+      "featured": false,
+      "client": null,
+      "industry": "Productivity",
+      "image": "/mobile-apps/followly-thumbnail.png",
+      "heroImage": "/mobile-apps/followly-thumbnail.png",
+      "imageAspect": 1.7768331562167907,
+      "heroAspect": 1.7768331562167907,
+      "gallery": [
+        {
+          "src": "/mobile-apps/followly-thumbnail.png",
+          "alt": "Followly app concept mockup",
+          "kind": "App concept",
+          "isConcept": true,
+          "aspect": 1.7768331562167907
+        }
+      ],
+      "discipline": "mobile-apps",
+      "detailsEnabled": false,
+      "tags": [
+        "Client and proposal tracking",
+        "Follow-up reminders",
+        "AI-assisted message drafts"
+      ],
+      "tagsType": "capabilities",
+      "features": [
+        "Client and proposal tracking",
+        "Follow-up reminders",
+        "AI-assisted message drafts",
+        "Voice-note action items"
+      ],
+      "challenges": [],
+      "futurePlans": [
+        "Client and proposal tracking",
+        "Follow-up reminders",
+        "AI-assisted message drafts",
+        "Voice-note action items"
+      ],
+      "websiteUrl": null,
+      "demoUrl": null,
+      "githubUrl": null,
+      "backendUrl": null,
+      "gradient": "from-slate-900 to-teal-900",
+      "contentSource": "Owner-approved personal app concept. Planned features and generated concept imagery."
+    },
+    {
+      "id": "lifeshelf",
+      "title": "LifeShelf",
+      "subtitle": "Home & Warranty Organizer",
+      "description": "A personal mobile app in development to organize household products, receipts and warranties, with maintenance reminders and repair history.",
+      "category": "personal",
+      "status": "in-development",
+      "featured": false,
+      "client": null,
+      "industry": "Productivity",
+      "image": "/mobile-apps/lifeshelf-thumbnail.png",
+      "heroImage": "/mobile-apps/lifeshelf-thumbnail.png",
+      "imageAspect": 1.7768331562167907,
+      "heroAspect": 1.7768331562167907,
+      "gallery": [
+        {
+          "src": "/mobile-apps/lifeshelf-thumbnail.png",
+          "alt": "LifeShelf app concept mockup",
+          "kind": "App concept",
+          "isConcept": true,
+          "aspect": 1.7768331562167907
+        }
+      ],
+      "discipline": "mobile-apps",
+      "detailsEnabled": false,
+      "tags": [
+        "Receipt scanning",
+        "Warranty and maintenance reminders",
+        "Room-based home inventory"
+      ],
+      "tagsType": "capabilities",
+      "features": [
+        "Receipt scanning",
+        "Warranty and maintenance reminders",
+        "Room-based home inventory",
+        "Repair and expense history"
+      ],
+      "challenges": [],
+      "futurePlans": [
+        "Receipt scanning",
+        "Warranty and maintenance reminders",
+        "Room-based home inventory",
+        "Repair and expense history"
+      ],
+      "websiteUrl": null,
+      "demoUrl": null,
+      "githubUrl": null,
+      "backendUrl": null,
+      "gradient": "from-slate-900 to-teal-900",
+      "contentSource": "Owner-approved personal app concept. Planned features and generated concept imagery."
+    }
+  ],
+  "clientDisciplines": [
+    {
+      "id": "web-software",
+      "label": "Web & Software Development"
+    },
+    {
+      "id": "mobile-apps",
+      "label": "Mobile Apps"
+    },
+    {
+      "id": "ai-automation-crm",
+      "label": "AI Automation & CRM"
+    }
+  ]
+}

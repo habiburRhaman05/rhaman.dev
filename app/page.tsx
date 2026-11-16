@@ -1,3 +1,7 @@
+import type { Metadata } from "next";
+import { profileSchema, jsonLd, siteUrl } from "@/lib/seo";
+import ProjectFaq from "./components/project-faq";
+export const metadata: Metadata = { alternates: { canonical: siteUrl } };
 import { Fragment } from "react";
 import dynamic from "next/dynamic";
 import GoTopButton from "./components/goTopButton";
@@ -27,13 +31,14 @@ function SectionDivider() {
 
 export default function Home() {
   const sections = [
-    <Services key="services" />,
+    // <Services key="services" />,
     <Qualifications key="qualifications" />,
-    <AboutMe key="about-me" />,
-    <Skills key="skills" />,
-    <Strengths key="strengths" />,
+    // <AboutMe key="about-me" />,
     <Projects key="projects" />,
-    <Achievements key="achievements" />,
+    <Skills key="skills" />,
+    // <Strengths key="strengths" />,
+    // <Achievements key="achievements" />,
+    <ProjectFaq key="faq" />,
     <Contact key="contact" />,
   ];
 
@@ -41,6 +46,7 @@ export default function Home() {
     <main className="relative min-h-screen grid-bg">
       <div className="grid-glow" aria-hidden="true" />
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(profileSchema) }} />
       <Hero />
 
       <div className="mx-auto max-w-7xl px-6 sm:px-4 space-y-0">

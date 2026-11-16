@@ -1,468 +1,508 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Badge } from "../components/ui/badge";
-import { Button } from "../components/ui/button";
-import {
-  Github,
-  ExternalLink,
-  ArrowUpRight,
-  Sparkles,
-  Layers,
-  Globe,
-  Lock,
-  X,
-  Zap,
-  Rocket,
-  Maximize2,
-} from "lucide-react";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+import ProjectTabs from "./project-tabs";
+import AutomationProjects from "./automation-projects";
+import {
+  getAttributionAgencies,
+  getPublicAutomationProjects,
+} from "@/lib/automation-projects";
 
-const projects = [
-  {
-    id: "blitz",
-    title: "Blitz Analyzer",
-    subtitle: "AI-Powered Resume Intelligence SaaS",
-    description:
-      "A production-grade ATS analysis platform that transforms raw resumes into actionable insights using AI scoring and PDF report generation.",
-    image: "/blitz-analyzer.png",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Express.js", "Redis", "Stripe", "Groq API", "Prisma"],
-    demoUrl: "https://blitz-analyzer.vercel.app",
-    githubUrl: "https://github.com/habiburRhaman05/Blitz-Analyzer",
-    backendUrl: "https://github.com/habiburRhaman05/Blitz-Analyzer-Backend",
-    features: [
-      "Secure Auth flow with OTP verification and RBAC",
-      "AI-driven Resume Analysis with Job Matching Score via Groq API",
-      "PDF Report Download & save with Stripe payment gating",
-      "Template-based + Custom Resume Builder with interactive canvas",
-      "Admin dashboard to manage users, track analytics and operations",
-    ],
-    challenges: [
-      "Optimizing PDF parsing to handle non-standard resume layouts without data loss.",
-      "Managing high-concurrency Redis sessions during peak traffic hours.",
-      "Ensuring Stripe webhook reliability for real-time subscription gating.",
-    ],
-    futurePlans: [
-      "Implement AI-generated mock interview questions based on analyzed resumes.",
-      "Add team/enterprise accounts for recruitment agencies.",
-      "Introduce browser-based resume preview with direct annotation tools.",
-    ],
-    featured: true,
-    gradient: "from-emerald-500 via-teal-500 to-cyan-500",
-    status: "live",
-  },
-  {
-    id: "eduspark",
-    title: "EduSpark Academy",
-    subtitle: "Full-Scale EdTech SaaS Platform",
-    description:
-      "A comprehensive online education ecosystem bridging mentors and students through real-time video, AI dashboards, and smart scheduling.",
-    image: "/eduspark.png",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Express.js", "ZegoCloud", "Socket.io", "Redis", "BullMQ", "Stripe"],
-    demoUrl: "https://edu-spark-zone.vercel.app",
-    githubUrl: "https://github.com/habiburRhaman05/EduSpark-modern-learning-platfrom",
-    backendUrl: "https://github.com/habiburRhaman05/Edu-Saprk-Backend",
-    features: [
-      "AI-Powered student dashboard with activity tracking and progress scores",
-      "High-quality real-time video sessions powered by ZegoCloud",
-      "Secure payment integration with Stripe for course purchases",
-      "Full mentor/tutor control panel — sessions, earnings, reviews, schedules",
-      "Background job processing with BullMQ for notifications and reminders",
-    ],
-    challenges: [
-      "Synchronizing real-time socket events with video session lifecycle management.",
-      "Designing a scalable BullMQ job queue for scheduling reminders across timezones.",
-      "Handling concurrent session bookings without double-booking conflicts.",
-    ],
-    futurePlans: [
-      "Integrate AI-generated personalized learning paths based on student progress.",
-      "Add certificate generation upon course completion.",
-      "Build a mobile app with React Native for on-the-go learning.",
-    ],
-    featured: true,
-    gradient: "from-violet-500 via-purple-500 to-indigo-500",
-    status: "live",
-  },
-  {
-    id: "skillbridge",
-    title: "SkillBridge",
-    subtitle: "High-Performance Tutor Marketplace",
-    description:
-      "A comprehensive educational ecosystem featuring complex multi-role workflows and smart scheduling.",
-    image: "/skill-bridge.png",
-    tags: ["Next.js 15", "TanStack Query", "TypeScript", "PostgreSQL", "Express.js"],
-    demoUrl: "https://skill-bridge-frontend-gamma.vercel.app",
-    githubUrl: "https://github.com/habiburRhaman05/skill-bridge-frontend",
-    backendUrl: "",
-    features: [
-      "Advanced RBAC for Students, Tutors, and Admins",
-      "Custom Availability Engine for recurring schedules",
-      "Hybrid Data Strategy using Server Components and TanStack Query",
-    ],
-    challenges: [
-      "Building a performant availability engine that handles timezone conversions for global users.",
-      "Designing a complex database schema to prevent overlapping session bookings.",
-      "Implementing smooth page transitions without breaking Lenis inertia scrolling.",
-    ],
-    futurePlans: [
-      "Integrate WebRTC for direct in-platform video tutoring sessions.",
-      "AI-driven tutor matching based on student learning speed and history.",
-      "Develop a mobile-first Progressive Web App (PWA) for on-the-go scheduling.",
-    ],
-    featured: false,
-    gradient: "from-indigo-600 via-violet-600 to-purple-600",
-    status: "live",
-  },
-  {
-    id: "opportune",
-    title: "Opportune Hub",
-    subtitle: "Full-Stack Job Portal",
-    description:
-      "A modern job portal platform with real-time listings, advanced search, and smooth UI/UX.",
-    image: "/opportune-hub.png",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Node.js", "MongoDB"],
-    demoUrl: "https://opportune-hub.vercel.app/",
-    githubUrl: "https://github.com/habiburRhaman05/OpportuneX",
-    backendUrl: "",
-    features: [
-      "Animated homepage transitions using Framer Motion",
-      "Responsive, mobile-first design with Tailwind CSS",
-      "Contact form with Nodemailer handling",
-    ],
-    challenges: [
-      "Achieving sub-second search results using MongoDB full-text search indexing.",
-      "Ensuring form security and preventing spam using Nodemailer with rate-limiting.",
-      "Managing complex state across nested filter components.",
-    ],
-    futurePlans: [
-      "Add a one-click apply feature that auto-generates cover letters.",
-      "Integrate LinkedIn API for easier profile importing.",
-      "Implement real-time notification system for job alerts using Socket.io.",
-    ],
-    featured: false,
-    gradient: "from-blue-500 via-indigo-500 to-purple-500",
-    status: "running",
-  },
-  {
-    id: "lumina",
-    title: "Lumina Compliance AI",
-    subtitle: "Enterprise Document Intelligence Engine",
-    description:
-      "A RAG-based platform designed to deconstruct legal frameworks into actionable risk reports.",
-    image: "/upcomming.avif",
-    tags: ["Next.js 15", "Golang", "PostgreSQL", "Vector DB", "Redis", "LangChain"],
-    demoUrl: "#",
-    githubUrl: "",
-    backendUrl: "",
-    features: [
-      "Neural Document Parsing: Extracting structured data from legal PDFs",
-      "Contextual RAG Engine: High-speed semantic search using Vector embeddings",
-      "Risk Score Synthesis: AI-driven compliance gap analysis",
-    ],
-    challenges: [
-      "Architecting a low-latency Go-to-Python bridge for AI inference tasks.",
-      "Ensuring 99% accuracy in source-citation from multi-page legal documents.",
-      "Handling massive vector embedding updates without system downtime.",
-    ],
-    futurePlans: [
-      "Automated legal drafting for mitigation strategy documents.",
-      "Multi-language support for international compliance standards.",
-      "On-premise deployment options for highly sensitive government data.",
-    ],
-    featured: false,
-    gradient: "from-slate-900 via-slate-800 to-slate-900",
-    status: "upcoming",
-  },
-];
+/** Automation and CRM work lives in its own collection, under this tab. */
+const AUTOMATION_DISCIPLINE = "ai-automation-crm";
+import {
+  boxAspect,
+  getCategoryLabel,
+  getClientDisciplines,
+  getClientProjectsByDiscipline,
+  getProjectsByCategory,
+  getStatusLabel,
+  getTagsLabel,
+  isAspectClamped,
+  type ClientDiscipline,
+  type Project,
+} from "@/lib/projects";
 
-// --- Sub-Components ---
+/* -------------------------------------------------------------------------- */
+/*  Shared pieces                                                             */
+/* -------------------------------------------------------------------------- */
 
-function StatusBadge({ status }: { status: string }) {
-  const isUpcoming = status === "upcoming";
-  const isRunning = status === "running";
+function StatusPill({ project }: { project: Project }) {
+  const isLive = project.status === "live" || project.status === "running";
+  const isUpcoming = project.status === "upcoming";
 
   return (
-    <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md ${isUpcoming ? "bg-amber-500/10 border-amber-500/20 text-amber-500" : "bg-emerald-500/10 border-emerald-500/20 text-emerald-500"}`}>
-      <span className="relative flex h-2 w-2">
-        {isRunning && <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>}
-        <span className={`relative inline-flex rounded-full h-2 w-2 ${isUpcoming ? 'bg-amber-500' : 'bg-emerald-500'}`}></span>
-      </span>
-      {status}
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background/60 px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+      <span
+        aria-hidden="true"
+        className={cn(
+          "h-1.5 w-1.5 rounded-full",
+          isLive && "bg-emerald-500",
+          isUpcoming && "bg-amber-500",
+          !isLive && !isUpcoming && "bg-primary"
+        )}
+      />
+      {getStatusLabel(project.status)}
+    </span>
+  );
+}
+
+/**
+ * The box takes the image's own aspect ratio (clamped for extremes), so the
+ * thumbnail fills it edge to edge with no letterboxing.
+ */
+function Thumbnail({
+  project,
+  sizes,
+  priority = false,
+  className,
+}: {
+  project: Project;
+  sizes: string;
+  priority?: boolean;
+  className?: string;
+}) {
+  const ratio = boxAspect(project.imageAspect);
+  const cropped = isAspectClamped(project.imageAspect);
+
+  return (
+    <span
+      style={{ aspectRatio: ratio }}
+      className={cn(
+        "relative block w-full overflow-hidden rounded-xl border border-border bg-muted",
+        className
+      )}
+    >
+      <Image
+        src={project.image}
+        alt={`${project.title} — ${project.subtitle}`}
+        fill
+        sizes={sizes}
+        priority={priority}
+        className={cn(
+          "object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.02]",
+          cropped ? "object-top" : "object-center"
+        )}
+      />
+    </span>
+  );
+}
+
+function TagList({
+  project,
+  limit,
+  className,
+}: {
+  project: Project;
+  limit?: number;
+  className?: string;
+}) {
+  if (project.tags.length === 0) return null;
+  const shown = limit ? project.tags.slice(0, limit) : project.tags;
+  const remaining = project.tags.length - shown.length;
+
+  return (
+    <ul
+      className={cn("flex flex-wrap items-center gap-x-2 gap-y-1.5", className)}
+      aria-label={getTagsLabel(project)}
+    >
+      {shown.map((tag) => (
+        <li
+          key={tag}
+          className="rounded-md border border-border/70 bg-background/50 px-2 py-0.5 font-mono text-[11px] text-muted-foreground"
+        >
+          {tag}
+        </li>
+      ))}
+      {remaining > 0 && (
+        <li className="font-mono text-[11px] text-muted-foreground/80">
+          +{remaining}
+        </li>
+      )}
+    </ul>
+  );
+}
+
+function DetailsAffordance({ label = "View details" }: { label?: string }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+      {label}
+      <ArrowUpRight className="h-4 w-4 transition-transform duration-300 motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5" />
+    </span>
+  );
+}
+
+function GroupHeading({
+  index,
+  label,
+  description,
+  count,
+}: {
+  index: string;
+  label: string;
+  description: string;
+  count: number;
+}) {
+  return (
+    <div className="mb-10 border-t border-border pt-6">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+        <h3 className="flex items-baseline gap-3 text-xl font-semibold tracking-tight sm:text-2xl">
+          <span className="font-mono text-sm text-primary">{index}</span>
+          {label}
+        </h3>
+        <span className="font-mono text-xs text-muted-foreground">
+          {count} {count === 1 ? "project" : "projects"}
+        </span>
+      </div>
+      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+        {description}
+      </p>
     </div>
   );
 }
 
-// Fullscreen Image Lightbox Component
-function Lightbox({ src, onClose }: { src: string; onClose: () => void }) {
-  useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
-  }, [onClose]);
+/* -------------------------------------------------------------------------- */
+/*  Client work                                                               */
+/* -------------------------------------------------------------------------- */
 
+function EmptyDiscipline({ label }: { label: string }) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 cursor-zoom-out"
-      onClick={onClose}
-    >
-      <motion.button 
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="absolute top-6 right-6 p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors z-30"
-      >
-        <X className="w-6 h-6" />
-      </motion.button>
-      
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        transition={{ type: "spring", damping: 25, stiffness: 300 }}
-        className="relative w-full max-w-6xl aspect-video rounded-xl overflow-hidden"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <Image 
-          src={src} 
-          alt="Fullscreen view" 
-          fill 
-          className="object-contain"
-          priority
-        />
-      </motion.div>
-    </motion.div>
+    <div className="rounded-2xl border border-dashed border-border bg-card/40 px-6 py-12 text-center">
+      <p className="text-sm font-medium text-foreground">
+        No {label} projects yet
+      </p>
+      <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
+        Work in this area is not published here yet. The delivered client
+        projects are under Web &amp; Software Development.
+      </p>
+    </div>
   );
 }
 
-function ProjectDetailsModal({ project, isOpen, onClose, onImageClick }: { project: any, isOpen: boolean, onClose: () => void, onImageClick: (src: string) => void }) {
-  if (!project) return null;
+function disciplineCount(discipline: ClientDiscipline): number {
+  return discipline.id === AUTOMATION_DISCIPLINE
+    ? getPublicAutomationProjects().length
+    : getClientProjectsByDiscipline(discipline.id).length;
+}
+
+function DisciplinePanel({ discipline }: { discipline: ClientDiscipline }) {
+  if (discipline.id === AUTOMATION_DISCIPLINE) {
+    return (
+      <AutomationProjects
+        projects={getPublicAutomationProjects()}
+        agencies={getAttributionAgencies()}
+      />
+    );
+  }
+
+  const projects = getClientProjectsByDiscipline(discipline.id);
+  if (discipline.id === "mobile-apps" && projects.length > 0) {
+    return <ul className="grid gap-6 lg:grid-cols-2">{projects.map((project) => (
+      <li key={project.id} className="rounded-2xl border border-border bg-card p-5 space-y-5">
+        <Thumbnail project={project} sizes="(min-width: 1024px) 45vw, 100vw" />
+        <div className="flex flex-wrap items-center gap-3"><span className="text-xs font-medium uppercase tracking-wider text-primary">{getCategoryLabel(project.category)}</span><StatusPill project={project} /></div>
+        <div><h4 className="text-2xl font-semibold">{project.title}</h4><p className="mt-1 text-sm text-muted-foreground">{project.subtitle}</p></div>
+        <p className="text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+        {project.detailsEnabled === false ? <><p className="text-xs text-muted-foreground">Concept preview. Features are in development.</p><button disabled className="rounded-lg border border-border px-4 py-2 text-sm text-muted-foreground opacity-60 cursor-not-allowed">Details coming soon</button></> : <Link href={`/projects/${project.id}`}><DetailsAffordance /></Link>}
+      </li>
+    ))}</ul>;
+  }
+  const [lead, ...rest] = [
+    ...projects.filter((project) => project.featured),
+    ...projects.filter((project) => !project.featured),
+  ];
+
+  if (!lead) return <EmptyDiscipline label={discipline.label} />;
 
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
-            className="absolute inset-0 bg-background/80 backdrop-blur-md"
-          />
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-card border border-border rounded-3xl shadow-2xl scrollbar-hide"
-          >
-            <button onClick={onClose} className="absolute top-6 right-6 p-2 rounded-full bg-muted/50 hover:bg-muted transition-colors z-10">
-              <X className="w-5 h-5" />
-            </button>
-
-            <div className="grid lg:grid-cols-2 gap-0">
-              <div 
-                className="relative h-[300px] lg:h-full bg-muted cursor-zoom-in group"
-                onClick={() => onImageClick(project.image)}
-              >
-                <Image src={project.image} alt={project.title} fill className="object-cover" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors flex items-center justify-center">
-                  <Maximize2 className="text-white opacity-0 group-hover:opacity-100 transition-opacity w-8 h-8" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-              </div>
-
-              <div className="p-8 space-y-8">
-                <div>
-                  <Badge variant="outline" className="mb-3 text-primary border-primary/20">{project.subtitle}</Badge>
-                  <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
-                  <p className="text-muted-foreground leading-relaxed">{project.description}</p>
-                </div>
-
-                 <div className="flex flex-wrap gap-2 pt-2">
-       <h1>Tech Stack</h1>
-
-                  <div className="flex flex-wrap gap-2 pt-2">
-                     {project.tags.map((tag, i) => <span key={i} className="text-[13px] bg-zinc-800 text-white dark:bg-zinc-300 dark:text-zinc-800 p-3 rounded-md font-bold text-muted-foreground uppercase">{tag}</span>)}
-                  </div>
-                </div>
-
-
-                <div className="space-y-4">
-                  <h4 className="flex items-center gap-2 font-bold text-sm uppercase tracking-wider">
-                    <Zap className="w-4 h-4 text-primary" /> Challenges Faced
-                  </h4>
-                  <ul className="space-y-2">
-                    {project.challenges.map((c: string, i: number) => (
-                      <li key={i} className="text-sm text-muted-foreground flex gap-2">
-                        <span className="text-primary">•</span> {c}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="space-y-4">
-                  <h4 className="flex items-center gap-2 font-bold text-sm uppercase tracking-wider">
-                    <Rocket className="w-4 h-4 text-primary" /> Future Plans
-                  </h4>
-                  <ul className="space-y-2">
-                    {project.futurePlans.map((p: string, i: number) => (
-                      <li key={i} className="text-sm text-muted-foreground flex gap-2">
-                        <span className="text-primary">→</span> {p}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex flex-wrap gap-3 pt-6 border-t">
-                  {project.status !== "upcoming" && (
-                    <>
-                      <Link href={project.demoUrl} target="_blank" className="flex-1">
-                        <Button className="w-full gap-2 rounded-xl"> <ExternalLink className="w-4 h-4" /> Live Demo</Button>
-                      </Link>
-                      <Link href={project.githubUrl} target="_blank">
-                        <Button variant="outline" className="gap-2 rounded-xl"> <Github className="w-4 h-4" /> Code</Button>
-                      </Link>
-                    </>
-                  )}
-                </div>
-              </div>
-       
-            </div>
-          </motion.div>
-        </div>
+    <>
+      <ClientLead project={lead} />
+      {rest.length > 0 && (
+        <ul className="mt-6 grid gap-6 lg:grid-cols-2">
+          {rest.map((project) => (
+            <li key={project.id} className="flex">
+              <ClientCard project={project} />
+            </li>
+          ))}
+        </ul>
       )}
-    </AnimatePresence>
+    </>
   );
 }
 
-// --- Main Page Component ---
-
-export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState<any>(null);
-  const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
-
+function ClientLead({ project }: { project: Project }) {
   return (
-    <section id="projects" className="py-20 px-4">
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-        <div className="mb-12">
-          <p className="text-sm font-medium text-primary uppercase tracking-wider mb-2">Portfolio</p>
-          <h2 className="text-3xl sm:text-4xl font-bold section-heading">Featured Projects</h2>
-          <p className="text-muted-foreground mt-6 max-w-2xl">Excellence in engineering, performance, and user-centric design.</p>
+    <Link
+      href={`/projects/${project.id}`}
+      className="group block rounded-2xl border border-border bg-card p-4 transition-colors hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:p-6"
+    >
+      <div className="grid items-center gap-6 lg:grid-cols-12 lg:gap-10">
+        <div className="lg:col-span-7">
+          <Thumbnail
+            project={project}
+            sizes="(min-width: 1024px) 60vw, 100vw"
+            priority
+          />
         </div>
 
-       
-{/* Featured Project Row */}
-<div className="space-y-8 mb-16">
-  {projects.filter(p => p.featured).map((project, index) => (
-    <motion.div
-      key={index}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="group relative rounded-3xl border border-border bg-card overflow-hidden transition-all duration-500 hover:border-primary/30"
-    >
-      <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${project.gradient} opacity-70`} />
-      <div className="grid lg:grid-cols-12 gap-0">
-        <div 
-          className="lg:col-span-7 relative h-[350px] lg:h-[500px] bg-muted overflow-hidden cursor-zoom-in"
-          onClick={() => setFullscreenImage(project.image)}
-        >
-          <Image 
-            src={project.image} 
-            alt={project.title} 
-            fill 
-           
-            className="object-cover object-top transition-transform duration-700 group-hover:scale-105" 
-          />
-          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
-        </div>
-        
-        <div className="lg:col-span-5 p-8 lg:p-10 flex flex-col justify-center space-y-6">
-          <div className="flex justify-between items-center">
-            <span className="text-xs font-bold text-primary uppercase tracking-widest">{project.subtitle}</span>
-            <StatusBadge status={project.status} />
-          </div>
-          <h3 className="text-3xl font-bold">{project.title}</h3>
-          <p className="text-muted-foreground italic">"{project.description}"</p>
-          <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag, i) => <Badge key={i} variant="secondary" className="bg-muted/50">{tag}</Badge>)}
-          </div>
-          <div className="flex gap-3 pt-4 border-t border-border">
-            <Button onClick={() => setSelectedProject(project)} className="rounded-xl gap-2 shadow-lg shadow-primary/20">
-              View Details <ArrowUpRight className="w-4 h-4" />
-            </Button>
-            {project.status !== "upcoming" && (
-              <Link href={project.githubUrl} target="_blank">
-                <Button variant="outline" className="rounded-xl gap-2"> <Github className="w-4 h-4" /> Source </Button>
-              </Link>
+        <div className="space-y-5 lg:col-span-5 lg:pr-4">
+          <div className="flex flex-wrap items-center gap-3">
+            <StatusPill project={project} />
+            {project.industry && (
+              <span className="text-xs uppercase tracking-wider text-muted-foreground">
+                {project.industry}
+              </span>
             )}
           </div>
+
+          <div className="space-y-2">
+            {project.client && (
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
+                {project.client}
+              </p>
+            )}
+            <h4 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+              {project.title}
+            </h4>
+            <p className="text-sm text-muted-foreground">{project.subtitle}</p>
+          </div>
+
+          <p className="text-[15px] leading-relaxed text-muted-foreground">
+            {project.description}
+          </p>
+
+          <TagList project={project} limit={5} />
+          <DetailsAffordance label="View project details" />
         </div>
       </div>
-    </motion.div>
-  ))}
-</div>
-        {/* Grid Projects */}
-        <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
-          <span className="w-6 h-px bg-primary/50" /> More Projects
-        </h3>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.filter(p => !p.featured).map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="group relative rounded-2xl border border-border bg-card overflow-hidden hover:border-primary/40 transition-all duration-500"
-            >
-              <div className="relative h-[200px] bg-muted overflow-hidden">
-                <Image src={project.image} alt={project.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-2 backdrop-blur-[2px]">
-                   <Button onClick={() => setSelectedProject(project)} variant="secondary" className="rounded-full gap-2">
-                     View Details <ArrowUpRight className="w-4 h-4" />
-                   </Button>
-                   <button 
-                    onClick={() => setFullscreenImage(project.image)}
-                    className="text-white/70 hover:text-white text-xs flex items-center gap-1 transition-colors"
-                   >
-                     <Maximize2 className="w-3 h-3" /> Full Screen
-                   </button>
-                </div>
-              </div>
-              <div className="p-6 space-y-3">
-                <div className="flex justify-between items-start">
-                   <h3 className="text-xl font-bold">{project.title}</h3>
-                   <StatusBadge status={project.status} />
-                </div>
-                <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
-                <div className="flex flex-wrap gap-2 pt-2">
-                   {project.tags.slice(0, 3).map((tag, i) => <span key={i} className="text-[10px] font-bold text-muted-foreground uppercase">{tag}</span>)}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+    </Link>
+  );
+}
 
-      {/* Global Project Modal */}
-      <ProjectDetailsModal
-        project={selectedProject}
-        isOpen={!!selectedProject}
-        onClose={() => setSelectedProject(null)}
-        onImageClick={(src) => setFullscreenImage(src)}
+function ClientCard({ project }: { project: Project }) {
+  return (
+    <Link
+      href={`/projects/${project.id}`}
+      className="group flex h-full flex-col gap-5 rounded-2xl border border-border bg-card p-4 transition-colors hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:p-5"
+    >
+      <Thumbnail
+        project={project}
+        sizes="(min-width: 1024px) 45vw, 100vw"
       />
 
-      {/* Fullscreen Lightbox Overlay */}
-      <AnimatePresence>
-        {fullscreenImage && (
-          <Lightbox src={fullscreenImage} onClose={() => setFullscreenImage(null)} />
-        )}
-      </AnimatePresence>
+      <div className="flex flex-1 flex-col gap-4">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          {project.client ? (
+            <span className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
+              {project.client}
+            </span>
+          ) : (
+            <span />
+          )}
+          <StatusPill project={project} />
+        </div>
+
+        <div className="space-y-1.5">
+          <h4 className="text-xl font-semibold tracking-tight">
+            {project.title}
+          </h4>
+          <p className="text-sm text-muted-foreground">{project.subtitle}</p>
+        </div>
+
+        <p className="text-sm leading-relaxed text-muted-foreground">
+          {project.description}
+        </p>
+
+        <div className="mt-auto space-y-4 pt-1">
+          <TagList project={project} limit={4} />
+          <DetailsAffordance />
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Personal work                                                             */
+/* -------------------------------------------------------------------------- */
+
+function PersonalRow({ project, index }: { project: Project; index: number }) {
+  return (
+    <li>
+      <Link
+        href={`/projects/${project.id}`}
+        className="group grid items-center gap-5 rounded-2xl p-3 transition-colors hover:bg-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:grid-cols-12 sm:gap-8 sm:p-4"
+      >
+        <div className="sm:col-span-5 lg:col-span-4">
+          <Thumbnail
+            project={project}
+            sizes="(min-width: 640px) 40vw, 100vw"
+          />
+        </div>
+
+        <div className="space-y-3 sm:col-span-7 lg:col-span-8">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="font-mono text-xs text-muted-foreground">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <StatusPill project={project} />
+          </div>
+
+          <div className="space-y-1.5">
+            <h4 className="text-xl font-semibold tracking-tight sm:text-2xl">
+              {project.title}
+            </h4>
+            <p className="text-sm text-muted-foreground">{project.subtitle}</p>
+          </div>
+
+          <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            {project.description}
+          </p>
+
+          <TagList project={project} limit={6} />
+          <DetailsAffordance />
+        </div>
+      </Link>
+    </li>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Upcoming work                                                             */
+/* -------------------------------------------------------------------------- */
+
+function UpcomingCard({ project }: { project: Project }) {
+  return (
+    <Link
+      href={`/projects/${project.id}`}
+      className="group flex h-full flex-col gap-4 rounded-2xl border border-dashed border-border bg-card/50 p-4 transition-colors hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+    >
+      <span
+        style={{ aspectRatio: boxAspect(project.imageAspect) }}
+        className="relative block w-full overflow-hidden rounded-xl border border-border bg-muted"
+      >
+        <Image
+          src={project.image}
+          alt=""
+          fill
+          sizes="(min-width: 1024px) 33vw, 100vw"
+          className="object-cover opacity-50 saturate-50"
+        />
+        <span className="absolute inset-0 flex items-center justify-center">
+          <span className="rounded-full border border-border bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+            Coming soon
+          </span>
+        </span>
+      </span>
+
+      <div className="flex flex-1 flex-col gap-3">
+        <div className="space-y-1.5">
+          <h4 className="text-lg font-semibold tracking-tight">
+            {project.title}
+          </h4>
+          {project.industry && (
+            <p className="text-xs uppercase tracking-wider text-muted-foreground">
+              {project.industry}
+            </p>
+          )}
+        </div>
+        <p className="text-sm leading-relaxed text-muted-foreground">
+          {project.description}
+        </p>
+        <div className="mt-auto pt-1">
+          <DetailsAffordance />
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Section                                                                   */
+/* -------------------------------------------------------------------------- */
+
+export default function Projects() {
+  const clientProjects = getProjectsByCategory("client");
+  const clientDisciplines = getClientDisciplines();
+  const personalProjects = getProjectsByCategory("personal").filter((project) => project.discipline !== "mobile-apps");
+  const upcomingProjects = getProjectsByCategory("upcoming");
+
+  return (
+    <section id="projects" className="py-20">
+      <div className="mb-16">
+        <p className="mb-2 text-sm font-medium uppercase tracking-wider text-primary">
+          Portfolio
+        </p>
+        <h2 className="section-heading text-3xl font-bold sm:text-4xl">
+          Selected Work
+        </h2>
+        <p className="mt-6 max-w-2xl text-muted-foreground">
+          Delivered client platforms and self-directed engineering projects,
+          grouped by discipline. Explore case studies and features, with concept
+          previews for apps in development.
+        </p>
+      </div>
+
+      <div className="mb-24">
+        <GroupHeading
+          index="01"
+          label="Real Client Works in Ghlprime"
+          description="Client websites, software and automation, alongside personal mobile apps in development."
+          count={clientProjects.length + getPublicAutomationProjects().length + getClientProjectsByDiscipline("mobile-apps").filter((project) => project.category === "personal").length}
+        />
+
+        <ProjectTabs
+          label="Project disciplines"
+          tabs={clientDisciplines.map((discipline) => ({
+            id: discipline.id,
+            label: discipline.label,
+            count: disciplineCount(discipline),
+          }))}
+          panels={Object.fromEntries(
+            clientDisciplines.map((discipline) => [
+              discipline.id,
+              <DisciplinePanel key={discipline.id} discipline={discipline} />,
+            ])
+          )}
+        />
+      </div>
+
+      {personalProjects.length > 0 && (
+        <div className="mb-24">
+          <GroupHeading
+            index="02"
+            label={getCategoryLabel("personal")}
+            description="Products built end to end to explore architecture, real-time systems and AI tooling, with source code available."
+            count={personalProjects.length}
+          />
+
+          <ol className="divide-y divide-border">
+            {personalProjects.map((project, index) => (
+              <PersonalRow key={project.id} project={project} index={index} />
+            ))}
+          </ol>
+        </div>
+      )}
+
+      {upcomingProjects.length > 0 && (
+        <div>
+          <GroupHeading
+            index="03"
+            label={getCategoryLabel("upcoming")}
+            description="Work in progress. Details and screens are published here once each project is ready to show."
+            count={upcomingProjects.length}
+          />
+
+          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {upcomingProjects.map((project) => (
+              <li key={project.id} className="flex">
+                <UpcomingCard project={project} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </section>
   );
 }
